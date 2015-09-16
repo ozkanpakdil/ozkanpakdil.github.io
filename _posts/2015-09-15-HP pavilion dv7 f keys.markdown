@@ -2,7 +2,7 @@
 layout: post
 title:  "HP pavilion dv7 f keys"
 date:   2015-09-15 18:30:30
-categories: jekyll update
+categories: laptop
 ---
 I bought this laptop about 2 months ago. and I directly installed xubuntu. I was not aware but F keys stop working. one day I was looking a site and wanted to see the html dom details and hit the F12. and my wireless stop working. then I realized my function key is like pressed and my F keys was not working.
 
