@@ -22,3 +22,5 @@ VBoxManage setextradata "test" "VBoxInternal/Devices/smc/0/Config/GetKeyFromReal
 {% endhighlight %}
 
 dont forget to change ¨test¨ in your machine. other then this problem video is true. my ubuntu is ¨Ubuntu 14.04.3 LTS¨ and virtualbox version is ¨5.0.10 r104061¨
+
+after this installation I could not manage to install xcode :) I think if you want to try you have to buy.
