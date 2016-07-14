@@ -34,3 +34,11 @@ Run this command in  shell
 {% highlight bash %}
 java -jar fmw_12.2.1.1.0_wls.jar -silent -invPtrLoc /fullpath/oraInst.loc -responseFile /fullpath/responseFile.properties
 {% endhighlight %}
+for windows
+{% highlight bash %}
+java -jar fmw_12.2.1.1.0_wls.jar -silent -invPtrLoc c:\oracle\oraInst.loc -responseFile c:\oracle\responseFile.properties
+{% endhighlight %}
+in responseFile.properties change
+{% highlight bash %}
+ORACLE_HOME=c:\\some-path-to-install
+{% endhighlight %}
