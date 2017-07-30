@@ -1,0 +1,9 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.mascix.whatisthis",
+    "sha256_cert_fingerprints":
+    ["B5:13:91:03:54:9D:F4:F4:9E:6F:CD:DB:B6:4C:49:9B:67:D4:0E:BF:0B:71:F3:3A:3F:8F:FD:6A:A0:24:E7:F3"]
+  }
+}]
