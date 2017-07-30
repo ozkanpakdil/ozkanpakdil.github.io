@@ -9,4 +9,5 @@ github_username:  ozkanpakdil
 
 # Build settings
 markdown: kramdown
+
 include: [".well-known"]
