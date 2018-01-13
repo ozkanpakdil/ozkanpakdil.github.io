@@ -8,9 +8,13 @@ Let say you have bunch(5 millions) of small files in your linux in some folder. 
 
 Everybody knows rm -rf /tmp/somefolder but if you run this on a server which already has internet load it may freeze it. and make it stop serving pages.
 
-So what are the options. first and easiest way "find /tmp/somefolder/ -type f -mtime +30  | xargs rm -f" this also can freeze or eat a lot of resources to run.
+So what are the options. first and easiest way 
+find /tmp/somefolder/ -type f -mtime +30  | xargs rm -f
+this also can freeze or eat a lot of resources to run.
 
-Then ionice comes to scene and with ionice you can make it run smoothly "ionice -c3 find /tmp2/cache/ -type f -mtime +30  | xargs rm -f" this way for sure your system does not get freeze. but the problem is if you run this in every hour this may overrun and can 2 procceses clash which result as slow server. so what we need to do watch the system and clean whenever server has time.
+Then ionice comes to scene and with ionice you can make it run smoothly 
+ionice -c3 find /tmp2/cache/ -type f -mtime +30  | xargs rm -f
+this way for sure your system does not get freeze. but the problem is if you run this in every hour this may overrun and can 2 procceses clash which result as slow server. so what we need to do watch the system and clean whenever server has time.
 
 {% highlight bash %}
 #!/bin/bash
