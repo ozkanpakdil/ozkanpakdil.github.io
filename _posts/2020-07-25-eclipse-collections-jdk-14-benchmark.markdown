@@ -321,4 +321,4 @@ IntegerListSum.jdkListParallel        thrpt   10  1130.600 ±   7.078  ops/s
 
 {% endhighlight %}
 
-I will do this in travis ci or github actions in jdk matrix. It would be nice to see jdk 8 9 11 14 next to each other :)
+I may do this in travis ci or github actions in jdk matrix. It would be nice to see jdk 8 9 11 14 next to each other :)
