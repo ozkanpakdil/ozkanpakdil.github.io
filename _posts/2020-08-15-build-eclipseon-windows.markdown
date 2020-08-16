@@ -31,7 +31,7 @@ Exception in thread "main" java.lang.AssertionError: pom file must not be null f
         at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:105)
 {% endhighlight %}
 
-or some git clone problems, you need to make sure there was no problem in git clone.
+or some git clone problems, you need to make sure there is no problem in git clone.
 
 First install [git bash](https://git-scm.com/downloads) to your local and then you can run the commands below,
 {% highlight bash %}
