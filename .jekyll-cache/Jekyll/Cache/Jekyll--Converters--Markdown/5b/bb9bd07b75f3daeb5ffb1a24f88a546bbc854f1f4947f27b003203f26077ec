@@ -1,0 +1,87 @@
+I"¥#<p>I love performance tests. generally I test everything myself if there is no source in the internet I must do it :)</p>
+
+<p>today I was reading imperative coding vs functional coding <a href="http://www.javacodegeeks.com/2015/09/comparing-imperative-and-functional-algorithms-in-java-8.html" rel="nofollow">here</a>. it stuck my mind this sentence.</p>
+<blockquote>theyâ€™re probably equally fast and reasonable</blockquote>
+
+<p>then I have to try which one is faster. here is the code</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kn">package</span> <span class="n">testarea</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">java.util.stream.Collectors</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.stream.IntStream</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Test</span> <span class="o">{</span>
+
+	<span class="kd">static</span> <span class="kt">int</span><span class="o">[]</span> <span class="n">array</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[]</span> <span class="o">{</span> <span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">,</span> <span class="mi">3</span><span class="o">,</span> <span class="mi">4</span><span class="o">,</span> <span class="mi">5</span><span class="o">,</span> <span class="mi">6</span><span class="o">,</span> <span class="mi">7</span><span class="o">,</span> <span class="mi">8</span><span class="o">,</span> <span class="mi">8</span><span class="o">,</span> <span class="mi">8</span><span class="o">,</span> <span class="mi">9</span><span class="o">,</span> <span class="mi">10</span> <span class="o">};</span>
+
+	<span class="kd">static</span> <span class="kt">long</span> <span class="n">startTime</span><span class="o">,</span> <span class="n">stopTime</span><span class="o">;</span>
+
+	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+		
+		<span class="n">runImperative</span><span class="o">();</span>
+
+		<span class="n">runFunctional</span><span class="o">();</span>
+
+		<span class="n">runImperative</span><span class="o">();</span>
+		
+		<span class="n">runFunctional</span><span class="o">();</span><span class="n">runFunctional</span><span class="o">();</span><span class="n">runFunctional</span><span class="o">();</span><span class="n">runFunctional</span><span class="o">();</span>
+		
+		<span class="n">runImperative</span><span class="o">();</span><span class="n">runImperative</span><span class="o">();</span><span class="n">runImperative</span><span class="o">();</span><span class="n">runImperative</span><span class="o">();</span>
+		<span class="n">runFunctional</span><span class="o">();</span>
+	<span class="o">}</span>
+
+	<span class="kd">private</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">runFunctional</span><span class="o">()</span> <span class="o">{</span>
+		<span class="n">startTime</span> <span class="o">=</span> <span class="nc">System</span><span class="o">.</span><span class="na">nanoTime</span><span class="o">();</span>
+
+		<span class="n">functionalApproach</span><span class="o">();</span>
+
+		<span class="n">stopTime</span> <span class="o">=</span> <span class="nc">System</span><span class="o">.</span><span class="na">nanoTime</span><span class="o">();</span>
+		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"F:"</span><span class="o">+(</span><span class="n">stopTime</span> <span class="o">-</span> <span class="n">startTime</span><span class="o">));</span>
+	<span class="o">}</span>
+
+	<span class="kd">private</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">runImperative</span><span class="o">()</span> <span class="o">{</span>
+		<span class="n">startTime</span> <span class="o">=</span> <span class="nc">System</span><span class="o">.</span><span class="na">nanoTime</span><span class="o">();</span>
+
+		<span class="n">imperativeApproach</span><span class="o">();</span>
+
+		<span class="n">stopTime</span> <span class="o">=</span> <span class="nc">System</span><span class="o">.</span><span class="na">nanoTime</span><span class="o">();</span>
+		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"I:"</span><span class="o">+(</span><span class="n">stopTime</span> <span class="o">-</span> <span class="n">startTime</span><span class="o">));</span>
+	<span class="o">}</span>
+
+	<span class="kd">private</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">imperativeApproach</span><span class="o">()</span> <span class="o">{</span>
+		<span class="kt">int</span> <span class="n">sum</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+		<span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">array</span><span class="o">.</span><span class="na">length</span><span class="o">;</span> <span class="n">j</span><span class="o">++)</span> <span class="o">{</span>
+			<span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">k</span> <span class="o">=</span> <span class="n">j</span> <span class="o">+</span> <span class="mi">1</span><span class="o">;</span> <span class="n">k</span> <span class="o">&lt;</span> <span class="n">array</span><span class="o">.</span><span class="na">length</span><span class="o">;</span> <span class="n">k</span><span class="o">++)</span> <span class="o">{</span>
+				<span class="k">if</span> <span class="o">(</span><span class="n">k</span> <span class="o">!=</span> <span class="n">j</span> <span class="o">&amp;&amp;</span> <span class="n">array</span><span class="o">[</span><span class="n">k</span><span class="o">]</span> <span class="o">==</span> <span class="n">array</span><span class="o">[</span><span class="n">j</span><span class="o">])</span> <span class="o">{</span>
+					<span class="n">sum</span> <span class="o">=</span> <span class="n">sum</span> <span class="o">+</span> <span class="n">array</span><span class="o">[</span><span class="n">k</span><span class="o">];</span>
+				<span class="o">}</span>
+			<span class="o">}</span>
+		<span class="o">}</span>
+	<span class="o">}</span>
+
+	<span class="kd">private</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">functionalApproach</span><span class="o">()</span> <span class="o">{</span>
+		<span class="nc">IntStream</span><span class="o">.</span><span class="na">of</span><span class="o">(</span><span class="n">array</span><span class="o">).</span><span class="na">boxed</span><span class="o">().</span><span class="na">collect</span><span class="o">(</span><span class="nc">Collectors</span><span class="o">.</span><span class="na">groupingBy</span><span class="o">(</span><span class="n">i</span> <span class="o">-&gt;</span> <span class="n">i</span><span class="o">)).</span><span class="na">entrySet</span><span class="o">().</span><span class="na">stream</span><span class="o">()</span>
+				<span class="o">.</span><span class="na">filter</span><span class="o">(</span><span class="n">e</span> <span class="o">-&gt;</span> <span class="n">e</span><span class="o">.</span><span class="na">getValue</span><span class="o">().</span><span class="na">size</span><span class="o">()</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="o">).</span><span class="na">forEach</span><span class="o">(</span><span class="n">e</span> <span class="o">-&gt;</span> <span class="o">{</span>
+					 <span class="n">e</span><span class="o">.</span><span class="na">getValue</span><span class="o">().</span><span class="na">stream</span><span class="o">().</span><span class="na">collect</span><span class="o">(</span><span class="nc">Collectors</span><span class="o">.</span><span class="na">summingInt</span><span class="o">(</span><span class="n">i</span> <span class="o">-&gt;</span> <span class="n">i</span><span class="o">));</span>
+				<span class="o">});</span>
+	<span class="o">}</span>
+
+<span class="o">}</span></code></pre></figure>
+
+<p>here is my output</p>
+<pre>
+I:8297
+F:93871512
+I:6048
+F:192964
+F:165003
+F:164852
+F:158849
+I:5988
+I:5681
+I:5805
+I:5740
+F:159416
+</pre>
+<p>as you see imperative coding kick ass. and in my mind its easy to understand. I know it does not look beautiful like functional. still it works and far faster then functional. just saying :)</p>
+:ET

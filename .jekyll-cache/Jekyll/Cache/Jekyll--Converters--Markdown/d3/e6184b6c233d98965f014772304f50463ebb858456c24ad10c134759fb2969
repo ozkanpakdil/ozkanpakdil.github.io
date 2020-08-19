@@ -1,0 +1,37 @@
+I"a<p>I am trying to write small microservice benchmark for java, lately java microservice framework are popping up from every corner :smile: actually it is becoming little bit annoying, java world becoming js world.</p>
+
+<p>Anyway while writing some test I start getting the error below</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">Internal Server Error
+Error handling d1e23f6f-3947-497a-be41-27ba9f7f4791-1, org.jboss.resteasy.spi.UnhandledException: com.fasterxml.jackson.databind.exc.InvalidDefinitionException: No serializer found <span class="k">for </span>class com.mascix.ApplicationInfo and no properties discovered to create BeanSerializer <span class="o">(</span>to avoid exception, disable SerializationFeature.FAIL_ON_EMPTY_BEANS<span class="o">)</span>
+
+The stacktrace below has been reversed to show the root cause first. Click Here to see the original stacktrace
+
+com.fasterxml.jackson.databind.exc.InvalidDefinitionException: No serializer found <span class="k">for </span>class com.mascix.ApplicationInfo and no properties discovered to create BeanSerializer <span class="o">(</span>to avoid exception, disable SerializationFeature.FAIL_ON_EMPTY_BEANS<span class="o">)</span>
+	at com.fasterxml.jackson.databind.exc.InvalidDefinitionException.from<span class="o">(</span>InvalidDefinitionException.java:77<span class="o">)</span>
+	at com.fasterxml.jackson.databind.SerializerProvider.reportBadDefinition<span class="o">(</span>SerializerProvider.java:1277<span class="o">)</span>
+	at com.fasterxml.jackson.databind.DatabindContext.reportBadDefinition<span class="o">(</span>DatabindContext.java:400<span class="o">)</span></code></pre></figure>
+
+<p>This was coming from quarkus example. I got same error in spring boot and micronaut, my first approach was configure the bean or singleton and give</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">mapper</span><span class="o">.</span><span class="na">setVisibility</span><span class="o">(</span><span class="nc">PropertyAccessor</span><span class="o">.</span><span class="na">FIELD</span><span class="o">,</span> <span class="nc">Visibility</span><span class="o">.</span><span class="na">ANY</span><span class="o">);</span></code></pre></figure>
+
+<p>but that was brining one more file and class to the scene. I dont like extra code, and here is easier solution.</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nd">@JsonAutoDetect</span><span class="o">(</span><span class="n">fieldVisibility</span> <span class="o">=</span> <span class="nc">Visibility</span><span class="o">.</span><span class="na">ANY</span><span class="o">)</span></code></pre></figure>
+
+<p>full code</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nd">@JsonAutoDetect</span><span class="o">(</span><span class="n">fieldVisibility</span> <span class="o">=</span> <span class="nc">Visibility</span><span class="o">.</span><span class="na">ANY</span><span class="o">)</span>
+<span class="kd">class</span> <span class="nc">ApplicationInfo</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="nf">ApplicationInfo</span><span class="o">(</span><span class="nc">String</span> <span class="n">string</span><span class="o">,</span> <span class="kt">int</span> <span class="n">year</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">name</span> <span class="o">=</span> <span class="n">string</span><span class="o">;</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">releaseYear</span> <span class="o">=</span> <span class="n">year</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="nc">String</span> <span class="n">name</span><span class="o">;</span>
+    <span class="kt">int</span> <span class="n">releaseYear</span><span class="o">;</span>
+<span class="o">}</span></code></pre></figure>
+
+<p>adding one annotation is more elegant solution then mapper configuration :wink:, I hope this time I wont forget this solution.</p>
+:ET

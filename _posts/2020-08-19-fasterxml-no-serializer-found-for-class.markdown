@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Getting com.fasterxml.jackson.databind.exc.InvalidDefinitionException: No serializer found for class"
-date:   2020-08-19 20:05:30
+date:   2020-08-19 19:05:30
 categories: java,fasterxml,json
 ---
 I am trying to write small microservice benchmark for java, lately java microservice framework are popping up from every corner :smile: actually it is becoming little bit annoying, java world becoming js world. 

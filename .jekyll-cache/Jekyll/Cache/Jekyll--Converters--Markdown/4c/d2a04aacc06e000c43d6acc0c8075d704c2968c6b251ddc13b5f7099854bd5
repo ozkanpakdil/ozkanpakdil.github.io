@@ -1,0 +1,10 @@
+I"<p>While developing a small android application. I was thinking to use IntentService which is kind of a background worker for android platform. Then I found the need code and documentation and implemented yesterday. and code is compiling so today I wanted to see it in a real phone and started</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"> Caused by: android.content.ActivityNotFoundException: Unable to find explicit activity class <span class="o">{</span>com.mascix.fitinsta/com.mascix.fitinsta.ServiceLayer<span class="o">}</span><span class="p">;</span> have you declared this activity <span class="k">in </span>your AndroidManifest.xml?</code></pre></figure>
+
+<p>From this exception I understand that I am having a problem in androidmanifest.xml and since morning I was trying to fix it. And the result is it was code problem :)</p>
+
+<figure class="highlight"><pre><code class="language-kotlin" data-lang="kotlin"><span class="nf">startActivity</span><span class="p">(</span><span class="n">intent</span><span class="p">)</span></code></pre></figure>
+
+<p>then I learn that actually there is startService function for IntentServices and after I change the code to startService. Exception was gone. Terrible exception it was not really saying what is wrong.</p>
+:ET

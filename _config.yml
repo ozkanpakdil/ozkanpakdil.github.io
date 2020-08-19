@@ -10,4 +10,8 @@ github_username:  ozkanpakdil
 # Build settings
 markdown: kramdown
 
+plugins:
+  - jemoji
+gems: ["jemoji"]
+
 include: [".well-known"]

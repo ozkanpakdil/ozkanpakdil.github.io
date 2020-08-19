@@ -1,0 +1,13 @@
+I"I<p>I have been using whois for a long time(around 10 years). and if you are sending this whois queries from same ip and higher then expected. you will start seeing ripe.net access denied results. one solution is restart your adsl modem. or start using another ip. and my solution is TOR :)</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">sudo </span>apt <span class="nb">install </span>tor torsocks</code></pre></figure>
+
+<p>you will need to configure torify check https://www.linux.com/blog/beginners-guide-tor-ubuntu</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">torify whois 25.166.194.172</code></pre></figure>
+
+<p>and I did not wanted to run in my server. therefore amazon free instance and a micro service <a href="https://github.com/ozkanpakdil/CommandRunner">https://github.com/ozkanpakdil/CommandRunner</a> did the trick.</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">curl http://52.30.20.212:8080/whois?ip<span class="o">=</span>25.166.194.172</code></pre></figure>
+
+:ET
