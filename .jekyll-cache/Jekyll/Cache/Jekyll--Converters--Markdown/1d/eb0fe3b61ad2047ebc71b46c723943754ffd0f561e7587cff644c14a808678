@@ -1,2 +1,0 @@
-I"p<p>I was reading <a href="https://www.baeldung.com/jdk-collections-vs-eclipse-collections">eclipse collections benchmark doc</a> and realized that its little bit old and it was using jdk 11, in my local I have jdk 14 I wanted to run in my local and see the result. You can find eclipse collections <a href="https://github.com/eclipse/eclipse-collections">here</a></p>
-:ET
