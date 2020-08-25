@@ -14,6 +14,7 @@ Here is total package generation times for separate modules,
 [INFO] framewrok-benchmark 1.0-SNAPSHOT ................... SUCCESS [  0.001 s]
 {% endhighlight %}
 Size of created packages: 
+
 | Size in MB |  Name |
 |----------|------|
 | 14M | micronaut/target/micronaut-demo-0.1.jar |
