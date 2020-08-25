@@ -16,7 +16,7 @@ Here is total package generation times for separate modules,
 Size of created packages: 
 
 | Size in MB |  Name |
-|----------|------|
+|------------|-------|
 | 14M | micronaut/target/micronaut-demo-0.1.jar |
 | 17M | quarkus/target/quarkus-demo-1.0.0-SNAPSHOT-runner.jar |
 | 18M | spring-boot/target/springboot-demo-0.0.1-SNAPSHOT.jar |
