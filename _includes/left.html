@@ -2,9 +2,9 @@
     {% for collection in site.collections %}
     {% if collection.label == 'microservicetests' %}
     <h5>Microservice framework tests</h5>
-    <ul class="list-group">
+    <ul class="list-group" style="transform: rotate(180deg);">
         {% for item in site[collection.label] %}
-        <li class="text-truncate"><a href="{{ item.url }}">{{ item.title }}</a></li>
+        <li class="text-truncate" style="transform: rotate(-180deg);"><a href="{{ item.url }}">{{ item.title }}</a></li>
         {% endfor %}
     </ul>
     {%endif%}
