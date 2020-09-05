@@ -12,6 +12,17 @@ markdown: kramdown
 
 plugins:
   - jemoji
+  - jekyll-paginate
 gems: ["jemoji"]
 
 include: [".well-known"]
+
+collections:
+  microservicetests:
+    output: true
+
+collections_dir: my_collections
+
+paginate: 5
+# paginate_path: "/blog/page:num/"
+

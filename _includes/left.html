@@ -1,0 +1,12 @@
+<div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+    {% for collection in site.collections %}
+    {% if collection.label == 'microservicetests' %}
+    <h5>Microservice framework tests</h5>
+    <ul class="list-group">
+        {% for item in site[collection.label] %}
+        <li class="text-truncate"><a href="{{ item.url }}">{{ item.title }}</a></li>
+        {% endfor %}
+    </ul>
+    {%endif%}
+    {% endfor %}
+</div>
