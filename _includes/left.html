@@ -1,12 +1,3 @@
-<div class="col-12 col-md-3 col-xl-2 bd-sidebar">
-    {% for collection in site.collections %}
-    {% if collection.label == 'microservicetests' %}
-    <h5>Microservice framework tests</h5>
-    <ul class="list-group" style="transform: rotate(180deg);">
-        {% for item in site[collection.label] %}
-        <li class="text-truncate" style="transform: rotate(-180deg);"><a href="{{ item.url }}">{{ item.title }}</a></li>
-        {% endfor %}
-    </ul>
-    {%endif%}
-    {% endfor %}
+<div class="col-12 col-md-3 col-xl-2 bd-sidebar d-none d-lg-block">
+    
 </div>
