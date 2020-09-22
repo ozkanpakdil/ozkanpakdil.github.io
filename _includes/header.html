@@ -24,7 +24,8 @@
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               {% for collection in site.collections %}
               {% if collection.label == 'microservicetests' %}
-              {% for item in site[collection.label] reversed %}
+              {% assign items = site[collection.label] | reverse %}
+              {% for item in items limit:10 %}
               <a class="dropdown-item d-flex align-items-center text-truncate" href="{{ item.url }}">
                 {{ item.title  | 
                   replace:'Java microservice framework tests in ','' | 
