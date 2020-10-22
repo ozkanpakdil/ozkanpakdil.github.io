@@ -1,19 +1,19 @@
 ---
 layout: post
-title:  'Java microservice framework tests in SB:2.3.4.RELEASE Q:1.9.0.Final M:2.1.2 V:3.9.4 H:2.1.0 openjdk version "15" 2020-09-15'
-date:   2020-10-22 07:38:48
+title:  'Java microservice framework tests in SB:2.3.4.RELEASE Q:1.8.3.Final M:2.1.2 V:3.9.4 H:2.1.0 openjdk version "15" 2020-09-15'
+date:   2020-10-22 07:38:30
 categories: java,fasterxml,json
 --- 
 Here is total package generation times for separate modules,
 {% highlight bash %}
 
-[INFO] eclipse-microprofile-kumuluz-test 1.0-SNAPSHOT ..... SUCCESS [ 13.541 s]
-[INFO] helidon-quickstart-se 1.0-SNAPSHOT ................. SUCCESS [ 15.660 s]
-[INFO] micronaut-demo 0.1 ................................. SUCCESS [ 35.310 s]
-[INFO] quarkus-demo 1.0.0-SNAPSHOT ........................ SUCCESS [ 20.259 s]
-[INFO] springboot-demo 0.0.1-SNAPSHOT ..................... SUCCESS [  9.584 s]
-[INFO] vertx-demo 1.0.0-SNAPSHOT .......................... SUCCESS [  4.090 s]
-[INFO] gatling 1.0-SNAPSHOT ............................... SUCCESS [  0.014 s]
+[INFO] eclipse-microprofile-kumuluz-test 1.0-SNAPSHOT ..... SUCCESS [ 33.198 s]
+[INFO] helidon-quickstart-se 1.0-SNAPSHOT ................. SUCCESS [ 28.892 s]
+[INFO] micronaut-demo 0.1 ................................. SUCCESS [ 36.746 s]
+[INFO] quarkus-demo 1.0.0-SNAPSHOT ........................ SUCCESS [ 31.521 s]
+[INFO] springboot-demo 0.0.1-SNAPSHOT ..................... SUCCESS [  9.052 s]
+[INFO] vertx-demo 1.0.0-SNAPSHOT .......................... SUCCESS [  6.097 s]
+[INFO] gatling 1.0-SNAPSHOT ............................... SUCCESS [  0.205 s]
 [INFO] framewrok-benchmark 1.0-SNAPSHOT ................... SUCCESS [  0.001 s]
 {% endhighlight %}
 Size of created packages:
@@ -23,56 +23,56 @@ Size of created packages:
 | 21M | eclipse-microprofile-kumuluz-test/target/eclipse-microprofile-kumuluz-test.jar |
 | 7.0M | helidon-se-netty/target/helidon-quickstart-se.jar |
 | 14M | micronaut/target/micronaut-demo-0.1.jar |
-| 14M | quarkus/target/quarkus-demo-1.0.0-SNAPSHOT-runner.jar |
+| 17M | quarkus/target/quarkus-demo-1.0.0-SNAPSHOT-runner.jar |
 | 18M | spring-boot/target/springboot-demo-0.0.1-SNAPSHOT.jar |
 | 6.8M | vertx/target/vertx-demo-1.0.0-SNAPSHOT-fat.jar |
 
 
-:: Spring Boot :: (v2.3.4.RELEASE) Started DemoApplication in 2.288 seconds (JVM running for 2.779)
+:: Spring Boot :: (v2.3.4.RELEASE) Started DemoApplication in 2.058 seconds (JVM running for 2.492)
 
     {% highlight bash %}
 ---- Global Information --------------------------------------------------------
 > request count                                       2000 (OK=2000   KO=0     )
 > min response time                                      0 (OK=0      KO=-     )
-> max response time                                    210 (OK=210    KO=-     )
+> max response time                                    196 (OK=196    KO=-     )
+> mean response time                                    15 (OK=15     KO=-     )
+> std deviation                                         30 (OK=30     KO=-     )
+> response time 50th percentile                          1 (OK=1      KO=-     )
+> response time 75th percentile                          9 (OK=9      KO=-     )
+> response time 95th percentile                         85 (OK=85     KO=-     )
+> response time 99th percentile                        129 (OK=129    KO=-     )
+> mean requests/sec                                    400 (OK=400    KO=-     )
+{% endhighlight %}
+
+powered by Quarkus 1.8.3.Final) started in 0.880s. Listening on: http://0.0.0.0:8080
+
+    {% highlight bash %}
+---- Global Information --------------------------------------------------------
+> request count                                       2000 (OK=2000   KO=0     )
+> min response time                                      0 (OK=0      KO=-     )
+> max response time                                    223 (OK=223    KO=-     )
 > mean response time                                    17 (OK=17     KO=-     )
-> std deviation                                         34 (OK=34     KO=-     )
+> std deviation                                         38 (OK=38     KO=-     )
 > response time 50th percentile                          1 (OK=1      KO=-     )
-> response time 75th percentile                          7 (OK=7      KO=-     )
-> response time 95th percentile                         98 (OK=98     KO=-     )
-> response time 99th percentile                        149 (OK=149    KO=-     )
+> response time 75th percentile                          4 (OK=4      KO=-     )
+> response time 95th percentile                        107 (OK=107    KO=-     )
+> response time 99th percentile                        172 (OK=172    KO=-     )
 > mean requests/sec                                    400 (OK=400    KO=-     )
 {% endhighlight %}
 
-powered by Quarkus 1.9.0.Final) started in 0.911s. Listening on: http://0.0.0.0:8080
+micronaut version:2.0.1 Startup completed in 947ms. Server Running: http://localhost:8080
 
     {% highlight bash %}
 ---- Global Information --------------------------------------------------------
 > request count                                       2000 (OK=2000   KO=0     )
 > min response time                                      0 (OK=0      KO=-     )
-> max response time                                    287 (OK=287    KO=-     )
-> mean response time                                     9 (OK=9      KO=-     )
-> std deviation                                         24 (OK=24     KO=-     )
+> max response time                                    153 (OK=153    KO=-     )
+> mean response time                                    12 (OK=12     KO=-     )
+> std deviation                                         26 (OK=26     KO=-     )
 > response time 50th percentile                          1 (OK=1      KO=-     )
-> response time 75th percentile                          2 (OK=2      KO=-     )
-> response time 95th percentile                         54 (OK=54     KO=-     )
-> response time 99th percentile                        117 (OK=117    KO=-     )
-> mean requests/sec                                    400 (OK=400    KO=-     )
-{% endhighlight %}
-
-micronaut version:2.0.1 Startup completed in 1052ms. Server Running: http://localhost:8080
-
-    {% highlight bash %}
----- Global Information --------------------------------------------------------
-> request count                                       2000 (OK=2000   KO=0     )
-> min response time                                      0 (OK=0      KO=-     )
-> max response time                                    207 (OK=207    KO=-     )
-> mean response time                                    22 (OK=22     KO=-     )
-> std deviation                                         41 (OK=41     KO=-     )
-> response time 50th percentile                          1 (OK=1      KO=-     )
-> response time 75th percentile                         18 (OK=18     KO=-     )
-> response time 95th percentile                        122 (OK=122    KO=-     )
-> response time 99th percentile                        166 (OK=166    KO=-     )
+> response time 75th percentile                          3 (OK=3      KO=-     )
+> response time 95th percentile                         75 (OK=75     KO=-     )
+> response time 99th percentile                        107 (OK=107    KO=-     )
 > mean requests/sec                                    400 (OK=400    KO=-     )
 {% endhighlight %}
 
@@ -82,29 +82,29 @@ vertx version:3.9.4
 ---- Global Information --------------------------------------------------------
 > request count                                       2000 (OK=2000   KO=0     )
 > min response time                                      0 (OK=0      KO=-     )
-> max response time                                    141 (OK=141    KO=-     )
-> mean response time                                     6 (OK=6      KO=-     )
-> std deviation                                         17 (OK=17     KO=-     )
+> max response time                                     96 (OK=96     KO=-     )
+> mean response time                                     4 (OK=4      KO=-     )
+> std deviation                                         11 (OK=11     KO=-     )
 > response time 50th percentile                          1 (OK=1      KO=-     )
 > response time 75th percentile                          1 (OK=1      KO=-     )
-> response time 95th percentile                         42 (OK=42     KO=-     )
-> response time 99th percentile                         83 (OK=83     KO=-     )
+> response time 95th percentile                         24 (OK=24     KO=-     )
+> response time 99th percentile                         60 (OK=60     KO=-     )
 > mean requests/sec                                    400 (OK=400    KO=-     )
 {% endhighlight %}
 
-kumuluz version:3.11.0 Server -- Started @3842ms
+kumuluz version:3.11.0 Server -- Started @3665ms
 
     {% highlight bash %}
 ---- Global Information --------------------------------------------------------
 > request count                                       2000 (OK=2000   KO=0     )
 > min response time                                      0 (OK=0      KO=-     )
-> max response time                                    202 (OK=202    KO=-     )
-> mean response time                                    13 (OK=13     KO=-     )
-> std deviation                                         30 (OK=30     KO=-     )
-> response time 50th percentile                          1 (OK=1      KO=-     )
-> response time 75th percentile                          5 (OK=5      KO=-     )
-> response time 95th percentile                         85 (OK=85     KO=-     )
-> response time 99th percentile                        145 (OK=145    KO=-     )
+> max response time                                    220 (OK=220    KO=-     )
+> mean response time                                    17 (OK=17     KO=-     )
+> std deviation                                         36 (OK=36     KO=-     )
+> response time 50th percentile                          2 (OK=2      KO=-     )
+> response time 75th percentile                          8 (OK=8      KO=-     )
+> response time 95th percentile                        107 (OK=107    KO=-     )
+> response time 99th percentile                        166 (OK=166    KO=-     )
 > mean requests/sec                                    400 (OK=400    KO=-     )
 {% endhighlight %}
 
@@ -114,13 +114,13 @@ Helidon SE 2.1.0 features: [Config, Health, Metrics, WebServer]
 ---- Global Information --------------------------------------------------------
 > request count                                       2000 (OK=2000   KO=0     )
 > min response time                                      0 (OK=0      KO=-     )
-> max response time                                    242 (OK=242    KO=-     )
-> mean response time                                    27 (OK=27     KO=-     )
-> std deviation                                         51 (OK=51     KO=-     )
+> max response time                                    227 (OK=227    KO=-     )
+> mean response time                                    23 (OK=23     KO=-     )
+> std deviation                                         46 (OK=46     KO=-     )
 > response time 50th percentile                          1 (OK=1      KO=-     )
-> response time 75th percentile                         30 (OK=30     KO=-     )
-> response time 95th percentile                        160 (OK=160    KO=-     )
-> response time 99th percentile                        203 (OK=203    KO=-     )
+> response time 75th percentile                         15 (OK=15     KO=-     )
+> response time 95th percentile                        141 (OK=141    KO=-     )
+> response time 99th percentile                        183 (OK=183    KO=-     )
 > mean requests/sec                                    400 (OK=400    KO=-     )
 {% endhighlight %}
 
