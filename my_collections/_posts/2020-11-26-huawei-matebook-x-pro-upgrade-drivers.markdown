@@ -33,7 +33,7 @@ I was afraid to install it because as you know any windows fail will need resett
 
 And today I finally installed the drivers and my laptop still works I am happy,
 
-Now I need to figure out https://answers.microsoft.com/en-us/windows/forum/all/win10-internet-connection-problem/59141108-4477-4124-928b-3cc8ea63a322?auth=1 very strange problem, it is so much fun to use windows, I wish it had better community.
+Now I need to figure out [very strange windows 10 network problem](https://answers.microsoft.com/en-us/windows/forum/all/win10-internet-connection-problem/59141108-4477-4124-928b-3cc8ea63a322?auth=1), it is so much fun to use windows, I wish it had better community.
 
 
 
