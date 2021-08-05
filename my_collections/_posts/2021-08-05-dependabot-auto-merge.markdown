@@ -13,3 +13,6 @@ And finally I did it. Took me around a month because in every config there was s
 [ymls for the automerge configuration](https://github.com/ozkanpakdil/test-microservice-frameworks/tree/master/.github/workflows)
 
 You will see auto-merge.yml and autoapprove-dependabot.yml, you need both in order to automerge. autoapprove make sure PR is approved and "auto-merge" does the merging. Do not forget to define secret "TOKEN_GIT" in your settings. Here is how it looks in [PR](https://github.com/ozkanpakdil/test-microservice-frameworks/pull/234)
+
+And here how it looks in the notification
+![github notifications](https://user-images.githubusercontent.com/604405/128320669-613e83f7-7205-4a7c-a2fd-977423d31639.png)
