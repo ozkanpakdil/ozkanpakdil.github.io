@@ -10,6 +10,6 @@ Dependabot is dependency upgrader for all projects. if you have nodejs project i
 
 And finally I did it. Took me around a month because in every config there was something else was cancelling the automerge. and here are the results
 
-(https://github.com/ozkanpakdil/test-microservice-frameworks/tree/master/.github/workflows)
+[ymls for the automerge configuration](https://github.com/ozkanpakdil/test-microservice-frameworks/tree/master/.github/workflows)
 
-You will see auto-merge.yml and autoapprove-dependabot.yml, you need both in order to automerge. autoapprove make sure PR is approved and auto-merge does the merging. Here is how it looks in PR (https://github.com/ozkanpakdil/test-microservice-frameworks/pull/234)
+You will see auto-merge.yml and autoapprove-dependabot.yml, you need both in order to automerge. autoapprove make sure PR is approved and auto-merge does the merging. Here is how it looks in [PR](https://github.com/ozkanpakdil/test-microservice-frameworks/pull/234)
