@@ -6,9 +6,9 @@ categories: github,dependabot
 ---
 It has been a long time there is very nice sweet bot around, it is called [dependabot](https://dependabot.com/) or [check](https://docs.github.com/en/code-security/supply-chain-security/keeping-your-dependencies-updated-automatically/about-dependabot-version-updates)
 
-Dependabot is dependency upgrader for all projects. if you have nodejs project it updates those dependencies to latest, if you have maven same. And I have a small test framework which does spring template tests and release results, very good project for dependabot, it can fail anytim it is not that important. and I have been trying to make dependabot PRs automerged.
+Dependabot is dependency upgrader for all projects. if you have nodejs project it updates those dependencies to latest, if you have maven same. And I have a small test framework which does spring template tests and release results, very good project for dependabot, it can fail anytime, not that important. and I have been trying to make dependabot PRs automerged.
 
-And finally I did it. Took me around a month because in every config there was something else was cancelling the automerge. and here are the results
+And finally I did it. Took me around 2 months because in every config there was something else was cancelling the automerge. And here are the results
 
 [ymls for the automerge configuration](https://github.com/ozkanpakdil/test-microservice-frameworks/tree/master/.github/workflows)
 
