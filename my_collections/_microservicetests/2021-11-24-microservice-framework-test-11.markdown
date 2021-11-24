@@ -1,18 +1,18 @@
 ---
 layout: post
 title:  'Java microservice framework tests in SB:2.5.6 Q:2.5.0.Final M:3.2.0 V:4.2.1 H:2.4.0 openjdk version "11.0.13" 2021-10-19 LTS'
-date:   2021-11-24 16:13:25
+date:   2021-11-24 18:33:32
 categories: java,fasterxml,json
 --- 
 Here is total package generation times for separate modules,
 {% highlight bash %}
 
-[INFO] eclipse-microprofile-kumuluz-test 1.0-SNAPSHOT ..... SUCCESS [  6.590 s]
-[INFO] helidon-quickstart-se 1.0-SNAPSHOT ................. SUCCESS [ 12.843 s]
-[INFO] micronaut-demo 0.1 ................................. SUCCESS [ 10.045 s]
-[INFO] quarkus-demo 1.0.0-SNAPSHOT ........................ SUCCESS [ 20.221 s]
-[INFO] springboot-demo 0.0.1-SNAPSHOT ..................... SUCCESS [  8.952 s]
-[INFO] vertx-demo 1.0.0-SNAPSHOT .......................... SUCCESS [  4.946 s]
+[INFO] eclipse-microprofile-kumuluz-test 1.0-SNAPSHOT ..... SUCCESS [  6.225 s]
+[INFO] helidon-quickstart-se 1.0-SNAPSHOT ................. SUCCESS [ 13.097 s]
+[INFO] micronaut-demo 0.1 ................................. SUCCESS [  9.787 s]
+[INFO] quarkus-demo 1.0.0-SNAPSHOT ........................ SUCCESS [ 20.258 s]
+[INFO] springboot-demo 0.0.1-SNAPSHOT ..................... SUCCESS [  8.777 s]
+[INFO] vertx-demo 1.0.0-SNAPSHOT .......................... SUCCESS [  5.108 s]
 {% endhighlight %}
 Size of created packages:
 
@@ -26,17 +26,17 @@ Size of created packages:
 | 7.4M | vertx/target/vertx-demo-1.0.0-SNAPSHOT-fat.jar |
 
 
-:: Spring Boot :: (v2.5.6) Started DemoApplication in 2.62 seconds (JVM running for 3.235)
+:: Spring Boot :: (v2.5.6) Started DemoApplication in 2.627 seconds (JVM running for 3.326)
 
     {% highlight bash %}
 {% endhighlight %}
 
-powered by Quarkus 2.5.0.Final) started in 1.453s. Listening on: http://0.0.0.0:8080
+powered by Quarkus 2.5.0.Final) started in 1.440s. Listening on: http://0.0.0.0:8080
 
     {% highlight bash %}
 {% endhighlight %}
 
-micronaut version:3.0.3 Startup completed in 1299ms. Server Running: http://localhost:8080
+micronaut version:3.0.3 Startup completed in 1232ms. Server Running: http://localhost:8080
 
     {% highlight bash %}
 {% endhighlight %}
@@ -46,7 +46,7 @@ vertx version:4.2.1
     {% highlight bash %}
 {% endhighlight %}
 
-kumuluz version:3.12.2 Server -- Started @5261ms
+kumuluz version:3.12.2 Server -- Started @4997ms
 
     {% highlight bash %}
 {% endhighlight %}
