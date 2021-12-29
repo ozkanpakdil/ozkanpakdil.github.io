@@ -5,9 +5,9 @@ date:   2021-12-10 18:05:30
 categories: kubernetes, hetzner
 ---
 ## Providers
-I have been studying kubernetes lately. I still wonder if will it be useful for personal usage for all peaople. Right now it is kind of expensive and used by big companies ias customer to EKS(Amazon) or GKE(Google) or AKS(Azure/Microsoft), Another big player is [Hetzner](https://community.hetzner.com/tutorials/install-kubernetes-cluster)
+I have been studying kubernetes lately. I still wonder if will it be useful for personal usage for all peaople. Right now it is kind of expensive and used by big companies as customer to EKS(Amazon) or GKE(Google) or AKS(Azure/Microsoft), Another big player is [Hetzner](https://community.hetzner.com/tutorials/install-kubernetes-cluster)
 
-I have not heard before there is big blue also in this market [IBM](https://www.ibm.com/uk-en/cloud/kubernetes-service/pricing), I think they come in after they bought RedHat, because Redhat have openshift. Openshift is in-between product, Redhat provides it in cloud providers with managed option, check [prices](https://www.redhat.com/en/technologies/cloud-computing/openshift#product-grid) and there is self managed below table.
+I have not heard before there is big blue also in this market [IBM](https://www.ibm.com/uk-en/cloud/kubernetes-service/pricing), I think they come in after they bought RedHat, because Redhat have openshift. Openshift is in-between product, Redhat provides it in cloud providers with managed option, check [prices](https://www.redhat.com/en/technologies/cloud-computing/openshift#product-grid) and there is "self managed" below table.
 
 OKE stands for Oracle Container Engine for Kubernetes https://www.oracle.com/uk/cloud-native/container-engine-kubernetes/
 
@@ -15,7 +15,7 @@ And of course [Digital Ocean](https://www.digitalocean.com/products/kubernetes/)
 
 Alibaba is another player, they say they are leading in the APAC https://www.alibabacloud.com/product/kubernetes
 
-I saw Rancher and VMware Tenzu and Suse and couple more at https://landscape.cncf.io/card-mode?category=special&grouping=category but not all of them are really providing service.
+I saw Rancher and VMware Tenzu and Suse and couple more at https://landscape.cncf.io/card-mode?category=special&grouping=category but not all of them are really providing service for the end-user.
 
 ### ingress vs egress
 
