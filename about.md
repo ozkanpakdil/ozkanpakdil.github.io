@@ -36,8 +36,10 @@ Eclipse between 2008 - 2018
 Bash scripter since 2006  
 Apache httpd user since 2006  
 Jquery coder since 2010  
-Spring framework and hinernate user since 2008  
+Spring framework and hibernate coder since 2008  
 PostgreSql PL/pgSQL between 2008 - 2011  
+Spring boot since 2012  
+Oracle Coherence between 2012-2015  
 Atlassian Jira user since 2011 jira API user between 2018-2020    
 Bitbucket user for git repo since 2015  used bitbucket API in 2018-2020  
 [Junit](https://junit.org/) since 2011  
