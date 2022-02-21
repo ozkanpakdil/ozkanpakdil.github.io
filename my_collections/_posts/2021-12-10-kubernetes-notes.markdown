@@ -26,3 +26,63 @@ ingress: Each NetworkPolicy may include a list of allowed ingress rules. Each ru
 egress: Each NetworkPolicy may include a list of allowed egress rules. Each rule allows traffic which matches both the to and ports sections. The example policy contains a single rule, which matches traffic on a single port to any destination in 10.0.0.0/24.
 
 https://kubernetes.io/docs/concepts/services-networking/network-policies/
+
+### Multi-container design patterns
+
+#### Sidecar pattern
+
+An extra container in your pod to enhance or extend the functionality of the main container.
+
+#### Ambassador pattern
+
+A container that proxy the network connection to the main container.
+
+#### Adapter pattern
+
+A container that transform output of the main container.
+
+[more details](https://stackoverflow.com/a/59453840/175554)
+
+## Some commands to remember
+
+```
+# Expose a deployment as a NodePort based service using the following settings: The Service name is svc1, the Service type is NodePort, the Service port is 80, and the NodePort is 32080
+kubectl expose deployment -n ns1 somename --name=svc1 --port=80 --type=NodePort
+kubectl patch -n ns1 svc svc1 --patch '{"spec": {"ports": [{"port": 80, "nodePort": 32080}]}}'
+```
+```
+kubectl run -n namespace1 --image=nginx:stable-alpine-perl --restart=OnFailure --port=80 basic
+
+# Expose a Pod in the namespace1 Namespace with the following configuration: The Service name is servicename1, the Service port is 8080, the Target port is 80, the Service type is ClusterIP
+kubectl expose pod basic -n namespace1 --name=servicename1-svc --port=8080 --target-port=80
+```
+
+```
+kubectl apply -f - <<EOF
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: inspector
+  namespace: namespace1
+EOF
+
+kubectl create deployment calins --image=busybox:1.31.1 --replicas=1 -n namespace1
+
+
+kubectl -n namespace2 apply -f - <<EOF
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: task-pv-claim
+spec:
+  storageClassName: manual
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 2Gi
+EOF
+```                                      
+                                      
+
+
