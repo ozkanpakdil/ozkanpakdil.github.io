@@ -15,7 +15,7 @@ here is the example result [page](https://ozkanpakdil.github.io/microservicetest
 
 [full bash script](https://github.com/ozkanpakdil/test-microservice-frameworks/blob/6fb081cf3262d4a56dfab3676e3f6e12c2fa4f3f/runGatling.sh#L132),
 in case you want to generate the url from yml
-```yaml
+```
 ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
 ```
 
