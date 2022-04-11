@@ -83,6 +83,12 @@ spec:
       storage: 2Gi
 EOF
 ```                                      
-                                      
+test namespace from temporary pod
+```k run tmp --restart=Never --rm -i --image=nginx:alpine -- curl -m 5 SERVICENAME.NAMESPACE:9999```
+
+list endpoints
+```k -n earth get ep```
+
+
 
 
