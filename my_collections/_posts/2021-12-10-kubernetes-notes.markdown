@@ -89,5 +89,5 @@ test namespace from temporary pod
 list endpoints
 ```k -n earth get ep```
 
-connect to docker container with root privilages **docker exec -u 0 -it 7d61a1d3813b bash** "-u 0" does the trick
+connect to docker container with root privilages ```docker exec -u 0 -it 7d61a1d3813b bash``` "-u 0" does the trick
 
