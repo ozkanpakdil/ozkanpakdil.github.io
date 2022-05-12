@@ -1,19 +1,19 @@
 ---
 layout: post
 title:  'Java microservice framework tests in SB:2.6.7 Q:2.9.0.Final M:3.4.3 V:4.3.0 H:2.5.0 Dotnet:6 openjdk version "17.0.3" 2022-04-19 rustc 1.60.0 (7737e0b5c 2022-04-04)'
-date:   2022-05-12 20:22:10
+date:   2022-05-12 21:39:39
 categories: java,rust,fasterxml,json
 ---
 Here is total package generation times for separate modules,
 {% highlight bash %}
 
-[INFO] eclipse-microprofile-kumuluz-test 1.0-SNAPSHOT ..... SUCCESS [ 21.000 s]
-[INFO] helidon-quickstart-se 1.0-SNAPSHOT ................. SUCCESS [ 29.444 s]
-[INFO] micronaut-demo 0.1 ................................. SUCCESS [ 29.199 s]
-[INFO] quarkus-demo 1.0.0-SNAPSHOT ........................ SUCCESS [ 45.355 s]
-[INFO] springboot-demo 0.0.1-SNAPSHOT ..................... SUCCESS [ 46.585 s]
-[INFO] springboot-demo-web 0.0.1-SNAPSHOT ................. SUCCESS [ 46.567 s]
-[INFO] vertx-demo 1.0.0-SNAPSHOT .......................... SUCCESS [ 16.986 s]
+[INFO] eclipse-microprofile-kumuluz-test 1.0-SNAPSHOT ..... SUCCESS [ 25.060 s]
+[INFO] helidon-quickstart-se 1.0-SNAPSHOT ................. SUCCESS [ 38.263 s]
+[INFO] micronaut-demo 0.1 ................................. SUCCESS [ 35.138 s]
+[INFO] quarkus-demo 1.0.0-SNAPSHOT ........................ SUCCESS [ 55.005 s]
+[INFO] springboot-demo 0.0.1-SNAPSHOT ..................... SUCCESS [ 56.733 s]
+[INFO] springboot-demo-web 0.0.1-SNAPSHOT ................. SUCCESS [ 56.748 s]
+[INFO] vertx-demo 1.0.0-SNAPSHOT .......................... SUCCESS [ 21.854 s]
 {% endhighlight %}
 Size of created packages:
 
@@ -32,67 +32,67 @@ Size of created packages:
 
 
 [:: Spring Boot ::       (v0.0.1-SNAPSHOT)](https://spring.io/projects/spring-boot) 
-Started DemoWebFluxApplication in 2.016 seconds (JVM running for 2.453)
+Started DemoWebFluxApplication in 2.362 seconds (JVM running for 2.884)
 {% highlight bash %}
 ---- Global Information --------------------------------------------------------
 > request count                                       4000 (OK=4000   KO=0     )
-> min response time                                      0 (OK=0      KO=-     )
-> max response time                                    657 (OK=657    KO=-     )
-> mean response time                                   156 (OK=156    KO=-     )
-> std deviation                                        148 (OK=148    KO=-     )
-> response time 50th percentile                        137 (OK=137    KO=-     )
-> response time 75th percentile                        258 (OK=258    KO=-     )
-> response time 95th percentile                        423 (OK=423    KO=-     )
-> response time 99th percentile                        538 (OK=538    KO=-     )
-> mean requests/sec                                    800 (OK=800    KO=-     )
+> min response time                                      3 (OK=3      KO=-     )
+> max response time                                   1104 (OK=1104   KO=-     )
+> mean response time                                   462 (OK=462    KO=-     )
+> std deviation                                        257 (OK=257    KO=-     )
+> response time 50th percentile                        415 (OK=415    KO=-     )
+> response time 75th percentile                        667 (OK=667    KO=-     )
+> response time 95th percentile                        917 (OK=917    KO=-     )
+> response time 99th percentile                       1009 (OK=1009   KO=-     )
+> mean requests/sec                                666.667 (OK=666.667 KO=-     )
 {% endhighlight %}
 
 [:: Spring Boot ::       (v0.0.1-SNAPSHOT)](https://spring.io/projects/spring-boot) 
-Started DemoApplication in 2.11 seconds (JVM running for 2.51)
+Started DemoApplication in 2.487 seconds (JVM running for 2.942)
 {% highlight bash %}
 ---- Global Information --------------------------------------------------------
 > request count                                       4000 (OK=4000   KO=0     )
-> min response time                                      0 (OK=0      KO=-     )
-> max response time                                   1039 (OK=1039   KO=-     )
-> mean response time                                   214 (OK=214    KO=-     )
-> std deviation                                        225 (OK=225    KO=-     )
-> response time 50th percentile                        167 (OK=167    KO=-     )
-> response time 75th percentile                        342 (OK=342    KO=-     )
-> response time 95th percentile                        566 (OK=566    KO=-     )
-> response time 99th percentile                       1028 (OK=1028   KO=-     )
-> mean requests/sec                                    800 (OK=800    KO=-     )
+> min response time                                      2 (OK=2      KO=-     )
+> max response time                                   2620 (OK=2620   KO=-     )
+> mean response time                                   718 (OK=718    KO=-     )
+> std deviation                                        530 (OK=530    KO=-     )
+> response time 50th percentile                        596 (OK=596    KO=-     )
+> response time 75th percentile                        984 (OK=984    KO=-     )
+> response time 95th percentile                       2075 (OK=2075   KO=-     )
+> response time 99th percentile                       2239 (OK=2239   KO=-     )
+> mean requests/sec                                666.667 (OK=666.667 KO=-     )
 {% endhighlight %}
 
-[powered by Quarkus 2.9.0.Final) started in 0.919s. Listening on: http://0.0.0.0:8080](https://quarkus.io/) 
+[powered by Quarkus 2.9.0.Final) started in 1.092s. Listening on: http://0.0.0.0:8080](https://quarkus.io/) 
 
 {% highlight bash %}
 ---- Global Information --------------------------------------------------------
 > request count                                       4000 (OK=4000   KO=0     )
-> min response time                                      0 (OK=0      KO=-     )
-> max response time                                    703 (OK=703    KO=-     )
-> mean response time                                   195 (OK=195    KO=-     )
-> std deviation                                        191 (OK=191    KO=-     )
-> response time 50th percentile                        160 (OK=160    KO=-     )
-> response time 75th percentile                        324 (OK=324    KO=-     )
-> response time 95th percentile                        589 (OK=589    KO=-     )
-> response time 99th percentile                        672 (OK=672    KO=-     )
-> mean requests/sec                                    800 (OK=800    KO=-     )
+> min response time                                      1 (OK=1      KO=-     )
+> max response time                                   2002 (OK=2002   KO=-     )
+> mean response time                                   521 (OK=521    KO=-     )
+> std deviation                                        316 (OK=316    KO=-     )
+> response time 50th percentile                        454 (OK=454    KO=-     )
+> response time 75th percentile                        792 (OK=792    KO=-     )
+> response time 95th percentile                       1043 (OK=1043   KO=-     )
+> response time 99th percentile                       1169 (OK=1169   KO=-     )
+> mean requests/sec                                666.667 (OK=666.667 KO=-     )
 {% endhighlight %}
 
 [micronaut version:3.4.3](https://micronaut.io/) 
-Startup completed in 837ms. Server Running: http://localhost:8080
+Startup completed in 1014ms. Server Running: http://localhost:8080
 {% highlight bash %}
 ---- Global Information --------------------------------------------------------
 > request count                                       4000 (OK=4000   KO=0     )
 > min response time                                      0 (OK=0      KO=-     )
-> max response time                                    606 (OK=606    KO=-     )
-> mean response time                                   185 (OK=185    KO=-     )
-> std deviation                                        165 (OK=165    KO=-     )
-> response time 50th percentile                        170 (OK=169    KO=-     )
-> response time 75th percentile                        302 (OK=302    KO=-     )
-> response time 95th percentile                        477 (OK=477    KO=-     )
-> response time 99th percentile                        547 (OK=547    KO=-     )
-> mean requests/sec                                    800 (OK=800    KO=-     )
+> max response time                                    957 (OK=957    KO=-     )
+> mean response time                                   427 (OK=427    KO=-     )
+> std deviation                                        243 (OK=243    KO=-     )
+> response time 50th percentile                        397 (OK=397    KO=-     )
+> response time 75th percentile                        625 (OK=625    KO=-     )
+> response time 95th percentile                        824 (OK=824    KO=-     )
+> response time 99th percentile                        894 (OK=894    KO=-     )
+> mean requests/sec                                666.667 (OK=666.667 KO=-     )
 {% endhighlight %}
 
 [vertx version:4.3.0](https://vertx.io/) 
@@ -101,29 +101,29 @@ Startup completed in 837ms. Server Running: http://localhost:8080
 ---- Global Information --------------------------------------------------------
 > request count                                       4000 (OK=4000   KO=0     )
 > min response time                                      0 (OK=0      KO=-     )
-> max response time                                    403 (OK=403    KO=-     )
-> mean response time                                    68 (OK=68     KO=-     )
-> std deviation                                        101 (OK=101    KO=-     )
-> response time 50th percentile                          1 (OK=1      KO=-     )
-> response time 75th percentile                        102 (OK=102    KO=-     )
-> response time 95th percentile                        297 (OK=297    KO=-     )
-> response time 99th percentile                        375 (OK=375    KO=-     )
+> max response time                                    592 (OK=592    KO=-     )
+> mean response time                                   148 (OK=148    KO=-     )
+> std deviation                                        163 (OK=163    KO=-     )
+> response time 50th percentile                        103 (OK=103    KO=-     )
+> response time 75th percentile                        263 (OK=263    KO=-     )
+> response time 95th percentile                        478 (OK=478    KO=-     )
+> response time 99th percentile                        536 (OK=536    KO=-     )
 > mean requests/sec                                    800 (OK=800    KO=-     )
 {% endhighlight %}
 
 [kumuluz version:3.12.2](https://ee.kumuluz.com/) 
-Server -- Started @3399ms
+Server -- Started @4281ms
 {% highlight bash %}
 ---- Global Information --------------------------------------------------------
 > request count                                       4000 (OK=4000   KO=0     )
-> min response time                                      1 (OK=1      KO=-     )
-> max response time                                    944 (OK=944    KO=-     )
-> mean response time                                   381 (OK=381    KO=-     )
-> std deviation                                        232 (OK=232    KO=-     )
-> response time 50th percentile                        339 (OK=339    KO=-     )
-> response time 75th percentile                        586 (OK=586    KO=-     )
-> response time 95th percentile                        782 (OK=782    KO=-     )
-> response time 99th percentile                        846 (OK=846    KO=-     )
+> min response time                                     14 (OK=14     KO=-     )
+> max response time                                   2445 (OK=2445   KO=-     )
+> mean response time                                   663 (OK=663    KO=-     )
+> std deviation                                        397 (OK=397    KO=-     )
+> response time 50th percentile                        591 (OK=591    KO=-     )
+> response time 75th percentile                        969 (OK=969    KO=-     )
+> response time 95th percentile                       1331 (OK=1331   KO=-     )
+> response time 99th percentile                       1496 (OK=1496   KO=-     )
 > mean requests/sec                                666.667 (OK=666.667 KO=-     )
 {% endhighlight %}
 
@@ -132,15 +132,15 @@ Server -- Started @3399ms
 {% highlight bash %}
 ---- Global Information --------------------------------------------------------
 > request count                                       4000 (OK=4000   KO=0     )
-> min response time                                      0 (OK=0      KO=-     )
-> max response time                                   1227 (OK=1227   KO=-     )
-> mean response time                                   463 (OK=463    KO=-     )
-> std deviation                                        332 (OK=332    KO=-     )
-> response time 50th percentile                        402 (OK=402    KO=-     )
-> response time 75th percentile                        742 (OK=742    KO=-     )
-> response time 95th percentile                       1070 (OK=1070   KO=-     )
-> response time 99th percentile                       1177 (OK=1177   KO=-     )
-> mean requests/sec                                    800 (OK=800    KO=-     )
+> min response time                                     48 (OK=48     KO=-     )
+> max response time                                   1919 (OK=1919   KO=-     )
+> mean response time                                   853 (OK=853    KO=-     )
+> std deviation                                        481 (OK=481    KO=-     )
+> response time 50th percentile                        724 (OK=724    KO=-     )
+> response time 75th percentile                       1288 (OK=1288   KO=-     )
+> response time 95th percentile                       1684 (OK=1684   KO=-     )
+> response time 99th percentile                       1869 (OK=1869   KO=-     )
+> mean requests/sec                                666.667 (OK=666.667 KO=-     )
 {% endhighlight %}
 
 ***  
@@ -152,13 +152,13 @@ Server -- Started @3399ms
 ---- Global Information --------------------------------------------------------
 > request count                                       4000 (OK=4000   KO=0     )
 > min response time                                      0 (OK=0      KO=-     )
-> max response time                                    196 (OK=196    KO=-     )
-> mean response time                                    13 (OK=13     KO=-     )
-> std deviation                                         35 (OK=35     KO=-     )
+> max response time                                    294 (OK=294    KO=-     )
+> mean response time                                    45 (OK=45     KO=-     )
+> std deviation                                         69 (OK=69     KO=-     )
 > response time 50th percentile                          1 (OK=1      KO=-     )
-> response time 75th percentile                          1 (OK=1      KO=-     )
-> response time 95th percentile                        105 (OK=105    KO=-     )
-> response time 99th percentile                        158 (OK=158    KO=-     )
+> response time 75th percentile                         78 (OK=78     KO=-     )
+> response time 95th percentile                        204 (OK=204    KO=-     )
+> response time 99th percentile                        251 (OK=251    KO=-     )
 > mean requests/sec                                    800 (OK=800    KO=-     )
 {% endhighlight %}
 
@@ -167,13 +167,13 @@ Server -- Started @3399ms
 ---- Global Information --------------------------------------------------------
 > request count                                       4000 (OK=4000   KO=0     )
 > min response time                                      0 (OK=0      KO=-     )
-> max response time                                    134 (OK=134    KO=-     )
-> mean response time                                     9 (OK=9      KO=-     )
-> std deviation                                         23 (OK=23     KO=-     )
-> response time 50th percentile                          1 (OK=1      KO=-     )
-> response time 75th percentile                          1 (OK=1      KO=-     )
-> response time 95th percentile                         62 (OK=62     KO=-     )
-> response time 99th percentile                        117 (OK=117    KO=-     )
+> max response time                                    287 (OK=287    KO=-     )
+> mean response time                                    68 (OK=68     KO=-     )
+> std deviation                                         84 (OK=84     KO=-     )
+> response time 50th percentile                         25 (OK=25     KO=-     )
+> response time 75th percentile                        111 (OK=110    KO=-     )
+> response time 95th percentile                        248 (OK=248    KO=-     )
+> response time 99th percentile                        267 (OK=267    KO=-     )
 > mean requests/sec                                    800 (OK=800    KO=-     )
 {% endhighlight %}
 
@@ -183,13 +183,13 @@ Server -- Started @3399ms
 ---- Global Information --------------------------------------------------------
 > request count                                       4000 (OK=4000   KO=0     )
 > min response time                                      0 (OK=0      KO=-     )
-> max response time                                    416 (OK=416    KO=-     )
-> mean response time                                    44 (OK=44     KO=-     )
-> std deviation                                         74 (OK=74     KO=-     )
-> response time 50th percentile                          1 (OK=1      KO=-     )
-> response time 75th percentile                         66 (OK=66     KO=-     )
-> response time 95th percentile                        211 (OK=211    KO=-     )
-> response time 99th percentile                        297 (OK=297    KO=-     )
+> max response time                                    586 (OK=586    KO=-     )
+> mean response time                                   135 (OK=135    KO=-     )
+> std deviation                                        145 (OK=145    KO=-     )
+> response time 50th percentile                         94 (OK=94     KO=-     )
+> response time 75th percentile                        232 (OK=232    KO=-     )
+> response time 95th percentile                        438 (OK=438    KO=-     )
+> response time 99th percentile                        505 (OK=505    KO=-     )
 > mean requests/sec                                    800 (OK=800    KO=-     )
 {% endhighlight %}
 
@@ -200,13 +200,13 @@ Server -- Started @3399ms
 ---- Global Information --------------------------------------------------------
 > request count                                       4000 (OK=4000   KO=0     )
 > min response time                                      0 (OK=0      KO=-     )
-> max response time                                    160 (OK=160    KO=-     )
-> mean response time                                    15 (OK=15     KO=-     )
-> std deviation                                         33 (OK=33     KO=-     )
+> max response time                                    244 (OK=244    KO=-     )
+> mean response time                                    33 (OK=33     KO=-     )
+> std deviation                                         56 (OK=56     KO=-     )
 > response time 50th percentile                          1 (OK=1      KO=-     )
-> response time 75th percentile                          4 (OK=4      KO=-     )
-> response time 95th percentile                        104 (OK=104    KO=-     )
-> response time 99th percentile                        145 (OK=145    KO=-     )
+> response time 75th percentile                         51 (OK=51     KO=-     )
+> response time 95th percentile                        166 (OK=166    KO=-     )
+> response time 99th percentile                        205 (OK=205    KO=-     )
 > mean requests/sec                                    800 (OK=800    KO=-     )
 {% endhighlight %}
 
@@ -216,13 +216,13 @@ Server -- Started @3399ms
 ---- Global Information --------------------------------------------------------
 > request count                                       4000 (OK=4000   KO=0     )
 > min response time                                      0 (OK=0      KO=-     )
-> max response time                                    193 (OK=193    KO=-     )
-> mean response time                                    15 (OK=15     KO=-     )
-> std deviation                                         31 (OK=31     KO=-     )
-> response time 50th percentile                          1 (OK=1      KO=-     )
-> response time 75th percentile                          5 (OK=5      KO=-     )
-> response time 95th percentile                         99 (OK=99     KO=-     )
-> response time 99th percentile                        131 (OK=131    KO=-     )
+> max response time                                    327 (OK=327    KO=-     )
+> mean response time                                    49 (OK=49     KO=-     )
+> std deviation                                         75 (OK=75     KO=-     )
+> response time 50th percentile                          2 (OK=2      KO=-     )
+> response time 75th percentile                         78 (OK=78     KO=-     )
+> response time 95th percentile                        219 (OK=219    KO=-     )
+> response time 99th percentile                        306 (OK=306    KO=-     )
 > mean requests/sec                                    800 (OK=800    KO=-     )
 {% endhighlight %}
 
@@ -232,13 +232,13 @@ Server -- Started @3399ms
 ---- Global Information --------------------------------------------------------
 > request count                                       4000 (OK=4000   KO=0     )
 > min response time                                      0 (OK=0      KO=-     )
-> max response time                                    238 (OK=238    KO=-     )
-> mean response time                                    21 (OK=21     KO=-     )
-> std deviation                                         42 (OK=42     KO=-     )
+> max response time                                    305 (OK=305    KO=-     )
+> mean response time                                    40 (OK=40     KO=-     )
+> std deviation                                         65 (OK=65     KO=-     )
 > response time 50th percentile                          1 (OK=1      KO=-     )
-> response time 75th percentile                         16 (OK=16     KO=-     )
-> response time 95th percentile                        125 (OK=125    KO=-     )
-> response time 99th percentile                        167 (OK=167    KO=-     )
+> response time 75th percentile                         63 (OK=63     KO=-     )
+> response time 95th percentile                        194 (OK=194    KO=-     )
+> response time 99th percentile                        245 (OK=245    KO=-     )
 > mean requests/sec                                    800 (OK=800    KO=-     )
 {% endhighlight %}
 
@@ -248,15 +248,15 @@ Server -- Started @3399ms
 ---- Global Information --------------------------------------------------------
 > request count                                       4000 (OK=4000   KO=0     )
 > min response time                                      0 (OK=0      KO=-     )
-> max response time                                    176 (OK=176    KO=-     )
-> mean response time                                    15 (OK=15     KO=-     )
-> std deviation                                         33 (OK=33     KO=-     )
+> max response time                                    223 (OK=223    KO=-     )
+> mean response time                                    30 (OK=30     KO=-     )
+> std deviation                                         52 (OK=52     KO=-     )
 > response time 50th percentile                          1 (OK=1      KO=-     )
-> response time 75th percentile                          3 (OK=3      KO=-     )
-> response time 95th percentile                         99 (OK=99     KO=-     )
-> response time 99th percentile                        147 (OK=147    KO=-     )
+> response time 75th percentile                         44 (OK=44     KO=-     )
+> response time 95th percentile                        155 (OK=155    KO=-     )
+> response time 99th percentile                        204 (OK=204    KO=-     )
 > mean requests/sec                                    800 (OK=800    KO=-     )
 {% endhighlight %}
 
 
-[source code for the java and dotnet tests](https://github.com/ozkanpakdil/test-microservice-frameworks)  :point_left: [source code for the rust tests](https://github.com/ozkanpakdil/rust-examples)  :point_left: [github action](https://github.com/ozkanpakdil/test-microservice-frameworks/actions/runs/2315822681)  :point_left: 
+[source code for the java and dotnet tests](https://github.com/ozkanpakdil/test-microservice-frameworks)  :point_left: [source code for the rust tests](https://github.com/ozkanpakdil/rust-examples)  :point_left: [github action](https://github.com/ozkanpakdil/test-microservice-frameworks/actions/runs/2316164347)  :point_left: 
