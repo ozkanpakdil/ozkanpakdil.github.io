@@ -259,7 +259,7 @@ Server -- Started @4641ms
 {% endhighlight %}
 
 
-## graalvm native vertx rest service 
+## [graalvm native vertx rest service](#graalvmvertx)
 {% highlight bash %}
 ---- Global Information --------------------------------------------------------
 > request count                                       4000 (OK=4000   KO=0     )
