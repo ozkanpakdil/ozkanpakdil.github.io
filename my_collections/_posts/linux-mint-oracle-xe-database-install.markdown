@@ -217,5 +217,28 @@ Processing triggers for libc-bin (2.31-0ubuntu9.9) ...
 Processing triggers for systemd (245.4-4ubuntu3.18) ...
 mintozzy@mintozzy-MACH-WX9:~/Downloads$ 
 
+```
+then when I tried to run that configure command first got error related to machine ip and in second try I got rpm related error :) running oracle on mint is hard I will check testcontainers
+```bash
+mintozzy@mintozzy-MACH-WX9:~/Downloads$ sudo /etc/init.d/oracle-xe-21c configure
+Specify a password to be used for database accounts. Oracle recommends that the password entered should be at least 8 characters in length, contain at least 1 uppercase character, 1 lower case character and 1 digit [0-9]. Note that the same password will be used for SYS, SYSTEM and PDBADMIN accounts:
+Confirm the password:
+Configuring Oracle Listener.
+Listener configuration failed. Check log '/opt/oracle/cfgtoollogs/netca/netca_configure_out.log' for more details.
+mintozzy@mintozzy-MACH-WX9:~/Downloads$ sudo /etc/init.d/oracle-xe-21c configure
+Specify a password to be used for database accounts. Oracle recommends that the password entered should be at least 8 characters in length, contain at least 1 uppercase character, 1 lower case character and 1 digit [0-9]. Note that the same password will be used for SYS, SYSTEM and PDBADMIN accounts:
+Confirm the password:
+Configuring Oracle Listener.
+Listener configuration succeeded.
+Configuring Oracle Database XE.
+[FATAL] [DBT-50000] Unable to check available system memory.
+   CAUSE: An exception occured while checking kernel parameter.
+*ADDITIONAL INFORMATION:*
+Exception details
+ - PRVG-13702 : RPM Package Manager database files are corrupt on nodes "laptop". PRVG-2043 : Command "/bin/rpm --quiet -qa " failed on node "laptop" and produced the following output: error: cannot open Packages database in /home/oracle/.rpmdb error: cannot open Packages database in /home/oracle/.rpmdb
+
+
+
+Database configuration failed. Check logs under '/opt/oracle/cfgtoollogs/dbca'.
 
 ```
