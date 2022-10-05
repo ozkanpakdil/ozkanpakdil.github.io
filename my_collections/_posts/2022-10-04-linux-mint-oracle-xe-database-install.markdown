@@ -218,7 +218,7 @@ Processing triggers for systemd (245.4-4ubuntu3.18) ...
 mintozzy@mintozzy-MACH-WX9:~/Downloads$ 
 
 ```
-then when I tried to run that configure command first got error related to machine ip and in second try I got rpm related error :) running oracle on mint is hard I will check testcontainers
+then when I tried to run that configure command first got error related to machine ip and in second try I got rpm related error :) running oracle on mint is hard, below you can see the error
 ```bash
 mintozzy@mintozzy-MACH-WX9:~/Downloads$ sudo /etc/init.d/oracle-xe-21c configure
 Specify a password to be used for database accounts. Oracle recommends that the password entered should be at least 8 characters in length, contain at least 1 uppercase character, 1 lower case character and 1 digit [0-9]. Note that the same password will be used for SYS, SYSTEM and PDBADMIN accounts:
@@ -242,3 +242,4 @@ Exception details
 Database configuration failed. Check logs under '/opt/oracle/cfgtoollogs/dbca'.
 
 ```
+then I used testcontainer and prepared a spring boot app which works with oracle db [here](https://github.com/ozkanpakdil/spring-examples/tree/master/oracle-h2--hibernate-second-level-cache)
