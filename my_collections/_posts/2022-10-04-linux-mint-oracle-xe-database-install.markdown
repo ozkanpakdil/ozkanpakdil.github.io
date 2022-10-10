@@ -243,3 +243,5 @@ Database configuration failed. Check logs under '/opt/oracle/cfgtoollogs/dbca'.
 
 ```
 then I used testcontainer and prepared a spring boot app which works with oracle db [here](https://github.com/ozkanpakdil/spring-examples/tree/master/oracle-h2--hibernate-second-level-cache)
+
+after running testcontainers in my local I decided to move oracle cloud, they give free oracle database, so it is the fastest and easiest solution so far. [here](https://github.com/ozkanpakdil/spring-examples/tree/master/oracle-atp-ehcache-hibernate-second-level-cache) is spring petclinic with it. [more details](https://github.com/ozkanpakdil/ozkanpakdil.github.io/issues/16#issuecomment-1268917208) about UI and sql developer with oracle cloud.
