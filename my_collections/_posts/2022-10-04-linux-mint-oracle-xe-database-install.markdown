@@ -7,7 +7,7 @@ categories: oracle,linux
 Fallowed this [answer](https://stackoverflow.com/a/67945200/175554) looked like it would work.
 
 <details class="faq box"><summary>Show bash output</summary>
-<p>
+<p markdown="1">
   installation steps below
   <br />
 ```bash
