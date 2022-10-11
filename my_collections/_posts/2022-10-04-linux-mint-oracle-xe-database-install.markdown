@@ -4,10 +4,12 @@ title:  "Oracle XE database install on Linux Mint"
 date:   2022-10-04 11:42:30
 categories: oracle,linux
 ---
-Fallowed https://stackoverflow.com/a/67945200/175554
+Fallowed this [answer](https://stackoverflow.com/a/67945200/175554) looked like it would work.
 
 <details><summary>Show bash output</summary>
 <p>
+  installation steps below
+  
 ```bash
 mintozzy@mintozzy-MACH-WX9:~/Downloads$ sudo apt install alien libaio1 unixodbc
 [sudo] password for mintozzy:       
