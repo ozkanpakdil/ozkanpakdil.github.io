@@ -6,8 +6,7 @@ categories: oracle,linux
 ---
 Fallowed this [answer](https://stackoverflow.com/a/67945200/175554) looked like it would work.
 
-<details class="faq box"><summary>Show bash output</summary>
-<p markdown="1">
+<details class="faq box" markdown="1"><summary>Show bash output</summary>
   installation steps below
   <br />
 ```bash
@@ -221,8 +220,6 @@ Processing triggers for libc-bin (2.31-0ubuntu9.9) ...
 Processing triggers for systemd (245.4-4ubuntu3.18) ...
 mintozzy@mintozzy-MACH-WX9:~/Downloads$ 
 ```
-  
-</p>
  </details>
 then when I tried to run that configure command first got error related to machine ip and in second try I got rpm related error :) running oracle on mint is hard, below you can see the error
 ```bash
