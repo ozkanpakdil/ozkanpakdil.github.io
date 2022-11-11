@@ -338,13 +338,13 @@ rustc 1.64.0 (a55dd71d5 2022-09-19)
       ["Spring webflux", 283, 33],
       ["Quarkus", 292, 30],
       ["Micronaut", 288, 33],
-      ['Vertx', 93, 22]
-      ['Ktor', 676, 0]
-      ['Helidon', 519, 27]
-      ['Kumuluz', 501, 1]
-      ['RustActix', 28, 1]
-      ['RustWarp', 21, 1]
-      ['Dotnet 6', 52, 1]
+      ['Vertx', 93, 22],
+      ['Ktor', 676, 0],
+      ['Helidon', 519, 27],
+      ['Kumuluz', 501, 0],
+      ['RustActix', 28, 0],
+      ['RustWarp', 21, 0],
+      ['Dotnet 6', 52, 0]
     ]);
 
 
