@@ -349,10 +349,6 @@ rustc 1.64.0 (a55dd71d5 2022-09-19)
 
 
     var data = google.visualization.arrayToDataTable(dataSource);
-    const newDiv = document.createElement("div");
-
-    var chart = new google.visualization.ColumnChart(newDiv);
-    chart.draw(data, chartOptions);
-    document.getElementsByClassName('post-content').prepend(newDiv);
+    console.log(data);
   }
 </script>
