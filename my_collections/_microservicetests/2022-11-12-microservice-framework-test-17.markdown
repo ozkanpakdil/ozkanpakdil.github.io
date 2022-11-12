@@ -347,12 +347,10 @@ rustc 1.64.0 (a55dd71d5 2022-09-19)
       ['Dotnet 6', 275, 0],
     ]);
 
-
-    var data = google.visualization.arrayToDataTable(dataSource);
     const newDiv = document.createElement("div");
+    var chart = new google.charts.Bar(newDiv);
+    chart.draw(dataSource, chartOptions);
+    document.getElementsByClassName('post-content').prepend(newDiv);
 
-    var chart = new google.visualization.ColumnChart(newDiv);
-    chart.draw(data, chartOptions);
-    console.log(data);
   }
 </script>
