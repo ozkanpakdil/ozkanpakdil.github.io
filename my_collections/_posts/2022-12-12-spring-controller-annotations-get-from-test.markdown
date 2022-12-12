@@ -63,6 +63,14 @@ One way to write more independent tests. You can see running code [here](https:/
 
 or another way to get the methods by name, like below
 ```java
-loginUrl = Arrays.stream(methods).filter(f->f.getName().toLowerCase().contains("login")).findFirst().get().getAnnotation(PostMapping.class).value()[0];
-get1Url = Arrays.stream(methods).filter(f->f.getName().toLowerCase().contains("get1")).findFirst().get().getAnnotation(GetMapping.class).value()[0];
+loginUrl = Arrays.stream(methods)
+        .filter(f->f.getName().toLowerCase().contains("login"))
+        .findFirst()
+        .get()
+        .getAnnotation(PostMapping.class).value()[0];
+get1Url = Arrays.stream(methods)
+        .filter(f->f.getName().toLowerCase().contains("get1"))
+        .findFirst()
+        .get()
+        .getAnnotation(GetMapping.class).value()[0];
 ```
