@@ -3,7 +3,7 @@ layout: page
 title: About
 permalink: /about/
 ---
-List of technologies I use/code on/configure so far between amateur and professional life. 
+Over the years, I've been using a variety of technologies, both in my personal and professional life. Below is a list of the tools and platforms that I've worked with so far
 
 Amateur
 -----------
