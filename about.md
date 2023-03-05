@@ -49,12 +49,11 @@ Bitbucket user for git repo since 2015
 [Artifactory](https://jfrog.com/artifactory/) user since 2011 (called APIs for spring boot project between 2018 - 2020) 
 For CI/CD jenkins since 2012  
 Oracle DB sql coder/fine tuning since 2011  
-And used between 2008-2010
 Maven since 2011  
 SonarCube for scanning the code since 2012  
-Snyk user since 2018
-Fortify for code scanning between 2012-2015 
-Splunk log monitoring since 2012  
+Snyk user since 2018   
+Fortify for code scanning between 2012-2015    
+Splunk log monitoring since 2012   
 Weblogic administration/fine tuning between 2012 - 2019  
 Intellij IDEA user since 2018  
 [Salt Stack](https://saltproject.io/) used in 2018  
