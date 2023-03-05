@@ -28,31 +28,31 @@ Professional
 Started with C#, VB6, IIS, MSSQL between 2004 and 2008  
 TSQL with MSSQL in 2004    
 SQL since 2005  
+Bash scripter since 2006  
 SVN between 2006 - 2018  
+Java developer since 2006  
 Javascript since 2006   
 MySql between 2006 and 2008  
 IBM Websphere and DB2 wrote sql and did administration between 2008 - 2011  
 Netscaler load balancer management between 2008 - 2011  
 Apache Ant between 2008 - 2011  
-Java developer since 2006  
 Eclipse between 2008 - 2018  
-Bash scripter since 2006  
 Apache httpd user since 2006 with and without weblogic module and proxy module   
-Jquery since 2010  
 PostgreSql PL/pgSQL between 2008-2011 and 2018-2020   
 Spring framework and hibernate coder since 2008   
+Jquery since 2010  
 Oracle DB sql coder/fine tuning since 2011   
 Maven since 2011  
 Atlassian Jira user since 2011    
-Spring boot since 2012  
-Oracle Coherence between 2012-2015  
 [Junit](https://junit.org/) since 2011  
 [Artifactory](https://jfrog.com/artifactory/) user since 2011 (called APIs for spring boot project between 2018 - 2020)                
+Spring boot since 2012  
+[Oracle Coherence](https://www.oracle.com/uk/java/coherence/) between 2012-2015  
 For CI/CD jenkins since 2012  
+Splunk log monitoring since 2012   
 SonarCube for scanning the code since 2012  
 Bitbucket user for git repo since 2015  
 Fortify for code scanning between 2012-2015    
-Splunk log monitoring since 2012   
 Weblogic administration/fine tuning between 2012 - 2019  
 Intellij IDEA user since 2018  
 [Salt Stack](https://saltproject.io/) used in 2018  
