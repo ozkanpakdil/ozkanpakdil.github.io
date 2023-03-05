@@ -46,7 +46,7 @@ Oracle Coherence between 2012-2015
 Atlassian Jira user since 2011    
 Bitbucket user for git repo since 2015  
 [Junit](https://junit.org/) since 2011  
-[Artifactory](https://jfrog.com/artifactory/) user since 2011 (called APIs for spring boot project between 2018 - 2020)     
+[Artifactory](https://jfrog.com/artifactory/) user since 2011 (called APIs for spring boot project between 2018 - 2020)                
 For CI/CD jenkins since 2012  
 Oracle DB sql coder/fine tuning since 2011  
 Maven since 2011  
