@@ -64,7 +64,9 @@ Atlassian Jira and Bitbucket APIs between 2018 - 2020 in Credit Suisse in Odysse
 [Cucumber BDD](https://cucumber.io/) since 2020
 Prometheus monitoring since 2020
 Kubernetes user since 2020 and [CKAD](https://github.com/ozkanpakdil/ozkanpakdil/files/9477123/ozkan-pakdil-5ed7d355-8547-4c8f-b0f1-7ff21a3fcfda-certificate.pdf) since 2022
+
 [Cypress](https://www.cypress.io/) since 2022
+
 [React](https://reactjs.org/) since 2022
 
 you can find all my repositiries [here](https://github.com/ozkanpakdil) 
