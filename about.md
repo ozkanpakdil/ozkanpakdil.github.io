@@ -37,9 +37,9 @@ Apache Ant between 2008 - 2011
 Java developer since 2006  
 Eclipse between 2008 - 2018  
 Bash scripter since 2006  
-Apache httpd user since 2006 with and without weblogic module and proxy module. 
-Jquery coder since 2010  
-PostgreSql PL/pgSQL between 2008-2011 and 2018-2020  
+Apache httpd user since 2006 with and without weblogic module and proxy module   
+Jquery since 2010  
+PostgreSql PL/pgSQL between 2008-2011 and 2018-2020   
 Spring framework and hibernate coder since 2008  
 Spring boot since 2012  
 Oracle Coherence between 2012-2015  
