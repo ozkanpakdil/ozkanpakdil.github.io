@@ -46,7 +46,7 @@ Oracle Coherence between 2012-2015
 Atlassian Jira user since 2011    
 Bitbucket user for git repo since 2015  
 [Junit](https://junit.org/) since 2011  
-[Artifactory](https://jfrog.com/artifactory/) user since 2011 (called APIs for spring boot project between 2018 - 2020) 
+[Artifactory](https://jfrog.com/artifactory/) user since 2011 (called APIs for spring boot project between 2018 - 2020)     
 For CI/CD jenkins since 2012  
 Oracle DB sql coder/fine tuning since 2011  
 Maven since 2011  
@@ -58,11 +58,11 @@ Weblogic administration/fine tuning between 2012 - 2019
 Intellij IDEA user since 2018  
 [Salt Stack](https://saltproject.io/) used in 2018  
 [Ansible](https://www.ansible.com/) since 2018  
-[ServiceNow](https://www.servicenow.com/) used since 2015 and used its [API](https://docs.servicenow.com/bundle/sandiego-application-development/page/build/applications/concept/api-rest.html) in 2019 for a jira integration project  
-Atlassian Jira and Bitbucket APIs between 2018 - 2020 in Credit Suisse in Odyssey  
+[ServiceNow](https://www.servicenow.com/) used since 2015 and used its [API](https://docs.servicenow.com/bundle/sandiego-application-development/page/build/applications/concept/api-rest.html) in 2019 for a jira integration project   
+Atlassian Jira and Bitbucket APIs between 2018 - 2020 in Credit Suisse in Odyssey   
 [Cucumber BDD](https://cucumber.io/) since 2020   
 Prometheus monitoring since 2020   
-Kubernetes user since 2020 and [CKAD](https://github.com/ozkanpakdil/ozkanpakdil/files/9477123/ozkan-pakdil-5ed7d355-8547-4c8f-b0f1-7ff21a3fcfda-certificate.pdf) since 2022  
+Kubernetes user since 2020 and [CKAD](https://github.com/ozkanpakdil/ozkanpakdil/files/9477123/ozkan-pakdil-5ed7d355-8547-4c8f-b0f1-7ff21a3fcfda-certificate.pdf) since 2022   
 [Cypress](https://www.cypress.io/) since 2022   
 [React](https://reactjs.org/) since 2022   
 
