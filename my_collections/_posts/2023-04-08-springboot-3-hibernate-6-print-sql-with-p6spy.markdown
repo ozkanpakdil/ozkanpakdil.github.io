@@ -30,6 +30,7 @@ With this configuration application logs will appear in console. like below
 If required user can change the log format like described [here](https://github.com/p6spy/p6spy/blob/master/src/main/assembly/individualFiles/spy.properties#L101)
 
 P6spy is good for development but should not be used in production, for production every database has their own monitoring logging solution which will show what sql is running from which user.
+
 Postgre sql
 ```SQL
 SELECT pid, age(clock_timestamp(), query_start), usename, query 
@@ -37,4 +38,4 @@ FROM pg_stat_activity
 WHERE query != '<IDLE>' AND query NOT ILIKE '%pg_stat_activity%' 
 ORDER BY query_start desc;
 ```
-[oracle](https://dba.stackexchange.com/questions/8828/how-do-you-show-sql-executing-on-an-oracle-database) [for mssql](https://stackoverflow.com/a/941836/175554)
+Check links for [oracle](https://dba.stackexchange.com/questions/8828/how-do-you-show-sql-executing-on-an-oracle-database) and [for mssql](https://stackoverflow.com/a/941836/175554)
