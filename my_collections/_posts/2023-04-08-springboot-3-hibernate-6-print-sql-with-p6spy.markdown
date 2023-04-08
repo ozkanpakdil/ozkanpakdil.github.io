@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Printing running sqls with P6spy in spring boot 3 and hibernate 6"
-date:   2023-04-08 11:42:30
+date:   2023-04-08 10:42:30
 categories: hibernate,spring,springboot,p6spy
 ---
 in build.gradle
