@@ -1,7 +1,6 @@
 ---
 layout: post
 title:  "Printing running sqls with P6spy in spring boot 3 and hibernate 6"
-date:   2023-04-08 10:42:30
 categories: hibernate,spring,springboot,p6spy
 ---
 in build.gradle
@@ -38,5 +37,4 @@ FROM pg_stat_activity
 WHERE query != '<IDLE>' AND query NOT ILIKE '%pg_stat_activity%' 
 ORDER BY query_start desc;
 ```
-oracle https://dba.stackexchange.com/questions/8828/how-do-you-show-sql-executing-on-an-oracle-database
-for mssql https://stackoverflow.com/a/941836/175554
+[oracle](https://dba.stackexchange.com/questions/8828/how-do-you-show-sql-executing-on-an-oracle-database) [for mssql](https://stackoverflow.com/a/941836/175554)
