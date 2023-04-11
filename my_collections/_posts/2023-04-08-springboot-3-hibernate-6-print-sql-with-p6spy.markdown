@@ -27,7 +27,7 @@ With this configuration application logs will appear in console. like below
 1680952494244|0|select o1_0."customer_id",o1_1."id",o1_1."create_time",o1_1."full_price",o1_1."items",o1_1."update_time",o1_1."version" from "customer_orders" o1_0 join "order" o1_1 on o1_1."id"=o1_0."orders_id" where o1_0."customer_id"=2
 1680952494246|0|select b1_0."customer_id",b1_1."id",b1_1."create_time",b1_1."items",b1_1."update_time",b1_1."version" from "customer_baskets" b1_0 join "basket" b1_1 on b1_1."id"=b1_0."baskets_id" where b1_0."customer_id"=2
 ```
-If required user can change the log format like described [here](https://github.com/p6spy/p6spy/blob/master/src/main/assembly/individualFiles/spy.properties#L101)
+If required user can change the log format like described [here](https://github.com/p6spy/p6spy/blob/master/src/main/assembly/individualFiles/spy.properties#L101), [here](https://github.com/ozkanpakdil/spring-examples/tree/master/h2-spring-transactions-p6spy) is working example project.
 
 P6spy is good for development but should not be used in production, for production every database has their own monitoring logging solution which will show what sql is running from which user.
 
