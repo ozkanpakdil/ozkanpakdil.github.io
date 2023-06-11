@@ -14,4 +14,4 @@ Icon-Name=visual-studio-code
 Selection=Any
 Extensions=dir;
 ```
-Then in files go to folder you want to open with VScoe then right click and choose open in VS Code. 
+Then in files go to folder you want to open with VScode then right click and choose open in VS Code. 
