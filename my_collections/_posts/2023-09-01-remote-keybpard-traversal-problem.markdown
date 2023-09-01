@@ -29,6 +29,7 @@ Result: RIGHT, OK, RIGHT, DOWN, OK, RIGHT, RIGTH, UP, OK (Right answer)
 
 Result: RIGHT, RIGHT, LEFT, OK, RIGHT, DOWN, OK, RIGHT, RIGTH, UP, OK (incorrect, not the shortest one)
 </pre>
+this problem can be categorized as a grid navigation or grid traversal problem 
 # Solution
 ```java
 import java.util.ArrayList;
