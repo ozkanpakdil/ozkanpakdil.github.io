@@ -4,7 +4,6 @@ title:  "Table Rollback Problem"
 date:   2023-09-20 00:00:30
 categories: algorithms
 ---
-# Table Rollback Problem
 Create a class that populates a table represented in the following way. You can think of this as a nested hash/map/dictionary structure.
 ```json
 {
