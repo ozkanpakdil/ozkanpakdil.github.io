@@ -6,7 +6,7 @@ categories: algorithms
 ---
 How to find how many characters are repeating in a string.
 ```java
- @Test
+@Test
 void anotherQ() {
     // Q1 -- given a String like aaabbbcccaa need to return output like a3b3c3a2.
     String input = "aaabbbcccazzdddxx";
