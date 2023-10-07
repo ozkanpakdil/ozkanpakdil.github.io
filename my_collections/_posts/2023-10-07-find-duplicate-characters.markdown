@@ -50,4 +50,4 @@ public static String transformString(String input) {
     return result.toString();
 }
 ```
-Check [here](https://github.com/ozkanpakdil/swaggerific/blob/main/src/test/java/com/mascix/swaggerific/algorithms/FindhighestAverage.java#L38) for full working example.
+The output is “a3b3c3a1z2d3x2” find the working code [here](https://github.com/ozkanpakdil/swaggerific/blob/main/src/test/java/com/mascix/swaggerific/algorithms/FindhighestAverage.java#L38) for full working example.
