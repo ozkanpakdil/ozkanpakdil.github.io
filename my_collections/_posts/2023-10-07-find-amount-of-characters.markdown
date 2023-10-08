@@ -5,7 +5,7 @@ date:   2023-10-07 00:00:30
 categories: algorithms
 ---
 
-How to find how many characters are repeating in a string.
+# How to find how many characters are repeating in a string.
 
 ```java
 @Test
