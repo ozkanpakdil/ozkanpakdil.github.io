@@ -396,6 +396,5 @@ oz-mint@ozmint-MACH-WX9:~/Downloads/DockFX$ mvn clean deploy
 [INFO] Finished at: 2024-03-10T13:32:01Z
 [INFO] ------------------------------------------------------------------------
 oz-mint@ozmint-MACH-WX9:~/Downloads/DockFX$ 
-
-
 ```
+now I will search how to make this happen from github action
