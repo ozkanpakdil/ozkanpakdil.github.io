@@ -4,7 +4,7 @@ title:  "How to deploy to maven central repo"
 date:   2024-03-10 00:00:30
 categories: maven
 ---
-Yesterday I found dockFX library, when I first try it did not work. Today I manage to upgrade the code to java17 and working with latest javafx21, then I wonder how to deploy this to maven central repository. Took around 3 hours, better to write this down for others.
+Yesterday I found [dockFX](https://github.com/RobertBColton/DockFX) library, when I first try it did not work. Today I manage to upgrade the [code to java17](https://github.com/ozkanpakdil/DockFX) and working with latest javafx21, then I wonder how to deploy this to maven central repository. Took around 3 hours, better to write this down for others.
 
 1. Go login to https://central.sonatype.com/account I used my gmail login and I was in.
 2. Go to https://central.sonatype.com/publishing/namespaces to create namespace, you need to create a verification repository on github if you want to use io.github.yourusername [as explained here](https://central.sonatype.org/register/central-portal/#for-code-hosting-services-with-personal-groupid)
