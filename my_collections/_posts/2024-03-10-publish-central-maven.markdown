@@ -212,6 +212,7 @@ Yesterday I found dockFX library, when I first try it did not work. Today I mana
 ```
 
 6. run mvn deploy from your local
+7. Publish it from UI ![image](https://github.com/ozkanpakdil/ozkanpakdil.github.io/assets/604405/a9b1df86-80ff-43e4-b00f-b3597730d414) takes around 2 hours
 
 For future reference below how the logs looks in my local
 ```shell
