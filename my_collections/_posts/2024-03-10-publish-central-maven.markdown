@@ -13,7 +13,7 @@ Yesterday I found [dockFX](https://github.com/RobertBColton/DockFX) library, whe
 4. Create your GPG keys and publish the, creating is easy https://central.sonatype.org/publish/requirements/gpg/#generating-a-key-pair
    - And distribute it with ```gpg --keyserver keyserver.ubuntu.com --send-keys CA925CD6C9E8D064FF05B4728190C4130ABA0F98``` explaind [here](https://central.sonatype.org/publish/requirements/gpg/#distributing-your-public-key)
 5. Copy the user token to your settings xml from https://central.sonatype.com/account that will be usedin deploy
-6. Prepare your pom xml, like below , those plugins required
+6. Prepare your [pom xml](https://github.com/ozkanpakdil/DockFX/blob/master/pom.xml), like below , those **plugins** required
 
 
 ```xml
@@ -21,23 +21,6 @@ Yesterday I found [dockFX](https://github.com/RobertBColton/DockFX) library, whe
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
     http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
-    <groupId>io.github.ozkanpakdil</groupId>
-    <artifactId>dockfx</artifactId>
-    <packaging>jar</packaging>
-    <version>0.0.4</version>
-    <name>DockFX</name>
-    <url>https://github.com/ozkanpakdil/DockFX.git</url>
-    <description>A fully featured docking library for the JavaFX platform. </description>
-
-    <properties>
-        <maven.compiler.source>17</maven.compiler.source>
-        <maven.compiler.target>17</maven.compiler.target>
-        <javafx.version>21</javafx.version>
-        <netbeans.checkstyle.format>true</netbeans.checkstyle.format>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <fileExtensions>java, properties, xml</fileExtensions>
-    </properties>
     <developers>
         <developer>
             <id>ozkanpakdil</id>
@@ -45,23 +28,6 @@ Yesterday I found [dockFX](https://github.com/RobertBColton/DockFX) library, whe
             <email>ozkan.pakdil@gmail.com</email>
         </developer>
     </developers>
-    <dependencies>
-        <dependency>
-            <groupId>org.openjfx</groupId>
-            <artifactId>javafx-web</artifactId>
-            <version>${javafx.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.openjfx</groupId>
-            <artifactId>javafx-controls</artifactId>
-            <version>${javafx.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.openjfx</groupId>
-            <artifactId>javafx-fxml</artifactId>
-            <version>${javafx.version}</version>
-        </dependency>
-    </dependencies>
 
     <build>
         <plugins>
@@ -78,44 +44,7 @@ Yesterday I found [dockFX](https://github.com/RobertBColton/DockFX) library, whe
                     </archive>
                 </configuration>
             </plugin>
-            <plugin>
-                <groupId>org.apache.felix</groupId>
-                <artifactId>maven-bundle-plugin</artifactId>
-                <version>5.1.2</version>
-                <executions>
-                    <execution>
-                        <id>bundle-manifest</id>
-                        <phase>process-classes</phase>
-                        <goals>
-                            <goal>manifest</goal>
-                        </goals>
-                    </execution>
-                </executions>
-                <configuration>
-                    <instructions>
-                        <Bundle-SymbolicName>${project.groupId}</Bundle-SymbolicName>
-                        <Bundle-Version>${project.version}</Bundle-Version>
-                        <Export-Package>org.dockfx</Export-Package>
-                        <Private-Package>org.dockfx.demo</Private-Package>
-                    </instructions>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.3</version>
-                <configuration>
-                    <encoding>${project.build.sourceEncoding}</encoding>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-resources-plugin</artifactId>
-                <version>2.7</version>
-                <configuration>
-                    <encoding>${project.build.sourceEncoding}</encoding>
-                </configuration>
-            </plugin>
+           
             <plugin>
                 <groupId>org.sonatype.central</groupId>
                 <artifactId>central-publishing-maven-plugin</artifactId>
@@ -169,34 +98,8 @@ Yesterday I found [dockFX](https://github.com/RobertBColton/DockFX) library, whe
                     </execution>
                 </executions>
             </plugin>
-
         </plugins>
     </build>
-
-    <reporting>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-project-info-reports-plugin</artifactId>
-                <version>2.8</version>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-checkstyle-plugin</artifactId>
-                <version>2.16</version>
-                <reportSets>
-                    <reportSet>
-                        <reports>
-                            <report>checkstyle</report>
-                        </reports>
-                    </reportSet>
-                </reportSets>
-                <configuration>
-                    <configLocation>google_checks.xml</configLocation>
-                </configuration>
-            </plugin>
-        </plugins>
-    </reporting>
 
     <licenses>
         <license>
