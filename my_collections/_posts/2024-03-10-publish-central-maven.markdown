@@ -14,6 +14,8 @@ Yesterday I found dockFX library, when I first try it did not work. Today I mana
    - And distribute it with ```gpg --keyserver keyserver.ubuntu.com --send-keys CA925CD6C9E8D064FF05B4728190C4130ABA0F98``` explaind [here](https://central.sonatype.org/publish/requirements/gpg/#distributing-your-public-key)
 5. Copy the user token to your settings xml from https://central.sonatype.com/account that will be usedin deploy
 6. Prepare your pom xml, like below , those plugins required
+
+
 ```xml
      <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
