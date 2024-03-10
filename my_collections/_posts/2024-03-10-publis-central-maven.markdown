@@ -209,8 +209,8 @@ Yesterday I found dockFX library, when I first try it did not work. Today I mana
     </scm>
 
 </project>
+```
 
-     ``` 
 6. run mvn deploy from your local
 
 For future reference below how the logs looks in my local
