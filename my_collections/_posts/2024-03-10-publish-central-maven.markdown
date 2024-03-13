@@ -303,4 +303,6 @@ oz-mint@ozmint-MACH-WX9:~/Downloads/DockFX$ mvn clean deploy
 [INFO] ------------------------------------------------------------------------
 oz-mint@ozmint-MACH-WX9:~/Downloads/DockFX$ 
 ```
-now I will search how to make this happen from github action
+now I will search how to make this happen from github action. 
+
+My first jar in central maven https://repo.maven.apache.org/maven2/io/github/ozkanpakdil/dockfx/ :)
