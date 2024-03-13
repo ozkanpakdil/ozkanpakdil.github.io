@@ -6,9 +6,9 @@ categories: maven
 ---
 Yesterday I found [dockFX](https://github.com/RobertBColton/DockFX) library, when I first try it did not work. Today I manage to upgrade the [code to java17](https://github.com/ozkanpakdil/DockFX) and working with latest javafx21, then I wonder how to deploy this to maven central repository. Took around 3 hours, better to write this down for others.
 
-1. Go login to https://central.sonatype.com/account I used my gmail login and I was in.
-2. Go to https://central.sonatype.com/publishing/namespaces to create namespace, you need to create a verification repository on github if you want to use io.github.yourusername [as explained here](https://central.sonatype.org/register/central-portal/#for-code-hosting-services-with-personal-groupid)
-   - ![image](https://github.com/ozkanpakdil/ozkanpakdil.github.io/assets/604405/43c16272-75c8-47e9-9c4f-2640f97879ed)
+1. Go login to [https://central.sonatype.com/account](https://central.sonatype.com/account) I used my gmail login and I was in.
+2. Go to [https://central.sonatype.com/publishing/namespaces](https://central.sonatype.com/publishing/namespaces) to create namespace, you need to create a verification repository on github if you want to use io.github.yourusername [as explained here](https://central.sonatype.org/register/central-portal/#for-code-hosting-services-with-personal-groupid)
+   - ![my maven namespace](https://github.com/ozkanpakdil/ozkanpakdil.github.io/assets/604405/43c16272-75c8-47e9-9c4f-2640f97879ed)
 
 4. Create your GPG keys and publish the, creating is easy https://central.sonatype.org/publish/requirements/gpg/#generating-a-key-pair
    - And distribute it with ```gpg --keyserver keyserver.ubuntu.com --send-keys CA925CD6C9E8D064FF05B4728190C4130ABA0F98``` explaind [here](https://central.sonatype.org/publish/requirements/gpg/#distributing-your-public-key)
@@ -117,7 +117,7 @@ Yesterday I found [dockFX](https://github.com/RobertBColton/DockFX) library, whe
 ```
 
 6. run mvn deploy from your local
-7. Publish it from UI ![image](https://github.com/ozkanpakdil/ozkanpakdil.github.io/assets/604405/a9b1df86-80ff-43e4-b00f-b3597730d414) takes around 2 hours
+7. Publish it from UI ![sonatype maven central ui](https://github.com/ozkanpakdil/ozkanpakdil.github.io/assets/604405/a9b1df86-80ff-43e4-b00f-b3597730d414) takes around 2 hours
 
 For future reference below how the logs looks in my local
 ```shell
@@ -305,4 +305,4 @@ oz-mint@ozmint-MACH-WX9:~/Downloads/DockFX$
 ```
 now I will search how to make this happen from github action. 
 
-My first jar in central maven https://repo.maven.apache.org/maven2/io/github/ozkanpakdil/dockfx/ :)
+My first jar in central maven [https://repo.maven.apache.org/maven2/io/github/ozkanpakdil/dockfx/](https://repo.maven.apache.org/maven2/io/github/ozkanpakdil/dockfx/) :)
