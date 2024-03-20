@@ -7,21 +7,23 @@ Over the years, I've been using a variety of technologies, both in my personal a
 
 Amateur
 -----------
-Coding since 1994, started in commodore 64  
-Linux enthusiast since 1999 - first distro was slackware, and used redhat between 2001 and 2004 since then debian variants, now [mint](https://linuxmint.com/)  
-CVS between 2003 - 2004 at https://sourceforge.net/projects/f4l/  
-C,CPP,[QT](https://www.qt.io/) since 2002  
-PHP under Apache since 2003
-Javascript learned in 1999
-Java learned in 2002
-MySql since 2002  
-[Varnish cache](https://varnish-cache.org/) server user since 2013  
-[New Relic](https://newrelic.com/) user since 2012  
-Github since 2011  
-Nodejs time to time code since 2018, started with [this commit](https://github.com/ozkanpakdil/popcorn-desktop/commit/723bd203fe3425a5322b7b97296525f59202479a)  
-Quarkus, Micronaut enthusiast since 2019  
-GraalVM since 2018  
-Rust since 2021  
+| Tech    | Dates |
+| --------- | ------- |
+| Coding/programming, started with commodore 64       |     since 1994     |
+| Linux enthusiast since 1999 - first distro was slackware, and used redhat between 2001 and 2004 since then debian variants, now [mint](https://linuxmint.com/)  |         |
+| CVS between         |    2003 - 2004 at https://sourceforge.net/projects/f4l/      |
+| C,CPP,[QT](https://www.qt.io/)       |   since 2002      |
+| PHP under Apache        |    since 2003     |
+| Javascript learned       |   in 1999      |
+| Java learned       |     in 2002    |
+| MySql       |    since 2002     |
+| [Varnish cache](https://varnish-cache.org/) server user       |    since 2013      |
+| [New Relic](https://newrelic.com/) user | since 2012 |
+| Github | since 2011 |
+| Nodejs time to time code  | since 2018, started with [this commit](https://github.com/ozkanpakdil/popcorn-desktop/commit/723bd203fe3425a5322b7b97296525f59202479a)    |
+| Quarkus, Micronaut enthusiast | since 2019 |
+| GraalVM | since 2018  |   
+|Rust | since 2021|
 
 Professional
 -----------
@@ -33,7 +35,9 @@ SVN between 2006 - 2018
 Java developer since 2006  
 Javascript since 2006   
 MySql between 2006 and 2008  
-IBM Websphere and DB2 wrote sql and did administration between 2008 - 2011  
+AJAX and all kind of http flips and flops and(before REST I was doing GET or POST to do many things) calls and making [SPA](https://en.wikipedia.org/wiki/Single-page_application) since 2006  
+IBM Websphere and DB2 wrote sql and did administration between 2008 - 2011 
+Websockets with [atmosphere](https://github.com/Atmosphere/atmosphere) 2010  
 Netscaler load balancer management between 2008 - 2011  
 Apache Ant between 2008 - 2011  
 Eclipse between 2008 - 2018  
