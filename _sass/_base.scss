@@ -212,6 +212,16 @@ pre {
   text-align: center;
 }
 
+table {
+  border-collapse: collapse;
+  border-color: #d0d7de;
+}
+
+table {
+  border-width: 1px;
+  border-style: solid;
+}
+
 tr:nth-of-type(even) {
   background-color: rgb(246, 248, 250);
 }
