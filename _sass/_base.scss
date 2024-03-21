@@ -223,3 +223,7 @@ pre {
 .pagination {
     text-align: center;
  }
+
+tr:nth-of-type(even) {
+    background-color:$grey-color;
+}
