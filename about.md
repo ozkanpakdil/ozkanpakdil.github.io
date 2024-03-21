@@ -16,11 +16,10 @@ Consider me a full-stack developer; I'm well-versed in all aspects of software d
 interfaces to optimizing backend performance and managing databases. With a knack for designing and delivering N-tier
 applications, Java has been my trusty companion, although I've dabbled in .NET on occasion.
 
-I have extensive experience across UI, UX, backend, database, and server-side development. Over the past 14 years, I've
-designed and delivered N-tier applications primarily in Java, with occasional forays into .NET. As a Linux enthusiast,
+I have extensive experience across backend, database, server-side development, UI, UX. As a Linux enthusiast,
 I've enjoyed coding on Linux systems since 2008, leveraging its capabilities for various projects. My encounters with
 challenges often involved the database layer, where I've honed my skills in fine-tuning kernel parameters, especially
-related to networking and TCP, for optimal performance. Additionally, I've earned the title of 'JVM bender' through my
+related to networking and TCP, for optimal performance. Additionally, I am also 'JVM bender' through my
 adeptness in configuring Oracle and IBM JVMs, particularly during the J2EE era with WebLogic and WebSphere, and more
 recently with OpenJDK, Tomcat, and Spring Boot.
 
