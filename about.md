@@ -3,72 +3,78 @@ layout: page
 title: About
 permalink: /about/
 ---
-Over the years, I've been using a variety of technologies, both in my personal and professional life. Below is a list of the tools and platforms that I've worked with so far
+
+Over the years, I've been using a variety of technologies, both in my personal and professional life. Below is a list of
+the tools and platforms that I've worked with so far
 
 Amateur
 -----------
-| Tech    | Dates |
-| --------- | ------- |
-| Coding/programming, started with commodore 64       |     since 1994     |
-| Linux enthusiast since 1999 - first distro was slackware, and used redhat between 2001 and 2004 since then debian variants, now [mint](https://linuxmint.com/)  |         |
-| CVS between         |    2003 - 2004 at https://sourceforge.net/projects/f4l/      |
-| C,CPP,[QT](https://www.qt.io/)       |   since 2002      |
-| PHP under Apache        |    since 2003     |
-| Javascript learned       |   in 1999      |
-| Java learned       |     in 2002    |
-| MySql       |    since 2002     |
-| [Varnish cache](https://varnish-cache.org/) server user       |    since 2013      |
-| [New Relic](https://newrelic.com/) user | since 2012 |
-| Github | since 2011 |
-| Nodejs time to time code  | since 2018, started with [this commit](https://github.com/ozkanpakdil/popcorn-desktop/commit/723bd203fe3425a5322b7b97296525f59202479a)    |
-| Quarkus, Micronaut enthusiast | since 2019 |
-| GraalVM | since 2018  |   
-|Rust | since 2021|
+
+| Tech                                                                                                                                                           | Dates                                                                                                                                  |
+|----------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------|
+| Coding/programming, started with commodore 64                                                                                                                  | since 1994                                                                                                                             |
+| Linux enthusiast since 1999 - first distro was slackware, and used redhat between 2001 and 2004 since then debian variants, now [mint](https://linuxmint.com/) | since 1999                                                                                                                             |
+| CVS between                                                                                                                                                    | 2003 - 2004 at https://sourceforge.net/projects/f4l/                                                                                   |
+| C,CPP,[QT](https://www.qt.io/)                                                                                                                                 | since 2002                                                                                                                             |
+| PHP under Apache                                                                                                                                               | since 2003                                                                                                                             |
+| Javascript learned                                                                                                                                             | in 1999                                                                                                                                |
+| Java learned                                                                                                                                                   | in 2002                                                                                                                                |
+| MySql                                                                                                                                                          | since 2002                                                                                                                             |
+| [Varnish cache](https://varnish-cache.org/) server user                                                                                                        | since 2013                                                                                                                             |
+| [New Relic](https://newrelic.com/) user                                                                                                                        | since 2012                                                                                                                             |
+| Github                                                                                                                                                         | since 2011                                                                                                                             |
+| Nodejs time to time code                                                                                                                                       | since 2018, started with [this commit](https://github.com/ozkanpakdil/popcorn-desktop/commit/723bd203fe3425a5322b7b97296525f59202479a) |
+| Quarkus, Micronaut enthusiast                                                                                                                                  | since 2019                                                                                                                             |
+| GraalVM                                                                                                                                                        | since 2018                                                                                                                             |   
+| Rust                                                                                                                                                           | since 2021                                                                                                                             |
 
 Professional
 -----------
-Started with C#, VB6, IIS, MSSQL between 2004 and 2008  
-TSQL with MSSQL in 2004    
-SQL since 2005  
-Bash scripter since 2006  
-SVN between 2006 - 2018  
-Java developer since 2006  
-Javascript since 2006   
-MySql between 2006 and 2008  
-AJAX and all kind of http flips and flops and(before REST I was doing GET or POST to do many things) calls and making [SPA](https://en.wikipedia.org/wiki/Single-page_application) since 2006  
-IBM Websphere and DB2 wrote sql and did administration between 2008 - 2011 
-Websockets with [atmosphere](https://github.com/Atmosphere/atmosphere) 2010  
-Netscaler load balancer management between 2008 - 2011  
-Apache Ant between 2008 - 2011  
-Eclipse between 2008 - 2018  
-Apache httpd user since 2006 with and without weblogic module and proxy module   
-PostgreSql PL/pgSQL between 2008-2011 and 2018-2020   
-Spring framework and hibernate coder since 2008   
-Jquery since 2010  
-Oracle DB sql coder/fine tuning since 2011   
-Maven since 2011  
-Atlassian Jira user since 2011    
-[Junit](https://junit.org/) since 2011  
-[Artifactory](https://jfrog.com/artifactory/) user since 2011 (called APIs for spring boot project between 2018 - 2020)                
-Spring boot since 2017  
-[Oracle Coherence](https://www.oracle.com/uk/java/coherence/) between 2012-2015  
-For CI/CD jenkins since 2012  
-Splunk log monitoring since 2012   
-SonarCube for scanning the code since 2012  
-Bitbucket user for git repo since 2015  
-Fortify for code scanning between 2012-2015    
-Weblogic administration/fine tuning between 2012 - 2019  
-Intellij IDEA user since 2018  
-[Salt Stack](https://saltproject.io/) used in 2018  
-Snyk user since 2018   
-[Ansible](https://www.ansible.com/) since 2018  
-[ServiceNow](https://www.servicenow.com/) used since 2015 and used its [API](https://docs.servicenow.com/bundle/sandiego-application-development/page/build/applications/concept/api-rest.html) in 2019 for a jira integration project   
-Atlassian Jira and Bitbucket APIs between 2018 - 2020 in Credit Suisse in Odyssey   
-[Grails](https://grails.org/) with **groovy** used between 2018 - 2020 in Credit Suisse in Odyssey   
-[Cucumber BDD](https://cucumber.io/) since 2020   
-Prometheus monitoring since 2020   
-Kubernetes user since 2020 and [CKAD](https://github.com/ozkanpakdil/ozkanpakdil/files/9477123/ozkan-pakdil-5ed7d355-8547-4c8f-b0f1-7ff21a3fcfda-certificate.pdf) since 2022   
-[Cypress](https://www.cypress.io/) since 2022   
-[React](https://reactjs.org/) since 2022   
+
+| Tech                                                                                                                                                                                                                                   | Dates                                           |
+|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------|
+| Started with C#, VB6, IIS, MSSQL                                                                                                                                                                                                       | between 2004 and 2008                           |
+| TSQL with MSSQL                                                                                                                                                                                                                        | in 2004                                         |
+| SQL                                                                                                                                                                                                                                    | since 2005                                      |
+| SVN                                                                                                                                                                                                                                    | between 2006 - 2018                             |
+| Java developer                                                                                                                                                                                                                         | since 2006                                      |
+| Javascript                                                                                                                                                                                                                             | since 2006                                      |
+| MySql                                                                                                                                                                                                                                  | between 2006 and 2008                           |
+| AJAX and all kind of http flips and flops and(before REST I was doing GET or POST to do many things) calls and making [SPA](https://en.wikipedia.org/wiki/Single-page_application)                                                     | since 2006                                      |
+| IBM Websphere and DB2 wrote sql and did administration                                                                                                                                                                                 | between 2008 - 2011                             |
+| Websockets with [atmosphere](https://github.com/Atmosphere/atmosphere)                                                                                                                                                                 | in 2011                                         |
+| Netscaler load balancer management                                                                                                                                                                                                     | between 2008 - 2011                             |
+| Apache Ant                                                                                                                                                                                                                             | between 2008 - 2011                             |
+| Eclipse IDE                                                                                                                                                                                                                            | between 2008 - 2018                             |
+| Apache httpd user  with and without weblogic module and proxy module                                                                                                                                                                   | since 2006                                      |   
+| PostgreSql PL/pgSQL                                                                                                                                                                                                                    | between 2008-2011 and 2018-2020                 |   
+| Spring framework and hibernate coder                                                                                                                                                                                                   | since 2008                                      |   
+| Jquery                                                                                                                                                                                                                                 | since 2010                                      |  
+| Oracle DB sql coder/fine tuning                                                                                                                                                                                                        | since 2011                                      |   
+| Maven                                                                                                                                                                                                                                  | since 2011                                      |  
+| Atlassian Jira user                                                                                                                                                                                                                    | since 2011                                      |    
+| [Junit](https://junit.org/)                                                                                                                                                                                                            | since 2011                                      | 
+| [Artifactory](https://jfrog.com/artifactory/) user since 2011 (called APIs for spring boot project                                                                                                                                     | between 2018 - 2020                             |                
+| Spring boot                                                                                                                                                                                                                            | since 2017                                      |  
+| [Oracle Coherence](https://www.oracle.com/uk/java/coherence/)                                                                                                                                                                          | between 2012-2015                               |  
+| For CI/CD jenkins                                                                                                                                                                                                                      | since 2012                                      | 
+| Splunk log monitoring                                                                                                                                                                                                                  | since 2012                                      |   
+| SonarCube for scanning the code                                                                                                                                                                                                        | since 2012                                      |  
+| Bitbucket user for git repo                                                                                                                                                                                                            | since 2015                                      |  
+| Fortify for code scanning                                                                                                                                                                                                              | between 2012-2015                               |    
+| Weblogic administration/fine tuning                                                                                                                                                                                                    | between 2012 - 2019                             |  
+| Intellij IDEA user                                                                                                                                                                                                                     | since 2018                                      |  
+| [Salt Stack](https://saltproject.io/) used for code as infrastructure                                                                                                                                                                  | in 2018                                         |  
+| Snyk user                                                                                                                                                                                                                              | since 2018                                      |   
+| [Ansible](https://www.ansible.com/)                                                                                                                                                                                                    | since 2018                                      |
+| [ServiceNow](https://www.servicenow.com/) used since 2015 and used its [API](https://docs.servicenow.com/bundle/sandiego-application-development/page/build/applications/concept/api-rest.html) in 2019 for a jira integration project | since 2015                                      |   
+| Atlassian Jira and Bitbucket APIs                                                                                                                                                                                                      | between 2018 - 2020 in Credit Suisse in Odyssey |   
+| [Grails](https://grails.org/) with **groovy** used                                                                                                                                                                                     | between 2018 - 2020 in Credit Suisse in Odyssey |   
+| [Cucumber BDD](https://cucumber.io/)                                                                                                                                                                                                   | since 2020                                      |
+| Prometheus monitoring                                                                                                                                                                                                                  | since 2020                                      |   
+| Kubernetes user since 2020 and [CKAD](https://github.com/ozkanpakdil/ozkanpakdil/files/9477123/ozkan-pakdil-5ed7d355-8547-4c8f-b0f1-7ff21a3fcfda-certificate.pdf)                                                                      | since 2022                                      |   
+| [Cypress](https://www.cypress.io/)                                                                                                                                                                                                     | since 2022                                      |
+| [React](https://reactjs.org/)                                                                                                                                                                                                          | since 2022                                      |
+| [Angular](https://angular.io/)                                                                                                                                                                                                         | since 2022                                      |
 
 you can find all my repositiries [here](https://github.com/ozkanpakdil) 
