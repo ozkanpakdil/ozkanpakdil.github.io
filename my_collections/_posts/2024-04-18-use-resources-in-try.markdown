@@ -6,14 +6,13 @@ categories: java, try
 ---
 I wrote a small piece of code to do some pdf encryption with openpdf, and intellij`s sonarlint was complaining about "Resources should be closed" more details [here](https://docs.oracle.com/javase/tutorial/essential/exceptions/tryResourceClose.html)
 
-<table>
-<tr><td>non-compliant old code</td><td>compliant code</td></tr>
-<tr><td>
+# non compliant
+
 ```java
 public class PasswordProtectedPDF {
     private static final Logger logger = Logger.getLogger(PasswordProtectedPDF.class.getName());
-    static final String USER_PASSWORD = "27042020";
-    static final String OWNER_PASSWORD = "27042020";
+    static final String USER_PASSWORD = "111";
+    static final String OWNER_PASSWORD = "111";
 
     public static void main(String[] args) {
         try {
@@ -39,12 +38,13 @@ public class PasswordProtectedPDF {
     }
 }
 ```
-</td><td>
+
+# Compliant
 ```java
 public class PasswordProtectedPDF {
     private static final Logger logger = Logger.getLogger(PasswordProtectedPDF.class.getName());
-    static final String USER_PASSWORD = "27042020";
-    static final String OWNER_PASSWORD = "27042020";
+    static final String USER_PASSWORD = "111";
+    static final String OWNER_PASSWORD = "111";
 
     public static void main(String[] args) {
         try (
@@ -69,7 +69,8 @@ public class PasswordProtectedPDF {
     }
 }
 ```
-</td></tr>
+
+
 just a reminder we can define multiple resources in try block
 ```java
 try (
@@ -77,4 +78,4 @@ try (
                 PdfReader reader = new PdfReader(new File("1.pdf").getPath())
         )
 ```
-</table>
+find full working example [here](https://github.com/ozkanpakdil/java-examlpes/tree/master/pdf-edit)
