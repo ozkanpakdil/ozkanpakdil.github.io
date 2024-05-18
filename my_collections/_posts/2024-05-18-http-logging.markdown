@@ -6,6 +6,10 @@ categories: java, springboot
 ---
 In Spring boot(SB) 2 the configuration was different, now in SB3 we need to configure the rest client differently. Before SB3 there was RestTemplate now there is new Rest api coming in spring world. Find more details [here](https://spring.io/blog/2023/07/13/new-in-spring-6-1-restclient).
 
+Adding the required dependency which will do the real http logging here.
+```gradle
+    implementation 'org.apache.httpcomponents.client5:httpclient5:5.3.1'
+```
 The big difference is properties configuration, it is changed and not documented on spring site
 ```properties
 logging.level.org.apache.hc.client5.http.wire=DEBUG
