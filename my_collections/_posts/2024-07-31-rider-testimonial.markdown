@@ -1,9 +1,10 @@
 ---
-layout: page
-title: Rider Testimonial
+layout: post
+title:  "Rider Testimonial"
+date:   2024-07-31 00:00:30
 permalink: /ridertestimonial/
+categories: rider
 ---
-
 I used eclipse 10 years and moved to IntelliJ in 2017 since then no turning back, a true Java IDE, perfect refactoring also any editing capabilities, and in 2024 I moved to [Redgate Monitor](https://www.red-gate.com/products/redgate-monitor/) and C# after 18 years of Java I was scared but thanks to JetBrains Rider, when I open the Rider it asked me what shortcut set do I choose, and there was IntelliJ option, I chose it and jumped into the code and adoption time was incredible, in days I understand how is the structure (over 180 projects under multiple solution and thousands of classes/files) and started contributing the project.
 
 I am also an open source developer and use IntelliJ and all products in my personal time, and it has been a pleasure to work with JetBrains, thank you for the great product, and please keep up the good work.
