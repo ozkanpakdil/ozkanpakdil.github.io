@@ -2,7 +2,8 @@
 layout: post
 title:  "Add Jetbrains Fleet to right click context menu in windows 11"
 date:   2024-07-15 00:00:30
-categories: fleet
+tags:
+    - fleet
 ---
 Jetbrains fleet is a new editor, it is kind of vscode competitor, and little bit faster then other IDEA and VScode so I wanted to ahve it in the context menu.
 
