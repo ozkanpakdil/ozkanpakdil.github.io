@@ -16,7 +16,4 @@ True way to pinpoint the which thread is eating up the CPU
 
 Those 30 seconds may change application to application it can be parametrized and go up to 5 minute or 10 minutes.
 
-So I wrote [this code](https://github.com/ozkanpakdil/dotnet-examples/tree/main/GCDumper) to prepare a zip from server, now customer can send that to support and it will be easier to investigate.
-
-Reference
-- https://stackoverflow.com/a/78975760/175554
+So I wrote [this code](https://github.com/ozkanpakdil/dotnet-examples/tree/main/GCDumper) to prepare a zip from server, now customer can send that to support and it will be easier to investigate. Also check [this answer](https://stackoverflow.com/a/78975760/175554) for different tools to do dmp reading or debugging.
