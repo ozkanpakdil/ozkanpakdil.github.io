@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "How to collect dmp files"
+title:  "How to collect dmp files in dotnet"
 date:   2024-09-12 00:00:30
 categories: dotnet
 ---
