@@ -39,4 +39,4 @@ This needed to change to json for me to parse it and show it better in rider deb
 ```
 Now I have the json debug log, all I needed was to remove appinsights from Socolin's plugin and parse the opentelemetry json and show it in the debug window.
 
-Check the video or screen shot at https://plugins.jetbrains.com/plugin/25499-opentelemetry-debug-log-viewer 
+Check [the video](https://youtu.be/8bd1T4F2Vik) or screen shot at [here](https://plugins.jetbrains.com/plugin/25499-opentelemetry-debug-log-viewer) 
