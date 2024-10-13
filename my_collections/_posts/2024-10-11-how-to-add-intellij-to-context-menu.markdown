@@ -2,7 +2,7 @@
 layout: post
 title: "How to add intellij community edition to right click menu on win 11"
 date: 2024-10-11 00:00:30
-categories: Jetbrains
+categories: [Jetbrains]
 ---
 
 How can one add intellij cpmmunity edition to right click menu on win 11?

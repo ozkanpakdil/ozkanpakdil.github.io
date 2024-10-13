@@ -2,7 +2,7 @@
 layout: post
 title: "How to publish JetBrains Rider plugin for opentelemetry/honeycomb"
 date: 2024-10-06 00:00:30
-categories: dotnet, java, opentelemetry
+categories: [dotnet, java, opentelemetry]
 ---
 I had the chance to work with honeycomb.io 2 weeks ago, mainly I was changing the code which sends data too appinsights azre now needed to send data to honeycomb too. It was not too complex but it is hard to catch those
 log lines and make sure if we called the endpoint correctly and what data we sent. There is wonderful plugin for that for appinsights https://github.com/Socolin/ApplicationInsightsRiderPlugin but there was no plugin whcih can show opentelemetry calls, yes honeycomb.io uses OTEL protocol meaning opentelemetry which is kind of industry standard now for observability.
