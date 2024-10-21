@@ -34,7 +34,7 @@ Yesterday I found [dockFX](https://github.com/RobertBColton/DockFX) library, whe
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
-                <version>3.0.0</version>
+                <version>3.4.2</version>
                 <configuration>
                     <archive>
                         <manifestFile>target/classes/META-INF/MANIFEST.MF</manifestFile>
@@ -48,7 +48,7 @@ Yesterday I found [dockFX](https://github.com/RobertBColton/DockFX) library, whe
             <plugin>
                 <groupId>org.sonatype.central</groupId>
                 <artifactId>central-publishing-maven-plugin</artifactId>
-                <version>0.4.0</version>
+                <version>0.6.0</version>
                 <extensions>true</extensions>
                 <configuration>
                     <publishingServerId>central</publishingServerId>
@@ -58,7 +58,7 @@ Yesterday I found [dockFX](https://github.com/RobertBColton/DockFX) library, whe
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-gpg-plugin</artifactId>
-                <version>1.6</version>
+                <version>3.2.5</version>
                 <executions>
                     <execution>
                         <id>sign-artifacts</id>
@@ -75,7 +75,7 @@ Yesterday I found [dockFX](https://github.com/RobertBColton/DockFX) library, whe
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-source-plugin</artifactId>
-                <version>2.2.1</version>
+                <version>3.3.1</version>
                 <executions>
                     <execution>
                         <id>attach-sources</id>
@@ -88,7 +88,7 @@ Yesterday I found [dockFX](https://github.com/RobertBColton/DockFX) library, whe
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-javadoc-plugin</artifactId>
-                <version>2.9.1</version>
+                <version>3.10.0</version>
                 <executions>
                     <execution>
                         <id>attach-javadocs</id>
