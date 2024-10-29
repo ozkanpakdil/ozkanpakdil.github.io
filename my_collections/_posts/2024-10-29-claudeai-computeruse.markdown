@@ -28,3 +28,5 @@ PORT=8080
 
 I like the direction but it is not there yet.
 ![Google cookie dialog not passed](https://github.com/user-attachments/assets/4a81cde5-29db-4099-a779-490165aee095)
+
+In case you ave error on docker run in windows chere [here](https://github.com/anthropics/anthropic-quickstarts/issues/123#issuecomment-2442907736).
