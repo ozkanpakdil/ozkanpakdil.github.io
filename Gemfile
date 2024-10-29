@@ -1,3 +1,5 @@
 source "https://rubygems.org"
 gem "jemoji"
 gem "jekyll-paginate"
+gem "liquid"
+gem "webrick"

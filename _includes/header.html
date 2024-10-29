@@ -1,48 +1,46 @@
 <header class="site-header">
 
-  <div class="wrapper">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="{{ site.baseurl }}/">{{ site.title }}</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+        <a class="navbar-brand" href="{{ site.baseurl }}/">{{ site.title }}</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          {% for page in site.pages %}
-          {% if page.title %}
-          <li class="nav-item">
-            <a class="nav-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
-          </li>
-          {% endif %}
-          {% endfor %}
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-              aria-haspopup="true" aria-expanded="false">Microservice framework tests</a>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                {% for page in site.pages %}
+                {% if page.title %}
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+                </li>
+                {% endif %}
+                {% endfor %}
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false">Microservice framework tests</a>
 
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              {% for collection in site.collections %}
-              {% if collection.label == 'microservicetests' %}
-              {% assign items = site[collection.label] | reverse %}
-              {% for item in items limit:10 %}
-              <a class="dropdown-item d-flex align-items-center text-truncate" href="{{ item.url }}">
-                {{ item.title  | 
-                  replace:'Java microservice framework tests in ','' | 
-                  replace:'.Final','' | 
-                  replace:'openjdk version','jdk' | 
-                  replace:'.RELEASE',''
-                }}
-              </a>
-              {% endfor %}
-              {%endif%}
-              {% endfor %}
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        {% for collection in site.collections %}
+                        {% if collection.label == 'microservicetests' %}
+                        {% assign items = site[collection.label] | reverse %}
+                        {% for item in items limit:10 %}
+                        <a class="dropdown-item d-flex align-items-center text-truncate" href="{{ item.url }}">
+                            {{ item.title |
+                            replace:'Java microservice framework tests in ','' |
+                            replace:'.Final','' |
+                            replace:'openjdk version','jdk' |
+                            replace:'.RELEASE',''
+                            }}
+                        </a>
+                        {% endfor %}
+                        {%endif%}
+                        {% endfor %}
 
-            </div>
-          </li>
-        </ul>
-      </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
 
     </nav>
-  </div>
 </header>
