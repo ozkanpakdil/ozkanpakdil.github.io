@@ -399,7 +399,7 @@ rustc 1.81.0 (eeb90cda1 2024-09-04)
 ***  
 ## GraalVM Native Binaries Sizes:
 
-| Size in MB | Name |
+| Size in MB |  Name |
 |------------|-------|
 | 61 | quarkus-demo-runner |
 | 80 | micronaut-demo |
@@ -408,6 +408,8 @@ rustc 1.81.0 (eeb90cda1 2024-09-04)
 | 60 | vertx-demo |
 | 50 | helidon-quickstart-se |
 | 78 | ktor-demo |
+
+
 [source code for the java and dotnet tests](https://github.com/ozkanpakdil/test-microservice-frameworks)  :point_left: [source code for the rust tests](https://github.com/ozkanpakdil/rust-examples)  :point_left: [github action](https://github.com/ozkanpakdil/test-microservice-frameworks/actions/runs/11653018887)  :point_left: 
 
 <script src="https://www.gstatic.com/charts/loader.js"></script>
