@@ -2,7 +2,7 @@
 layout: post
 title:  'Java microservice framework tests in SB:3.3.5 Q:3.16.1 M:4.6.3 V:4.5.10 H:4.1.3 Dotnet:6,7,8 openjdk version "23.0.1" 2024-10-15 rustc 1.81.0 (eeb90cda1 2024-09-04)'
 date:   2024-11-03 16:43:50
-categories: [java,rust,fasterxml,json,Linux fv-az1535-978 6.5.0-1025-azure #26~22.04.1-Ubuntu SMP Thu Jul 11 22:33:04 UTC 2024 x86_64 x86_64 x86_64 GNU/Linux]
+categories: [java,rust,fasterxml,json,'Linux fv-az1535-978 6.5.0-1025-azure #26~22.04.1-Ubuntu SMP Thu Jul 11 22:33:04 UTC 2024 x86_64 x86_64 x86_64 GNU/Linux']
 ---
 In Linux fv-az1535-978 6.5.0-1025-azure #26~22.04.1-Ubuntu SMP Thu Jul 11 22:33:04 UTC 2024 x86_64 x86_64 x86_64 GNU/Linux,
 Below is total package generation times for separate modules,
