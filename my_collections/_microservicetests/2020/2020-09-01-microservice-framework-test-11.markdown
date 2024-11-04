@@ -6,7 +6,6 @@ categories: java,fasterxml,json
 --- 
 Here is total package generation times for separate modules,
 {% highlight bash %}
-
 [INFO] micronaut-demo 0.1 ................................. SUCCESS [ 37.413 s]
 [INFO] quarkus-demo 1.0.0-SNAPSHOT ........................ SUCCESS [ 46.027 s]
 [INFO] springboot-demo 0.0.1-SNAPSHOT ..................... SUCCESS [ 11.241 s]

@@ -7,7 +7,6 @@ categories: [java,rust,fasterxml,json,'Linux fv-az1535-978 6.5.0-1025-azure #26~
 In Linux fv-az1535-978 6.5.0-1025-azure #26~22.04.1-Ubuntu SMP Thu Jul 11 22:33:04 UTC 2024 x86_64 x86_64 x86_64 GNU/Linux,
 Below is total package generation times for separate modules,
 {% highlight bash %}
-
 [INFO] eclipse-microprofile-kumuluz-test 4.1.0 ............ SUCCESS [  7.635 s]
 [INFO] helidon-quickstart-se 4.1.3 ........................ SUCCESS [  6.896 s]
 [INFO] ktor-demo 3.0.1-kotlin-2.0.21 ...................... SUCCESS [ 10.969 s]

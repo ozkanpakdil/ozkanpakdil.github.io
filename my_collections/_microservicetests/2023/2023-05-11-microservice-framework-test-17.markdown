@@ -7,7 +7,6 @@ categories: java,rust,fasterxml,json,Linux fv-az618-640 5.15.0-1037-azure #44-Ub
 In Linux fv-az618-640 5.15.0-1037-azure #44-Ubuntu SMP Thu Apr 20 13:19:31 UTC 2023 x86_64 x86_64 x86_64 GNU/Linux,
 Below is total package generation times for separate modules,
 {% highlight bash %}
-
 [INFO] eclipse-microprofile-kumuluz-test 1.0-SNAPSHOT ..... SUCCESS [ 21.640 s]
 [INFO] helidon-quickstart-se 1.0-SNAPSHOT ................. SUCCESS [ 28.230 s]
 [INFO] ktor-demo 1.0.1-SNAPSHOT ........................... SUCCESS [ 29.092 s]

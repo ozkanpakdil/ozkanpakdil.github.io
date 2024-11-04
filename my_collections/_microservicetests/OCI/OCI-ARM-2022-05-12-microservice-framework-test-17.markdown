@@ -6,7 +6,6 @@ categories: java,rust,fasterxml,json
 ---
 Here is total package generation times for separate modules,
 {% highlight bash %}
-
 [INFO] eclipse-microprofile-kumuluz-test 1.0-SNAPSHOT ..... SUCCESS [ 22.932 s]
 [INFO] helidon-quickstart-se 1.0-SNAPSHOT ................. SUCCESS [ 30.731 s]
 [INFO] micronaut-demo 0.1 ................................. SUCCESS [ 29.300 s]

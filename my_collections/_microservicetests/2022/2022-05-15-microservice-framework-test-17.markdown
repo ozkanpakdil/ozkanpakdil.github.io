@@ -6,7 +6,6 @@ categories: java,rust,fasterxml,json,Linux fv-az453-250 5.13.0-1022-azure #26~20
 ---
 In Linux fv-az453-250 5.13.0-1022-azure #26~20.04.1-Ubuntu SMP Thu Apr 7 19:42:45 UTC 2022 x86_64 x86_64 x86_64 GNU/Linux, Here is total package generation times for separate modules,
 {% highlight bash %}
-
 [INFO] eclipse-microprofile-kumuluz-test 1.0-SNAPSHOT ..... SUCCESS [ 25.088 s]
 [INFO] helidon-quickstart-se 1.0-SNAPSHOT ................. SUCCESS [ 38.954 s]
 [INFO] micronaut-demo 0.1 ................................. SUCCESS [ 35.789 s]

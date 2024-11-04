@@ -6,7 +6,6 @@ categories: java,rust,fasterxml,json,Linux githubrunner-0 5.4.17-2136.305.5.3.el
 ---
 In Linux githubrunner-0 5.4.17-2136.305.5.3.el8uek.aarch64 #2 SMP Thu Mar 17 11:08:12 PDT 2022 aarch64 aarch64 aarch64 GNU/Linux, Here is total package generation times for separate modules,
 {% highlight bash %}
-
 [INFO] eclipse-microprofile-kumuluz-test 1.0-SNAPSHOT ..... SUCCESS [ 19.505 s]
 [INFO] helidon-quickstart-se 1.0-SNAPSHOT ................. SUCCESS [ 27.192 s]
 [INFO] ktor-demo 1.0.1-SNAPSHOT ........................... SUCCESS [ 38.219 s]
