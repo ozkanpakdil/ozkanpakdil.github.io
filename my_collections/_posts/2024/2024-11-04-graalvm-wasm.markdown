@@ -8,8 +8,8 @@ categories: [graalvm,spring-boot]
 
 And WASM is getting popular day by day, WASM is a new binary file for web. There are many cool examples of WASM
 
-- https://github.com/stepstone-tech/doom-graalvm
-- https://github.com/electric-sql/pglite
+- [Doom game in the browser with graalvm](https://github.com/stepstone-tech/doom-graalvm)
+- [Postgres database in the browser](https://github.com/electric-sql/pglite)
 
 I was wondering how to run WASM code in simple spring boot application,
 ```java
@@ -26,15 +26,17 @@ public String addTwo() {
     }
 }
 ```
-It is not much but very good starting point how to run WASM from java with GraalVM. Find full running code [here](https://github.com/ozkanpakdil/spring-examples/blob/master/wasmdemo/readme.md)
+It is not much but very good starting point how to run WASM from java with #GraalVM. Find full running code [here](https://github.com/ozkanpakdil/spring-examples/blob/master/wasmdemo/readme.md)
 
 How looks in the browser
+
 ![wasm returned from graalvm in browser](https://github.com/user-attachments/assets/36b1b221-1b02-4ed3-a5a1-903b322d9de6)
 
 If we check how wasm file described in bash
+
 ![file wasm in bash](https://github.com/user-attachments/assets/f26ff1df-fde2-4f86-9fe9-84c4f8b01547)
 
 
 References:
-- https://dev.to/zenstack/what-are-people-building-with-webassembly-2eh4
-- https://webassembly.org/
+- [Nice Blog Showing How Other People Use WASM](https://dev.to/zenstack/what-are-people-building-with-webassembly-2eh4)
+- [Main WASM Page](https://webassembly.org/)
