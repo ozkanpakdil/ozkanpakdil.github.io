@@ -4,7 +4,7 @@ title: "Graalvm to run wasm from spring boot"
 date: 2024-11-04 00:00:30
 categories: [graalvm,spring-boot]
 ---
-[Graalvm](https://www.graalvm.org/) is AOT compilation advanced JDK, I am following the project since 2019, Project's first target was AOT now lately I start seeing more about multi language support. IIt supports Python, JS, Ruby, Wasm more details [here](https://www.graalvm.org/latest/reference-manual/languages/)
+[Graalvm](https://www.graalvm.org/) is AOT compilation advanced JDK, I am following the project since 2019, Project's first target was AOT now lately I start seeing more about multi language support. It supports Python, JS, Ruby, Wasm more details [here](https://www.graalvm.org/latest/reference-manual/languages/)
 
 And WASM is getting popular day by day, WASM is a new binary file for web. There are many cool examples of WASM
 
