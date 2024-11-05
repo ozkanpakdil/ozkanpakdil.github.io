@@ -59,11 +59,13 @@
 
     const searchBox = document.getElementById('search-box');
     const searchTerm = getQuery('query');
+	if(!searchBox.value)
+		searchBox.value=searchTerm;
 
     if (window.store != null)
         doSearch(searchTerm);
 
-    if (window.store != null && window.location.href.indexOf('/search/'))
+    if (window.store != null && window.location.href.indexOf('/search.html'))
         searchBox.addEventListener('keyup', function (event) {
             doSearch(this.value);
         });

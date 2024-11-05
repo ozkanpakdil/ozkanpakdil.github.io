@@ -14,7 +14,7 @@ title: Search Results
         "date":  {{ post.date | date: "%b %-d, %Y" | jsonify}},
         "author": "{{ post.author | xml_escape }}",
         "category": "{{ post.category | xml_escape }}",
-        "content": {{ post.content | strip_html | strict_url_encode | strip_newlines | jsonify }},
+        "content": {{ post.content | strip_html | slice: 0, 100 | jsonify }},
         "url": "{{ post.url | xml_escape }}"
       }
       {% unless forloop.last %},{% endunless %}
