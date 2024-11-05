@@ -4,7 +4,7 @@ title: "How to Use Lunr.js for Searching in a Jekyll Blog"
 date: 2024-11-04 00:00:30
 categories: [lunr, jekyll]
 ---
-I have been using [Google Programmable Search Engine](https://programmablesearchengine.google.com/controlpanel/all) to test search functionality on my blog, but I found that it doesn’t work quite as I expected. First, I tried Bing and DuckDuckGo as alternatives, but none of them performed as desired. DuckDuckGo’s API is nice, but it lacks a 'site:' filter, which prevented it from working as needed.
+I have been using [Google Programmable Search Engine](https://programmablesearchengine.google.com/controlpanel/all) on my blog, but I found that it doesn’t work quite as I expected. First, I tried Bing and DuckDuckGo as alternatives, but none of them performed as desired. DuckDuckGo’s API is nice, but it lacks a 'site:' filter, which prevented it from working as needed.
 
 Here are the steps to set up a Jekyll search system using Lunr.js for GitHub Pages(github.io):
 1. Create `js/search.js` and add [this code](https://github.com/ozkanpakdil/ozkanpakdil.github.io/blob/master/js/search.js)
