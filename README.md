@@ -39,5 +39,5 @@ graph TD
 
 local jekyll test
 ```shell
-bundle exec jekyll serve
+bundle exec jekyll serve --trace --livereload --force-polling
 ```

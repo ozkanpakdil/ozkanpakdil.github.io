@@ -10,15 +10,16 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 {% for page in site.pages %}
-                {% if page.title %}
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
-                </li>
-                {% endif %}
+                    {% if page.title and page.title != "Search Results" %}
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+                        </li>
+                    {% endif %}
                 {% endfor %}
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                       aria-haspopup="true" aria-expanded="false">Microservice framework tests</a>
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Microservice framework
+                        tests</a>
 
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         {% for collection in site.collections %}
@@ -37,6 +38,14 @@
                         {%endif%}
                         {% endfor %}
 
+                    </div>
+                </li>
+                <li class="nav-item my-auto">
+                    <div class="header-search">
+                        <form class="header-search-form" action="/search/" method="get">
+                            <input type="text" id="search-box" name="query">
+                            <input type="submit" value="search">
+                        </form>
                     </div>
                 </li>
             </ul>
