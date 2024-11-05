@@ -10,7 +10,8 @@ Here are the steps to set up a Jekyll search system using Lunr.js for GitHub Pag
 1. Create `js/search.js` and add [this code](https://github.com/ozkanpakdil/ozkanpakdil.github.io/blob/master/js/search.js)
 2. Add [search.md](https://raw.githubusercontent.com/ozkanpakdil/ozkanpakdil.github.io/refs/heads/master/search.md) to the root of your project.
 3. Add an HTML form where you like
-```html
+
+```
 <li class="nav-item my-auto">
 	<div class="header-search">
 		<form class="header-search-form" action="/search.html" method="get">
