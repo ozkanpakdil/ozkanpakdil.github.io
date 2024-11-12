@@ -4,7 +4,7 @@ title: "FFM (Foreign Function and Memory) Stdlib Example"
 date: 2024-11-07 00:00:30
 categories: [java,jni]
 ---
-FFM is the new API trying to replace JNI and jep is [here](https://openjdk.org/jeps/434) It is basically calling calling functions outside of JVM or accessing memory not managed by JVM. I wanted to test can FFM beat regular Java API, below you can find a simple test doing math sin with FFM and with regular `Math.sin`
+FFM is the new API trying to replace JNI and jep is [here](https://openjdk.org/jeps/434) It is basically calling functions outside of JVM or accessing memory not managed by JVM. I wanted to test can FFM beat regular Java API, below you can find a simple test doing math sin with FFM and with regular `Math.sin`
 
 ```java
 import java.lang.foreign.FunctionDescriptor;
