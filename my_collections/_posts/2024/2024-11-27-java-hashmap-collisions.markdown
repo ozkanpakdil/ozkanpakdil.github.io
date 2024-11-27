@@ -56,8 +56,6 @@ There is eclipse collections which is famous for performance of datastructures
 
 ![jcf eclipse collections explanation table](https://github.com/eclipse-collections/eclipse-collections/raw/master/docs/containerCompare.png)
 
-Future ideas [check](https://github.com/eclipse-collections/eclipse-collections/blob/master/docs/2-Collection_Containers.adoc#mutablemap) compare MutableMap to HashMap, make benchmarks.
-
-[Source code](https://github.com/eclipse-collections/eclipse-collections/blob/6256e7c298a2bb7a839c2b5941416a3f8795cf5a/eclipse-collections-api/src/main/java/org/eclipse/collections/api/map/MutableMap.java#L2)
+Future ideas [check](https://github.com/eclipse-collections/eclipse-collections/blob/master/docs/2-Collection_Containers.adoc#mutablemap) compare MutableMap to HashMap, make benchmarks.[MutableMap Source code](https://github.com/eclipse-collections/eclipse-collections/blob/6256e7c298a2bb7a839c2b5941416a3f8795cf5a/eclipse-collections-api/src/main/java/org/eclipse/collections/api/map/MutableMap.java#L2)
 
 Fun fact the code is licensed under eclipse public license and it is first developed by `Goldman Sachs` and turned to open source at 2012 read more [here](https://eclipse.dev/collections/)
