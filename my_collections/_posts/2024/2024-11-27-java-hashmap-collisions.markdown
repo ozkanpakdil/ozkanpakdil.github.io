@@ -5,7 +5,7 @@ date: 2024-11-27 00:00:30
 categories: [java]
 ---
 I was thinking on this question `How does HashMap handle collisions internally? What changes were introduced in Java 8 for its implementation?` 
-and reading https://www.baeldung.com/java-hashmap-advanced says
+and reading [this blog](https://www.baeldung.com/java-hashmap-advanced) says
 > On a final note, from Java 8, the linked lists are dynamically replaced with balanced binary search trees in collision resolution after the number of collisions in a given bucket location exceed a certain threshold.
 
 Than I wonder how it works and went and found the [source code of hash map](https://github.com/openjdk/jdk/blob/9527586923d1e7d47d06456ed100a3d123e7a6d2/src/java.base/share/classes/java/util/HashMap.java#L139) in openjdk. It is a very long class, almost 2600 lines, but so many comments 🤓 it is not very common to see this much comment in a java code, anyway then I start reading it and wanted to note down how it behaves on collusion
@@ -56,8 +56,8 @@ There is eclipse collections which is famous for performance of datastructures
 
 ![jcf eclipse collections explanation table](https://github.com/eclipse-collections/eclipse-collections/raw/master/docs/containerCompare.png)
 
-Future ideas check https://github.com/eclipse-collections/eclipse-collections/blob/master/docs/2-Collection_Containers.adoc#mutablemap compare MutableMap to HashMap, make benchmarks.
+Future ideas [check](https://github.com/eclipse-collections/eclipse-collections/blob/master/docs/2-Collection_Containers.adoc#mutablemap) compare MutableMap to HashMap, make benchmarks.
 
-Source code: https://github.com/eclipse-collections/eclipse-collections/blob/6256e7c298a2bb7a839c2b5941416a3f8795cf5a/eclipse-collections-api/src/main/java/org/eclipse/collections/api/map/MutableMap.java#L2
+[Source code](https://github.com/eclipse-collections/eclipse-collections/blob/6256e7c298a2bb7a839c2b5941416a3f8795cf5a/eclipse-collections-api/src/main/java/org/eclipse/collections/api/map/MutableMap.java#L2)
 
-Fun fact the code is licensed under eclipse public license and it is first developed by `Goldman Sachs` and turned to open source at 2012 https://eclipse.dev/collections/
+Fun fact the code is licensed under eclipse public license and it is first developed by `Goldman Sachs` and turned to open source at 2012 read more [here](https://eclipse.dev/collections/)
