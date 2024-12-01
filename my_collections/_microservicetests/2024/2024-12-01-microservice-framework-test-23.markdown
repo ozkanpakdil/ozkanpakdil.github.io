@@ -407,6 +407,8 @@ rustc 1.82.0 (f6e511eec 2024-10-15)
 | 60 | vertx-demo |
 | 50 | helidon-quickstart-se |
 | 78 | ktor-demo |
+
+
 ***  
 [source code for the java and dotnet tests](https://github.com/ozkanpakdil/test-microservice-frameworks)  :point_left: [source code for the rust tests](https://github.com/ozkanpakdil/rust-examples)  :point_left: [github action](https://github.com/ozkanpakdil/test-microservice-frameworks/actions/runs/12106778844)  :point_left: 
 
