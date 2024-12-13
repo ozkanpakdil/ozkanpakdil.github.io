@@ -9,7 +9,7 @@ PostgreSQL has query execution plans configured as extension, meaning they do no
 I wrote a small bash script [Here](https://gist.github.com/ozkanpakdil/63e961c40a10be5bf448a2baa21d625a) just to make this work automatic. [Here](https://gist.github.com/ozkanpakdil/af65c5af6b4d60126d041462374ba355) is powershell version
 - SubnetGroupName -> AWS subnet name for connecting which has all the configuration ready
 - $psqlPath = "C:\tools\postgresql-16.6-2\pgsql\bin\psql.exe" -> user should have psql in the machine and change the path accordingly 
-- Before starting it, user should have aws secret and keys defined in their env variables. https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-envvars.html?icmpid=docs_sso_user_portal
+- Before starting it, user should have aws secret and keys defined in their env variables, explained [here](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-envvars.html?icmpid=docs_sso_user_portal)
 
 <script src="https://gist.github.com/ozkanpakdil/63e961c40a10be5bf448a2baa21d625a.js"></script>
 
