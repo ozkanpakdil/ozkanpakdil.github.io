@@ -1,12 +1,13 @@
 ---
 layout: post
-title: "How to containerize an rust warp app"
+title: "How to containerize a rust warp app"
 date: 2024-12-11 00:00:30
 categories: [rust,docker]
 ---
 I wrote this [arti warp server](https://github.com/ozkanpakdil/rust-examples/tree/main/arti_whois) for running whois via TOR network, [Arti](https://docs.rs/arti/latest/arti/) is CLI tool which has `arti_client` library inside for connecting the network, my main target to dockerize this for easy deploy to koyeb.com
 
 1. I used `docker init` to create [Dockerfile](https://github.com/ozkanpakdil/rust-examples/blob/main/arti_whois/Dockerfile) and others and changed the implementation little bit because of some special dependencies
+
 ```dockerfile
 ARG RUST_VERSION=1.82.0
 ARG APP_NAME=arti_whois
@@ -39,6 +40,7 @@ ENV RUST_LOG=debug
 
 CMD ["/bin/server"]
 ```
+
 `apk add` part took a while to figure out because on every run, compile was failing with different error, I needed to install all the dev lib dependencies to the alpine linux
 2. Test with `docker compose up --build` until everything is fine. I was using curl for testing the app `curl "localhost:8016/whois?ip=1.1.1.1" -v`
 3. Than `docker push ozkanpakdil/arti_whois` to push it to docker repository
