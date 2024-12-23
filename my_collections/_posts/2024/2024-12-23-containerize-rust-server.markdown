@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "How to containerize a rust warp app"
-date: 2024-12-11 00:00:30
+date: 2024-12-23 00:00:30
 categories: [rust,docker]
 ---
 I wrote this [arti warp server](https://github.com/ozkanpakdil/rust-examples/tree/main/arti_whois) for running whois via TOR network, [Arti](https://docs.rs/arti/latest/arti/) is CLI tool which has `arti_client` library inside for connecting the network, my main target to dockerize this for easy deploy to koyeb.com
