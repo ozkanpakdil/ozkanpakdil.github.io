@@ -3,6 +3,7 @@ layout: post
 title: "How to find java app hosting(ISP) or How to deploy Spring Boot website to Koyeb"
 date: 2025-01-01 00:00:30
 categories: [java,koyeb]
+cover_image: https://github.com/user-attachments/assets/999c3f50-630a-49e7-ab9e-397ade5e5933
 ---
 Spring boot is the most famous java framework, and I have been looking for a simple way to serve a java app on a hosting service(not dedicated which is very expensive not AWS/Azure which are too complicated), Most shared hosting does not support java apps, they support php or asp or perl [here](https://archive.ph/iu7QS) is the table for godaddy webhosting supported tech.
 
