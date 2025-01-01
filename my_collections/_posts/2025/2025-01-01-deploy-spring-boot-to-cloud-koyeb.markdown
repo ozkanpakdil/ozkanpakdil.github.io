@@ -20,6 +20,9 @@ I spend around 2 hours until make the app work in docker image, needed to update
 
 At Koyeb side, while configuring the instance I changed the port to 8080, if we do not choose the port used by SB it may not work. 
 
+For now this looks like will take 5.36$ monthly. I use `1 eSmall instance` I took a screen shot just for future reference, and see how inflation affect them
+![koyeb instance prices 01-01-2025](https://github.com/user-attachments/assets/3bbc867c-3e19-4643-a595-9f64819fc843)
+
 References:
 - [https://docs.docker.com/get-started/introduction/build-and-push-first-image/](https://docs.docker.com/get-started/introduction/build-and-push-first-image/)
 - [https://www.koyeb.com/docs/deploy/java#deploy-to-koyeb-from-a-container-registry](https://www.koyeb.com/docs/deploy/java#deploy-to-koyeb-from-a-container-registry)
