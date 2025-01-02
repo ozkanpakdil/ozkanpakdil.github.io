@@ -36,8 +36,7 @@
     <meta name="twitter:image:width" content="1200">
     <meta name="twitter:image:height" content="628">
     <meta name="twitter:image:alt" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
-    {% if page.cover_image %}
-    <meta property="og:image" content="{{ site.url }}{{ page.cover_image | default: site.image }}"/>
-    <meta name="twitter:image:src" content="{{ site.url }}{{ page.cover_image | default: site.image }}">
-    {% endif %}
+
+    <meta property="og:image" content="{{ page.cover_image | default: site.image }}"/>
+    <meta name="twitter:image:src" content="{{ page.cover_image | default: site.image }}">
 </head>
