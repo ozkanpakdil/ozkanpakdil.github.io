@@ -1,19 +1,43 @@
 <head>
-     <meta charset="utf-8">
-     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-     <meta name="viewport" content="width=device-width, initial-scale=1">
-     <meta http-equiv='content-language' content='en-gb'>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv='content-language' content='en-gb'>
 
-     <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
-     <meta name="description"
+    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+    <meta name="description"
           content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
-     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-     <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
-     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-     <link rel="alternate" type="application/rss+xml" title="{{ site.title }}"
-          href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
-     <script type="text/javascript">var switchTo5x = true;</script>
-     <link rel="shortcut icon" type="image/png" href="/favicon.png">
+    <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.url }}" />
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+    <link rel="alternate"
+          type="application/rss+xml"
+          title="{{ site.title }}"
+          href="{{ site.url }}/feed.xml" />
+    <script type="text/javascript">var switchTo5x = true;</script>
+    <link rel="shortcut icon" type="image/png" href="/favicon.png">
+
+    <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}"/>
+    <meta property="og:description"
+          content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}"/>
+    <meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}"/>
+    <meta property="og:site_name" content="{{ site.title }}"/>
+    <meta property="og:type" content="website"/>
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="{{ site.url }}">
+    <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+    <meta name="twitter:description"
+          content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+    <meta name="twitter:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+    <meta name="twitter:creator" content="{{ site.social_username }}">
+    <meta name="twitter:image:alt" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+    <meta name="twitter:image:width" content="1200">
+    <meta name="twitter:image:height" content="628">
+    <meta name="twitter:image:alt" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+    {% if page.cover_image %}
+    <meta property="og:image" content="{{ site.url }}{{ page.cover_image | default: site.image }}"/>
+    <meta name="twitter:image:src" content="{{ site.url }}{{ page.cover_image | default: site.image }}">
+    {% endif %}
 </head>
