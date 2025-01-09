@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "What is load balancing and how to do it in a client side"
+title: "What is load balancing and how to do it on client side"
 date: 2025-01-09 00:00:30
 categories: [java,spring]
 cover_image: https://github.com/user-attachments/assets/96a6a0f0-2eb3-417e-830a-d10503b609a7
