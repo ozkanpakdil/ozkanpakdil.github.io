@@ -5,22 +5,22 @@ date: 2025-01-09 00:00:30
 categories: [java,spring]
 cover_image: https://github.com/user-attachments/assets/96a6a0f0-2eb3-417e-830a-d10503b609a7
 ---
-"Load balancing" can be explained to maintain any work load, for example if you have to serve 1000 breakfast in the morning you can divide the work into 2-3 or more caterer to lower the delivery/preparation time.
+"Load balancing" can be explained as maintaining any workload. For example if you have to serve 1000 breakfast in the morning you can divide the work among 2-3 or more caterers to lower the delivery/preparation time.
 
-For computer world same logic applies, if you want to deliver fast, you can divide the work, for example for a website we can have 5-10 webserver, this way website will be delivered faster(especially on high traffic), this is server side.
+In the computer world, same logic applies, if you want to deliver fast, you can divide the work, for example for a website we can have 5-10 webserver, this way website will be delivered faster(especially during high traffic), this is server side.
 
-I want to talk about client client side load balancing and how this works, for example you are querying backend for every request, and you have multiple servers doing the backend work, for this I will use whois service
+I want to talk about client side load balancing and how this works, for example you are querying backend for every request, and you have multiple servers doing the backend work, for this I will use WHOIS service
 
 whois1.service.com
 whois2.service.com
 
-We can load balance every request in these two servers, most used algorithm and default [round robin](https://docs.spring.io/spring-cloud-commons/reference/spring-cloud-commons/loadbalancer.html#switching-between-the-load-balancing-algorithms) meaning every request will go to one than another, like who1, who2 who1 and so on, this can be done at client side with "Spring Cloud LoadBalancer". we need to configure 3 classes
+We can load balance every request in these two servers, most used algorithm and default [round robin](https://docs.spring.io/spring-cloud-commons/reference/spring-cloud-commons/loadbalancer.html#switching-between-the-load-balancing-algorithms) meaning every request will go to one than another, like who1, who2 who1 and so on, this can be done on the client side with "Spring Cloud LoadBalancer". we need to configure 3 classes
 
 1. ServiceInstanceListSupplier for defining the backend addresses and ports
 2. Bean ServiceInstanceListSupplier for supplying the list of end points
 3. @LoadBalancerClient which is the webclient will be used for backend calls
 
-Now we have the whole setup for backend 
+Now, we have the whole setup for the backend 
 
 ```java
 public class RestCaller implements ServiceInstanceListSupplier {
@@ -89,7 +89,7 @@ public class WebClientConfig {
 }
 ```
 
-Now we can use this in any `@Component` or `@Service`
+This can now be used in any `@Component` or `@Service`.
 
 ```java
 @Component
