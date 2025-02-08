@@ -51,7 +51,7 @@ Professional
 
 | Tech                                                                                                                                                      | Dates                          |
 |-----------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------|
-| C#, VB6, IIS, MSSQL                                                                                                                                       | Between 2004 and 2008          |
+| C#, VB6, IIS, MSSQL                                                                                                                                       | Between 2004 and 2008, and picked up again 2024          |
 | TSQL with MSSQL                                                                                                                                           | In 2004                        |
 | SQL                                                                                                                                                       | Since 2005                     |
 | SVN (Subversion)                                                                                                                                          | Between 2006 - 2018            |
