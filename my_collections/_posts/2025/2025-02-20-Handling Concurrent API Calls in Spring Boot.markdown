@@ -7,8 +7,10 @@ cover_image: https://github.com/user-attachments/assets/3c2db4ca-8734-40c9-ba2a-
 ---
 When building Spring Boot applications, handling concurrent API calls efficiently is crucial to ensure optimal performance and scalability. Here are a few approaches to manage concurrent read and write operations:
 
+### Handling Concurrent Read API Calls
+
 #### Asynchronous Methods
-Using `@Async` annotation and enabling asynchronous processing can help handle multiple API calls concurrently.
+Using `@Async` at `@Service` annotation and enabling asynchronous processing can help handle multiple API calls concurrently.
 
 ```java
 @Async
@@ -49,7 +51,7 @@ return Stream.of("http://example.com/api1", "http://example.com/api2")
     .map(url -> "Result from " + url)
     .collect(Collectors.toList());
 ```
-
+---
 ### Handling Concurrent Write API Calls
 
 Handling concurrent write operations, such as updates, requires careful management to ensure data consistency. Here are a few strategies:
@@ -67,16 +69,18 @@ public synchronized String updateData(String url, Object data) {
 Optimistic locking uses versioning to handle concurrent updates, ensuring data consistency.
 
 ```java
-@Version
-private Long version;
-
+class Item {
+    // Other fields
+    @Version
+    private Long version;
+}
 public Item updateItem(Item newItem) {
     return repository.save(newItem);
 }
 ```
 
 #### @Transactional with Retry
-The `@Transactional` annotation combined with retry mechanisms can handle transaction conflicts.
+The `@Transactional` annotation combined with retry mechanisms can handle transaction conflicts. This is also used in `@Service` layer.
 
 ```java
 @Transactional
@@ -99,5 +103,4 @@ try {
 }
 ```
 
-By using these techniques, you can efficiently manage concurrent API calls in your Spring Boot application, ensuring both performance and data integrity.
-
+By employing these techniques, concurrent API calls within a Spring Boot application can be efficiently managed, thus ensuring optimal performance and maintaining data integrity.
