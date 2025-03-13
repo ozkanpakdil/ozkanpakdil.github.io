@@ -2,7 +2,7 @@
 layout: post
 title: "How to check which port are open for connection on remote server"
 date: 2025-03-13 00:00:30
-categories: [network]
+categories: [network,telnet,curl,nc,wget,powershell]
 cover_image: https://github.com/user-attachments/assets/7be691c9-711f-437b-880b-82c2fb2d8052
 ---
 Today I needed to check which ports are open on a remote server to ensure that the services I need are running and accessible. Here are a few ways to check which ports are open on a remote server:
