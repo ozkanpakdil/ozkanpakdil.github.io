@@ -62,8 +62,14 @@
 	if(!searchBox.value)
 		searchBox.value=searchTerm;
 
-    if (window.store != null)
+    if (window.store != null) {
+        Object.keys(window.store).forEach(key => {
+            window.store[key].content = window.store[key].content
+                .replace(/[^\x20-\x7E]/g, '') // Remove non-printable characters
+                .replace(/\s+/g, ' '); // Replace multiple spaces with single space
+        });
         doSearch(searchTerm);
+    }
 
     if (window.store != null && window.location.href.indexOf('/search.html'))
         searchBox.addEventListener('keyup', function (event) {

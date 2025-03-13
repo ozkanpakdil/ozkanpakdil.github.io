@@ -13,7 +13,7 @@ title: Search Results
         "title": "{{ post.title | xml_escape }}",
         "date":  {{ post.date | date: "%b %-d, %Y" | jsonify}},
         "category": {{ post.categories | join: ', ' | jsonify }},
-        "content": {{ post.content | strip_html | normalize_whitespace | strip | escape_once | jsonify }},
+        "content": {{ post.content | strip_html | strip_newlines | smartify | truncatewords: 50 | jsonify }},
         "url": "{{ post.url | xml_escape }}"
       }
       {% unless forloop.last %},{% endunless %}
