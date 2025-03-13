@@ -2,7 +2,7 @@
 layout: post
 title:  "Terrible android error"
 date:   2020-01-26 08:05:30
-categories: java,android
+categories: [java,android]
 ---
 While developing a small android application. I was thinking to use IntentService which is kind of a background worker for android platform. Then I found the need code and documentation and implemented yesterday. and code is compiling so today I wanted to see it in a real phone and started 
 {% highlight bash %}

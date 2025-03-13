@@ -2,7 +2,7 @@
 layout: post
 title:  "How to assign shortcut to a button in fxml"
 date:   2024-01-02 00:00:30
-categories: javafx
+categories: [javafx]
 ---
 I wanted to assign a button in fxml a keyboard shortcut. below is the example how to do that.
 ```xml

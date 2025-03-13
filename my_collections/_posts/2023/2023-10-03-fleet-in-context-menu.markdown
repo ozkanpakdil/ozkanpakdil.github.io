@@ -2,7 +2,7 @@
 layout: post
 title:  "Add `open with fleet` into context menu in linux mint"
 date:   2023-10-03 00:00:30
-categories: linux,intellij,fleet
+categories: [linux,intellij,fleet]
 ---
 If you install the Fleet from **JetBrains Toolbox** you can use the config below.
 Add code below to ~/.local/share/nemo/actions/fleet.nemo_action

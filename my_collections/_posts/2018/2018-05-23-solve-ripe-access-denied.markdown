@@ -2,7 +2,7 @@
 layout: post
 title:  "How to solve ripe.net access denied"
 date:   2018-05-22 08:05:30
-categories: bash,java,torify
+categories: [bash,java,torify]
 ---
 I have been using whois for a long time(around 10 years). and if you are sending this whois queries from same ip and higher then expected. you will start seeing ripe.net access denied results. one solution is restart your adsl modem. or start using another ip. and my solution is TOR :)
 {% highlight bash %}

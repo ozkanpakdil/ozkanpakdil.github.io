@@ -2,7 +2,7 @@
 layout: post
 title:  "I have been procrastinating this upgrade for a long"
 date:   2020-11-26 18:05:30
-categories: Huawei,laptop,matebook
+categories: [Huawei,laptop,matebook]
 ---
 I bought Huawei matebook x pro around 2 years ago
 

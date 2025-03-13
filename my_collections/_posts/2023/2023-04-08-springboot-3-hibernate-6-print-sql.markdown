@@ -2,7 +2,7 @@
 layout: post
 title:  "Printing running sqls in logs with spring boot 3 and hibernate 6"
 date:   2023-04-08 11:42:30
-categories: hibernate,spring,springboot
+categories: [hibernate,spring,springboot]
 ---
 In application.properties
 ```

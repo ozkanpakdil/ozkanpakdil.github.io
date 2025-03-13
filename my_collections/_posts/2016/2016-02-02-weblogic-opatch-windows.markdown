@@ -2,7 +2,7 @@
 layout: post
 title:  "How to use opatch in windows"
 date:   2016-02-02 11:30:30
-categories: windows weblogic
+categories: [windows,weblogic]
 ---
 Oracle has opatch utility for applying weblogic patches. you just need to unzip the patch package and run the command like this
 {% highlight PowerShell %}

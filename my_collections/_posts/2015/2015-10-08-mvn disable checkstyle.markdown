@@ -2,7 +2,7 @@
 layout: post
 title:  "mvn disable checkstyle"
 date:   2015-10-08 01:24:30
-categories: maven
+categories: [maven]
 ---
 Let say you are using windows I know most of developers does that. Especially in the company they work for.
  

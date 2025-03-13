@@ -2,7 +2,7 @@
 layout: post
 title:  "Building native image in windows with quarkus"
 date:   2021-11-03 08:05:30
-categories: quarkus,graalvm
+categories: [quarkus,graalvm]
 ---
 "mvn package -Pnative" builds the native image from quarkus project. Important step is we have to run that mvn command from "native tools commnad" of visual studio. If you run the command from regular command prompt you get the error below
 

@@ -2,7 +2,7 @@
 layout: post
 title:  "Get github action url from bash script"
 date:   2022-03-11 18:05:30
-categories: github-action,bash
+categories: [github-action,bash]
 ---
 ## Getting the github action job url from bash
 I have been trying to link rest testing framework pages to the connect github action job

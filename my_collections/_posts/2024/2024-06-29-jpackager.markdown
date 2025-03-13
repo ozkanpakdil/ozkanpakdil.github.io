@@ -2,7 +2,7 @@
 layout: post
 title:  "Creating Installers for Java Applications with jpackage"
 date:   2024-06-29 00:00:30
-categories: java, jpackage
+categories: [java, jpackage]
 ---
 Jpackage, a powerful tool introduced in Java 14. In this blog post, I'll explore how to use jpackage to create installers for different operating systems, with a focus on creating an MSI installer for Windows.
 

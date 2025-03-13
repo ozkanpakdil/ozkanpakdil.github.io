@@ -2,7 +2,7 @@
 layout: post
 title:  "Solving the Remote Keyboard Traversal Problem: Navigating the Grid Efficiently"
 date:   2023-09-01 00:00:30
-categories: algorithms
+categories: [algorithms]
 ---
 # The Problem
 <pre>

@@ -2,7 +2,7 @@
 layout: post
 title:  "Java find how many character repeating in a string"
 date:   2023-10-07 00:00:30
-categories: algorithms
+categories: [algorithms]
 ---
 
 # How to find how many characters are repeating in a string.

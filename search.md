@@ -10,11 +10,10 @@ title: Search Results
   window.store = {
     {% for post in site.posts %}
       "{{ post.url | slugify }}": {
-        "title": "{{ post.title | xml_escape }}",
+        "title": {{ post.title | xml_escape | jsonify }},
         "date":  {{ post.date | date: "%b %-d, %Y" | jsonify}},
-        "category": {{ post.categories | join: ', ' | jsonify }},
-        "content": {{ post.content | strip_html | strip_newlines | smartify | truncatewords: 50 | jsonify }},
-        "url": "{{ post.url | xml_escape }}"
+        "content": {{ post.content | strip_html | strip_newlines | jsonify }},
+        "url": {{ post.url | xml_escape | jsonify }}
       }
       {% unless forloop.last %},{% endunless %}
     {% endfor %}

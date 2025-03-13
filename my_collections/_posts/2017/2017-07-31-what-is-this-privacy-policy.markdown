@@ -2,7 +2,7 @@
 layout: post
 title:  "What is this Privacy Policy"
 date:   2017-07-31 10:05:30
-categories: google-play
+categories: [google-play]
 ---
 
 <div id="privacy_content"><h2>Privacy Policy</h2> <p>What Is This app as an Ad Supported app. This SERVICE is provided by  at no cost and is intended for use as is.

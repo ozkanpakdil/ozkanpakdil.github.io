@@ -2,7 +2,7 @@
 layout: post
 title:  "How to find which process uses some port in windows"
 date:   2016-01-09 11:30:30
-categories: windows shell
+categories: [windows,shell]
 ---
 How to find which process uses some port in windows
 {% highlight bash %}

@@ -2,7 +2,7 @@
 layout: post
 title:  "Using arti to Connect to TOR Network and query WHOIS information in Rust"
 date:   2023-01-14 11:42:30
-categories: rust,arti,tor,whois
+categories: [rust,arti,tor,whois]
 ---
 [This code](https://github.com/ozkanpakdil/rust-examples/tree/main/arti_whois) is a web application that allows querying WHOIS information over the TOR network. It uses the arti library to create and manage the tor connection and tor-rtcompat to define the runtime for the tor connection.
 

@@ -2,7 +2,7 @@
 layout: post
 title:  "How to setup gatling test scenario"
 date:   2022-12-12 11:42:30
-categories: gatling
+categories: [gatling]
 ---
 In a Gatling test, the setUp method is used to specify the scenario that will be run during the test. In the code below, the scenario is specified using the scn variable, which presumably refers to a scenario that has been defined elsewhere in the code.
 

@@ -2,7 +2,7 @@
 layout: post
 title:  "Java imperative and functional approach performance test 2"
 date:   2015-09-20 16:03:30
-categories: java performance
+categories: [java performance]
 ---
 another test for imperative code
 

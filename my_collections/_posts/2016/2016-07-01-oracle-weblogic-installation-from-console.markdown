@@ -2,7 +2,7 @@
 layout: post
 title:  "Oracle weblogic installation from console"
 date:   2016-07-01 11:30:30
-categories: java weblogic
+categories: [java,weblogic]
 ---
 the -silent mode is actually console installation without gui.
 

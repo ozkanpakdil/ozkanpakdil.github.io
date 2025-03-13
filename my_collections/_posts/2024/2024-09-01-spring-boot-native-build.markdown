@@ -2,7 +2,7 @@
 layout: post
 title:  "How to build spring boot native binary"
 date:   2024-09-01 00:00:30
-categories: graalvm,spring-boot
+categories: [graalvm,spring-boot]
 ---
 In short I am explaining why we should use `./mvnw -Pnative native:compile` and what error comes otherwise and why. 
 

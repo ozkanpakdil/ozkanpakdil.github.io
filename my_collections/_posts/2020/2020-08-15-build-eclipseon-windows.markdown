@@ -2,7 +2,7 @@
 layout: post
 title:  "How to build eclipse on locally in windows 10"
 date:   2020-08-15 20:05:30
-categories: java,eclipse
+categories: [java,eclipse]
 ---
 
 Best document I found is [here](https://wiki.eclipse.org/Platform-releng/Platform_Build#Windows), main problem about the documentation is google :) whenever I search different versions of "building eclipse in windows" all results were related to how to build a project(java or anything else) in eclipse. And I decided to write this note blog just for future refference.

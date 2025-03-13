@@ -2,7 +2,7 @@
 layout: post
 title:  "nginx vs varnish"
 date:   2015-10-23 20:30:30
-categories: linux performance
+categories: [linux performance]
 ---
 it has been a long time I am using varnish + apache. and I was reading nginx is really fast. 2 days ago I installed nginx and configure one php page works with it. here are the ab outputs
 

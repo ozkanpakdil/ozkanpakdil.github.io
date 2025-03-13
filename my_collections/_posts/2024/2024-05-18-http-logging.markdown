@@ -2,7 +2,7 @@
 layout: post
 title:  "Spring boot 3 RestClient and RestTemplate logging http requests and response"
 date:   2024-05-18 00:00:30
-categories: java, springboot
+categories: [java, springboot]
 ---
 In Spring boot(SB) 2 the configuration was different, now in SB3 we need to configure the rest client differently. Before SB3 there was RestTemplate now there is new Rest api coming in spring world. Find more details [here](https://spring.io/blog/2023/07/13/new-in-spring-6-1-restclient).
 

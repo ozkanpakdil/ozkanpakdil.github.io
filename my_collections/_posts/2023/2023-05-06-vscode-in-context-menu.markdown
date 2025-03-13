@@ -2,7 +2,7 @@
 layout: post
 title:  "Add `open with vscode` into context menu in linux mint"
 date:   2023-05-06 00:00:30
-categories: linux,vscode
+categories: [linux,vscode]
 ---
 Add code below to ~/.local/share/nemo/actions/vscode.nemo_action
 ```

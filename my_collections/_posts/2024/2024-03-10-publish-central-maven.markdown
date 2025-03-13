@@ -2,7 +2,7 @@
 layout: post
 title:  "How to deploy to maven central repo"
 date:   2024-03-10 00:00:30
-categories: maven
+categories: [maven]
 ---
 Yesterday I found [dockFX](https://github.com/RobertBColton/DockFX) library, when I first try it did not work. Today I manage to upgrade the [code to java17](https://github.com/ozkanpakdil/DockFX) and working with latest javafx21, then I wonder how to deploy this to maven central repository. Took around 3 hours, better to write this down for others.
 

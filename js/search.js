@@ -10,7 +10,7 @@
                 appendString += '<li><span class="post-meta">' + item.date + '</span><a href="' +
                     item.url + '"><h2>' + item.title + '</h2></a>';
                 appendString += '<p class="small">' + decodeURI(item.content).substring(0, 100)
-					+ '...</p></li>';
+                    + '...</p></li>';
             }
 
             searchResults.innerHTML = appendString;
@@ -39,7 +39,7 @@
             this.field('id');
             this.field('title', {boost: 10});
             this.field('author');
-            this.field('category');
+            this.field('url');
             this.field('content');
 
             for (var key in window.store) { // Add the JSON generated from site content to Lunr.js
@@ -47,8 +47,8 @@
                     'id': key,
                     'title': window.store[key].title,
                     'author': window.store[key].author,
-                    'category': window.store[key].category,
-                    'content': decodeURI(window.store[key].content)
+                    'url': window.store[key].url,
+                    'content': window.store[key].content
                 });
             }
         });
@@ -59,15 +59,10 @@
 
     const searchBox = document.getElementById('search-box');
     const searchTerm = getQuery('query');
-	if(!searchBox.value)
-		searchBox.value=searchTerm;
+    if(!searchBox.value)
+        searchBox.value=searchTerm;
 
     if (window.store != null) {
-        Object.keys(window.store).forEach(key => {
-            window.store[key].content = window.store[key].content
-                .replace(/[^\x20-\x7E]/g, '') // Remove non-printable characters
-                .replace(/\s+/g, ' '); // Replace multiple spaces with single space
-        });
         doSearch(searchTerm);
     }
 

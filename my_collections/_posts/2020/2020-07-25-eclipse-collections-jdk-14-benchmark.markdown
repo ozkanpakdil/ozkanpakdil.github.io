@@ -2,7 +2,7 @@
 layout: post
 title:  "Eclipse collections benchmark in jdk 14 at home"
 date:   2020-07-25 08:05:30
-categories: java,eclipse-collections
+categories: [java,eclipse-collections]
 ---
 I was reading [eclipse collections benchmark doc](https://www.baeldung.com/jdk-collections-vs-eclipse-collections) and realized that its little bit old and it was using jdk 11, in my local I have jdk 14 I wanted to run in my local and see the result. You can find eclipse collections [here](https://github.com/eclipse/eclipse-collections)
 

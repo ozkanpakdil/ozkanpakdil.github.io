@@ -2,7 +2,7 @@
 layout: post
 title:  "Availability in numbers"
 date:   2020-12-01 18:05:30
-categories: HA,high availability
+categories: [HA,high availability]
 ---
 This is worth to note.
 

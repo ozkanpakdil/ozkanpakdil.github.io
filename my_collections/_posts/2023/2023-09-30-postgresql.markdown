@@ -2,7 +2,7 @@
 layout: post
 title:  "Postgresql group by day, week and month examples "
 date:   2023-09-28 00:00:30
-categories: postgresql
+categories: [postgresql]
 ---
 at the end of any product there will be a reporting interfaces for counts. let say you build a advertisement site which gives people to publish their products on the site. they will want to see how many people visited their product in daily basis or weekly.
 

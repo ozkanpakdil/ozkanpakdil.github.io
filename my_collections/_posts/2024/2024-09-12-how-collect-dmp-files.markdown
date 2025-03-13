@@ -2,7 +2,7 @@
 layout: post
 title:  "How to collect dmp files in dotnet"
 date:   2024-09-12 00:00:30
-categories: dotnet
+categories: [dotnet]
 ---
 I was reading a DMP file to investigate customer issue where they have been having high CPU issues after latest upgrade. I read the dmp with [windbg](https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/) then vs.net analyze and both times I saw CLR GC(garbage collection and BGC) was eating up all the CPU and I must say VS.NET analyze is really nice, it shows who is eating up the CPU very easily, only problem it may crash sometimes, the dmp file size was around 9GB that maybe the reason I do not know.
 

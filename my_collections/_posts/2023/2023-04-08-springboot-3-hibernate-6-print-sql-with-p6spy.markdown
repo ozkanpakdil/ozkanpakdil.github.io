@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Printing running sqls with P6spy in spring boot 3 and hibernate 6"
-categories: hibernate,spring,springboot,p6spy
+categories: [hibernate,spring,springboot,p6spy]
 ---
 in build.gradle
 ```

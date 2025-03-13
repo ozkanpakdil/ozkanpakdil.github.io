@@ -2,7 +2,7 @@
 layout: post
 title:  "Kubernetes Notes"
 date:   2021-12-10 18:05:30
-categories: kubernetes, hetzner
+categories: [kubernetes, hetzner]
 ---
 ## Providers
 I have been studying kubernetes lately. I still wonder if will it be useful for personal usage for all peaople. Right now it is kind of expensive and used by big companies as customer to EKS(Amazon) or GKE(Google) or AKS(Azure/Microsoft), Another big player is [Hetzner](https://community.hetzner.com/tutorials/install-kubernetes-cluster)

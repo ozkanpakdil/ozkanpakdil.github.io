@@ -2,7 +2,7 @@
 layout: post
 title:  "jms jsp xa and non xa examples"
 date:   2016-01-05 11:30:30
-categories: jsp jms weblogic
+categories: [jsp,jms,weblogic]
 ---
 sometime you may need to configure jms messaging queue and when you need that you will configure jndi too.
 

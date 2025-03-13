@@ -2,7 +2,7 @@
 layout: post
 title:  "Using sqlite with h2 console"
 date:   2023-10-10 00:00:30
-categories: springboot
+categories: [springboot]
 ---
 Sometimes we(developers/programmers) may need to see database tables in tree and run some select, insert quickly on the db, H2 console is the best tool in spring boot to reach database on dev environment.
 

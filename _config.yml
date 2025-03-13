@@ -15,9 +15,7 @@ image: "https://cdn.bsky.app/img/avatar/plain/did:plc:zmhh6ioof646qg3yemnze6am/b
 markdown: kramdown
 
 plugins:
-  - jemoji
   - jekyll-paginate
-gems: ["jemoji"]
 
 include: [".well-known"]
 

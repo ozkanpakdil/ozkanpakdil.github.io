@@ -2,7 +2,7 @@
 layout: post
 title:  "How to get TeamCity parameters dynamically"
 date:   2016-07-29 11:30:30
-categories: teamcity
+categories: [teamcity]
 ---
 I have been searching about this hours. If you want to query parameters from build template. You can use REST api
  

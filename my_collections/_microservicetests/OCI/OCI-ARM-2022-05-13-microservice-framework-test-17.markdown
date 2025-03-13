@@ -2,7 +2,7 @@
 layout: post
 title:  'Java microservice framework tests in SB:2.6.7 Q:2.9.0.Final M:3.4.3 V:4.3.0 H:2.5.0 Dotnet:6 openjdk version "11.0.15" 2022-04-19 rustc 1.60.0 (7737e0b5c 2022-04-04)'
 date:   2022-05-13 06:15:17
-categories: java,rust,fasterxml,json
+categories: [java,rust,fasterxml,json]
 ---
 Here is total package generation times for separate modules,
 {% highlight bash %}

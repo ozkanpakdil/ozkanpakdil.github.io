@@ -2,7 +2,7 @@
 layout: post
 title:  "Delete files in linux best way"
 date:   2018-01-13 08:05:30
-categories: bash
+categories: [bash]
 ---
 Let say you have bunch(5 millions) of small files in your linux in some folder. when you try to delete them can be very tricky.
 

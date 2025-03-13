@@ -2,7 +2,7 @@
 layout: post
 title:  "How to use resources(file and memory) in try"
 date:   2024-04-18 00:00:30
-categories: java, try
+categories: [java, try]
 ---
 I wrote a small piece of code to do some pdf encryption with openpdf, and intellij`s sonarlint was complaining about "Resources should be closed" more details [here](https://docs.oracle.com/javase/tutorial/essential/exceptions/tryResourceClose.html)
 

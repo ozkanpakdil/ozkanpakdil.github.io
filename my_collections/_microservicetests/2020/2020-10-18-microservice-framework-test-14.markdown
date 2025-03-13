@@ -2,7 +2,7 @@
 layout: post
 title:  'Java microservice framework tests in SB:2.3.4.RELEASE Q:1.8.3.Final M:2.1.1 V:3.9.4 H:2.1.0 openjdk version "14.0.2" 2020-07-14'
 date:   2020-10-18 20:47:03
-categories: java,fasterxml,json
+categories: [java,fasterxml,json]
 --- 
 Here is total package generation times for separate modules,
 {% highlight bash %}

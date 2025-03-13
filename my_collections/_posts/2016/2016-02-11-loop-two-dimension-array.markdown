@@ -2,7 +2,7 @@
 layout: post
 title:  "different loops in two dimensional array"
 date:   2016-02-11 11:30:30
-categories: java programming
+categories: [java,programming]
 ---
 I was trying to solve hackerrank questions. it has been long time I write anything directly related to arrays. mostly coding after some point is db related and mostly used lists there. anyway here is how you can solve https://www.hackerrank.com/challenges/diagonal-difference this question in O(n square) and O(n).
 

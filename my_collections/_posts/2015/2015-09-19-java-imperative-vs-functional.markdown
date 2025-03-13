@@ -2,7 +2,7 @@
 layout: post
 title:  "Java imperative and functional approach performance test"
 date:   2015-09-19 18:30:30
-categories: java performance
+categories: [java performance]
 ---
 I love performance tests. generally I test everything myself if there is no source in the internet I must do it :)
 

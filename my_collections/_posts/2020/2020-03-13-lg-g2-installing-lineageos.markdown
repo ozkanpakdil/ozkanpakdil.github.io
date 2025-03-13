@@ -2,7 +2,7 @@
 layout: post
 title:  "LineageOS installation on my old lg g2"
 date:   2020-03-13 08:05:30
-categories: android
+categories: [android]
 ---
 My old lg g2 had lineageOS 14 installed already. But it was showing the info about new version and I should upgrade it. My first attempt failed miserably. And I brick my phone.
 

@@ -2,7 +2,7 @@
 layout: post
 title:  "Turning an array clockwise or counterclockwise"
 date:   2023-09-28 00:00:30
-categories: algorithms
+categories: [algorithms]
 ---
 Turn an array clockwise therefore the last element comes to first and all hops to right. 
 And counterclockwise meaning last element comes to first and others hops to their left.

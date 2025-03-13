@@ -2,7 +2,7 @@
 layout: post
 title:  "My first eclipse plugin"
 date:   2022-10-10 11:42:30
-categories: eclipse,intellij,plugin
+categories: [eclipse,intellij,plugin]
 ---
 I used Eclipse between 2008-2018. After 2018 I saw everyone was using Intellij I moved too. Then today I was trying to write some aspectj code and created an .aj file. I realized intellij community edition does not really support aj files. I checked vscode it also did not support it, then the old friend eclipse came. It caused some issues because of the old plugin version, but after installation of the new version ajdt plugin it worked.
 

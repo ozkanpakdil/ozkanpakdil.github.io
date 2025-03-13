@@ -2,7 +2,7 @@
 layout: post
 title:  "Gatling parameterize"
 date:   2022-03-12 11:42:30
-categories: scala,gatling
+categories: [scala,gatling]
 ---
 In order to send testing parameters from command line like below
 ```

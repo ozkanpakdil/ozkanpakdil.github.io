@@ -2,7 +2,7 @@
 layout: post
 title:  "install macos in virtualbox in ubuntu"
 date:   2015-11-22 17:30:30
-categories: virtualization linux macosx
+categories: [virtualization,linux,macosx]
 ---
 I am not a fan of apple products but I wanted to try qt in mac. so I look for how can I install the macos in ubuntu virtualbox. there are some info in hackintosh site and some videos and documents. first of all I tried yosemite but it did not start properly in virtualbox then I look for which one is the latest macos version and it is el capitain.
 

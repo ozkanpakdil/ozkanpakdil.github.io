@@ -2,7 +2,7 @@
 layout: post
 title:  "first jni example"
 date:   2015-10-10 20:30:30
-categories: java jni
+categories: [java jni]
 ---
 I never tried JNI(Java Native Interface) before. jni is an api for to call native C code from inside a java code. for a principle I dont like this kind of mixed things. calling java inside c# or calling C# code from C++ is always makes hard codes to understand. anyway I was wondering about the performance of printf between java and jni.
 

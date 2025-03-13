@@ -2,7 +2,7 @@
 layout: post
 title:  "Oracle XE database install on Linux Mint"
 date:   2022-10-04 11:42:30
-categories: oracle,linux
+categories: [oracle,linux]
 ---
 Fallowed this [answer](https://stackoverflow.com/a/67945200/175554) looked like it would work.
 

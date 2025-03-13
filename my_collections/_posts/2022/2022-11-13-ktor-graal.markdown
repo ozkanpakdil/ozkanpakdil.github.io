@@ -2,7 +2,7 @@
 layout: post
 title:  "Ktor build with graalvm"
 date:   2022-11-13 11:42:30
-categories: graalvm,java,ktor,native-image
+categories: [graalvm,java,ktor,native-image]
 ---
 I wanted to test ktor.io with graalvm build, main problem is all code I found using gradle and my project is using mvn here is the [code](https://github.com/ozkanpakdil/test-microservice-frameworks/tree/main/ktor-demo). like other modules I needed to create reflect config json, otherwise ktor serialize is not working properly with graal and when I send a request to "/hello" endpoint I got empty response. I tried to write myself but did not work and at the end I used command below
 

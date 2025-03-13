@@ -2,7 +2,7 @@
 layout: post
 title:  "Getting REST version from request mapping of controller for mockmvc"
 date:   2022-12-12 11:42:30
-categories: spring,mockmvc,junit
+categories: [spring,mockmvc,junit]
 ---
 When we write a spring rest controller we give version url and start writing different functions as endpoints like below
 ```java

@@ -2,7 +2,7 @@
 layout: post
 title:  "How to auto merge dependabot or Finally dependabot merges automatically"
 date:   2021-08-05 08:05:30
-categories: github,dependabot
+categories: [github,dependabot]
 ---
 It has been long time there is a very nice and sweet bot around, it is called [dependabot](https://dependabot.com/) or [check](https://docs.github.com/en/code-security/supply-chain-security/keeping-your-dependencies-updated-automatically/about-dependabot-version-updates)
 

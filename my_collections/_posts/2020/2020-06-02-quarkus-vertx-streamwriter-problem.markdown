@@ -2,7 +2,7 @@
 layout: post
 title:  "Could not find MessageBodyWriter for response object of type: io.vertx.reactivex.core.buffer.Buffer of media type: text/html;charset=UTF-8"
 date:   2020-06-02 08:05:30
-categories: quarkus,java
+categories: [quarkus,java]
 ---
 I was trying to use freemarker with quarkus and vertx. I start getting this error
 {% highlight bash %}

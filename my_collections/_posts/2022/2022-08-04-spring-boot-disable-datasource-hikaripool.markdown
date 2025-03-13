@@ -2,7 +2,7 @@
 layout: post
 title:  "Disable Spring Boot Hikari Datasource with aspectj"
 date:   2022-08-04 11:42:30
-categories: java,spring,aspect
+categories: [java,spring,aspect]
 ---
 There is database which will shutdown in uncertain future and application wants to be restarted and still working after that. In spring boot every datasource bean depends to some other bean, if we use **@ConditionalOnProperty** which actually not creates the bean after that other beans fails to initialize and app stop booting.
 
