@@ -12,7 +12,7 @@ title: Search Results
       "{{ post.url | slugify }}": {
         "title": "{{ post.title | xml_escape }}",
         "date":  {{ post.date | date: "%b %-d, %Y" | jsonify}},
-        "category": "{{ post.categories | xml_escape }}",
+        "category": {{ post.categories | join: ', ' | jsonify }},
         "content": {{ post.content | strip_html | slice: 0, 1000 | jsonify }},
         "url": "{{ post.url | xml_escape }}"
       }
