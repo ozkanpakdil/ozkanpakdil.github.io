@@ -12,9 +12,8 @@ title: Search Results
       "{{ post.url | slugify }}": {
         "title": "{{ post.title | xml_escape }}",
         "date":  {{ post.date | date: "%b %-d, %Y" | jsonify}},
-        "author": "{{ post.author | xml_escape }}",
-        "category": "{{ post.category | xml_escape }}",
-        "content": {{ post.content | strip_html | slice: 0, 100 | jsonify }},
+        "category": "{{ post.categories | xml_escape }}",
+        "content": {{ post.content | strip_html | slice: 0, 1000 | jsonify }},
         "url": "{{ post.url | xml_escape }}"
       }
       {% unless forloop.last %},{% endunless %}
