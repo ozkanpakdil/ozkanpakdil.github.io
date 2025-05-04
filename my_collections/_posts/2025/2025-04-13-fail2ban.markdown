@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "What is fil2bna why we all should use it if we have a server open to the internet"
+title: "What is fail2ban why we all should use it if we have a server open to the internet"
 date: 2025-04-13 00:00:30
 categories: [network,linux]
 cover_image: https://github.com/user-attachments/assets/13d1a016-8585-4f94-b8bf-01eeb7c7d2a2
