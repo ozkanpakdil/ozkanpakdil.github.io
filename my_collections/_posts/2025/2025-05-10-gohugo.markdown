@@ -2,6 +2,7 @@
 title: "Exploring Hugo: A Faster Alternative to Jekyll for Static Sites"
 date: 2025-05-10
 tags: [Hugo, Jekyll, Static Site, Performance]
+cover_image: https://github.com/user-attachments/assets/4fd557f8-1b24-4d67-8f22-2fcb36a98f73
 ---
 
 For years, I’ve been using [Jekyll](https://jekyllrb.com/) to power my blog at [ozkanpakdil.github.io](https://ozkanpakdil.github.io/). It has served me well in production, but setting it up on Windows for local testing has always been a bit of a headache. Even with WSL, the process is sluggish, making experimentation and quick iterations more cumbersome than I’d like.
