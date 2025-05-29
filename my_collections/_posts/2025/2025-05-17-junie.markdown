@@ -58,4 +58,4 @@ The combination of AI-powered code generation, structured implementation approac
 For developers looking to enhance their productivity, I highly recommend giving Junie a try. The structured approach and seamless code integration capabilities make it stand out among the growing field of AI coding assistants.
 
 References:
-- https://www.jetbrains.com/guide/ai/article/junie/intellij-idea/
+- [Guide](https://www.jetbrains.com/guide/ai/article/junie/intellij-idea/)
