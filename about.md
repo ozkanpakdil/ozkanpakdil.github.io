@@ -97,5 +97,5 @@ Professional
 
 you can find all my repositories [here](https://github.com/ozkanpakdil) 
 
-[Intern Manager: Leadership Toolkit - Giving Feedback](https://redgate.lessonly.com/certificate/48510461)
-[Intern Manager](https://redgate.lessonly.com/certificate/48031362)
+- [Intern Manager: Leadership Toolkit - Giving Feedback](https://redgate.lessonly.com/certificate/48510461)
+- [Intern Manager](https://redgate.lessonly.com/certificate/48031362)
