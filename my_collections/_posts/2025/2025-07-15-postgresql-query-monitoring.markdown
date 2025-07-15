@@ -27,7 +27,7 @@ Tools like DataDog, New Relic, and Prometheus + Grafana offer dashboards, alerts
 - Top slow queries
 - Query performance trends
 - Integration with `pg_stat_statements`
-- Historical analysis and alerting
+- [Historical analysis](https://archive.ph/cW1PP) and alerting
 ### 9. Proxy or Middleware Logging
 Use tools like [pgBouncer](https://www.pgbouncer.org/) or custom proxies to log and analyze queries at the connection level.
 ### 10. OS-Level Monitoring (`ps`, `top`, `htop`)
