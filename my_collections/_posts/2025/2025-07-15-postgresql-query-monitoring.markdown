@@ -16,20 +16,25 @@ Configure parameters like [log_statement](https://www.postgresql.org/docs/curren
 ```sql
 SELECT * FROM pg_stat_activity;
 ```
-## 5. pgBadger
+### 5. pgBadger
 A powerful [log analyzer that generates detailed HTML reports from PostgreSQL logs](https://github.com/darold/pgbadger).
+
 ### 6. pgAdmin
 [GUI tool](https://www.pgadmin.org/) with built-in query monitoring and session management features.
+
 ### 7. Third-party Monitoring Platforms
 Tools like DataDog, New Relic, and Prometheus + Grafana offer dashboards, alerts, and query insights.
+
 ### 8. Redgate Monitor 
 [A commercial tool](https://www.red-gate.com/products/redgate-monitor/entrypage/postgres-monitoring) that supports PostgreSQL and SQL Server. It provides:
 - Top slow queries
 - Query performance trends
 - Integration with `pg_stat_statements`
 - [Historical analysis](https://archive.ph/cW1PP) and alerting
+
 ### 9. Proxy or Middleware Logging
 Use tools like [pgBouncer](https://www.pgbouncer.org/) or custom proxies to log and analyze queries at the connection level.
+
 ### 10. OS-Level Monitoring (`ps`, `top`, `htop`)
 PostgreSQL spawns a separate process per connection. You can:
 - Use `ps aux | grep postgres` to see active queries.
