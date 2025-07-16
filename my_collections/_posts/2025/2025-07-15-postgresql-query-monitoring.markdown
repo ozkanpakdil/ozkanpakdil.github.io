@@ -40,3 +40,6 @@ Example:
 ```
 watch -n 1 "ps -u postgres -f"
 ```
+
+Reference:
+- https://dba.stackexchange.com/questions/280240/how-do-you-monitor-postgresql-queries
