@@ -4,7 +4,20 @@ title:  "Add `open with intellij` into context menu in linux mint"
 date:   2023-05-11 00:00:30
 categories: [linux,intellij]
 ---
-Add code below to ~/.local/share/nemo/actions/intellij.nemo_action
+Easy copy paste bash
+```shell
+cat << EOF > ~/.local/share/nemo/actions/intellij.nemo_action
+[Nemo Action]
+Name=Open in Intellij
+Comment=Open in Intellij
+Exec=idea "%F"
+Icon-Name=intellij          
+Selection=Any
+Extensions=dir;
+EOF
+```
+
+Manual way:Add code below to ~/.local/share/nemo/actions/intellij.nemo_action
 ```
 [Nemo Action]
 Name=Open in Intellij
