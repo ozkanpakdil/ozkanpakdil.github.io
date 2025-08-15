@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "PostgreSQL Client Certificate Authentication: Complete Setup Guide"
+title: "PostgreSQL Client Certificate Authentication: Complete Setup Guide for CN and one to one connection"
 date: 2025-07-30
 categories: [postgresql, ssl, security, authentication]
 tags: [postgres, certificates, ssl, tls, security]
