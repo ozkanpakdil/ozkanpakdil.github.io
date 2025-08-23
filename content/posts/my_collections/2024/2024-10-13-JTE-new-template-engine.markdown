@@ -2,9 +2,7 @@
 categories:
 - spring
 aliases:
-- "/spring/2024/10/13/jte-new-template-engine.html"
-- "/spring/2024/10/13/jte-new-template-engine/"
-- "/spring/2024/10/13/jte-new-template-engine"
+- "/spring/2024/10/13/JTE-new-template-engine.html"
 
 date: "2024-10-13T00:00:30Z"
 title: JTE new template engine in spring boot starter site

@@ -3,12 +3,7 @@ categories:
 - sql
 - postgresql
 aliases:
-- "/sql/2025/02/18/create-select-postgresql-fill-factor.html"
-- "/sql/2025/02/18/create-select-postgresql-fill-factor/"
-- "/sql/2025/02/18/create-select-postgresql-fill-factor"
-- "/postgresql/2025/02/18/create-select-postgresql-fill-factor.html"
-- "/postgresql/2025/02/18/create-select-postgresql-fill-factor/"
-- "/postgresql/2025/02/18/create-select-postgresql-fill-factor"
+- "/sql/postgresql/2025/02/18/create-select-postgresql-fill-factor.html"
 
 date: "2025-02-18T00:00:30Z"
 title: What is Fill Factor in PostgreSQL

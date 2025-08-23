@@ -4,15 +4,7 @@ categories:
 - aurora
 - postgresql
 aliases:
-- "/aws/2024/12/11/aurora-autoexplain-postgresql.html"
-- "/aws/2024/12/11/aurora-autoexplain-postgresql/"
-- "/aws/2024/12/11/aurora-autoexplain-postgresql"
-- "/aurora/2024/12/11/aurora-autoexplain-postgresql.html"
-- "/aurora/2024/12/11/aurora-autoexplain-postgresql/"
-- "/aurora/2024/12/11/aurora-autoexplain-postgresql"
-- "/postgresql/2024/12/11/aurora-autoexplain-postgresql.html"
-- "/postgresql/2024/12/11/aurora-autoexplain-postgresql/"
-- "/postgresql/2024/12/11/aurora-autoexplain-postgresql"
+- "/aws/aurora/postgresql/2024/12/11/aurora-autoexplain-postgresql.html"
 
 date: "2024-12-11T00:00:30Z"
 title: How to generate a Aurora Postgresql cluster with all auto explain enabled

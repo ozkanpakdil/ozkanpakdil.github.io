@@ -3,12 +3,7 @@ categories:
 - java
 - spring
 aliases:
-- "/java/2025/01/09/client-load-balancing.html"
-- "/java/2025/01/09/client-load-balancing/"
-- "/java/2025/01/09/client-load-balancing"
-- "/spring/2025/01/09/client-load-balancing.html"
-- "/spring/2025/01/09/client-load-balancing/"
-- "/spring/2025/01/09/client-load-balancing"
+- "/java/spring/2025/01/09/client-load-balancing.html"
 
 date: "2025-01-09T00:00:30Z"
 title: What is load balancing and how to do it on client side
