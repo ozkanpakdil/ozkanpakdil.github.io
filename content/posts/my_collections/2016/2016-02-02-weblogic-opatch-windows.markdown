@@ -3,12 +3,7 @@ categories:
 - windows
 - weblogic
 aliases:
-- "/windows/2016/02/02/weblogic-opatch-windows.html"
-- "/windows/2016/02/02/weblogic-opatch-windows/"
-- "/windows/2016/02/02/weblogic-opatch-windows"
-- "/weblogic/2016/02/02/weblogic-opatch-windows.html"
-- "/weblogic/2016/02/02/weblogic-opatch-windows/"
-- "/weblogic/2016/02/02/weblogic-opatch-windows"
+- "/windows/weblogic/2016/02/02/weblogic-opatch-windows.html"
 
 date: "2016-02-02T11:30:30Z"
 title: How to use opatch in windows

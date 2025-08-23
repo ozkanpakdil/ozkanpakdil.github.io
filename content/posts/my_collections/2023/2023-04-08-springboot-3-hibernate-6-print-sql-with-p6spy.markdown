@@ -5,18 +5,7 @@ categories:
 - springboot
 - p6spy
 aliases:
-- "/hibernate/2023/04/08/springboot-3-hibernate-6-print-sql-with-p6spy.html"
-- "/hibernate/2023/04/08/springboot-3-hibernate-6-print-sql-with-p6spy/"
-- "/hibernate/2023/04/08/springboot-3-hibernate-6-print-sql-with-p6spy"
-- "/spring/2023/04/08/springboot-3-hibernate-6-print-sql-with-p6spy.html"
-- "/spring/2023/04/08/springboot-3-hibernate-6-print-sql-with-p6spy/"
-- "/spring/2023/04/08/springboot-3-hibernate-6-print-sql-with-p6spy"
-- "/springboot/2023/04/08/springboot-3-hibernate-6-print-sql-with-p6spy.html"
-- "/springboot/2023/04/08/springboot-3-hibernate-6-print-sql-with-p6spy/"
-- "/springboot/2023/04/08/springboot-3-hibernate-6-print-sql-with-p6spy"
-- "/p6spy/2023/04/08/springboot-3-hibernate-6-print-sql-with-p6spy.html"
-- "/p6spy/2023/04/08/springboot-3-hibernate-6-print-sql-with-p6spy/"
-- "/p6spy/2023/04/08/springboot-3-hibernate-6-print-sql-with-p6spy"
+- "/hibernate,spring,springboot,p6spy/2023/04/08/springboot-3-hibernate-6-print-sql-with-p6spy.html"
 
 date: "2023-04-08T00:00:00Z"
 title: Printing running sqls with P6spy in spring boot 3 and hibernate 6

@@ -3,12 +3,7 @@ categories:
 - java
 - springboot
 aliases:
-- "/java/2024/05/18/http-logging.html"
-- "/java/2024/05/18/http-logging/"
-- "/java/2024/05/18/http-logging"
-- "/springboot/2024/05/18/http-logging.html"
-- "/springboot/2024/05/18/http-logging/"
-- "/springboot/2024/05/18/http-logging"
+- "/java,/springboot/2024/05/18/http-logging.html"
 
 date: "2024-05-18T00:00:30Z"
 title: Spring boot 3 RestClient and RestTemplate logging http requests and response
