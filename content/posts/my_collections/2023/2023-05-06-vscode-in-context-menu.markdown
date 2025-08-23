@@ -3,12 +3,7 @@ categories:
 - linux
 - vscode
 aliases:
-- "/linux/2023/05/06/vscode-in-context-menu.html"
-- "/linux/2023/05/06/vscode-in-context-menu/"
-- "/linux/2023/05/06/vscode-in-context-menu"
-- "/vscode/2023/05/06/vscode-in-context-menu.html"
-- "/vscode/2023/05/06/vscode-in-context-menu/"
-- "/vscode/2023/05/06/vscode-in-context-menu"
+- "/linux/vscode/2023/05/06/vscode-in-context-menu.html"
 
 date: "2023-05-06T00:00:30Z"
 title: Add `open with vscode` into context menu in linux mint
