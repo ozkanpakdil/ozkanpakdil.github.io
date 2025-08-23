@@ -1,0 +1,126 @@
+---
+categories:
+- postgresql
+aliases:
+- "/postgresql/2025/05/27/pg18-beta-1.html"
+- "/postgresql/2025/05/27/pg18-beta-1/"
+- "/postgresql/2025/05/27/pg18-beta-1"
+
+date: "2025-05-27T00:00:30Z"
+title: PostgreSQL 18 Beta 1 Summary
+cover:
+  image: "https://github.com/user-attachments/assets/49d00fba-60f8-4049-8843-89bb7fe96791"
+  alt: "postgresql pg18 beta 1"
+  hidden: false
+---
+# PostgreSQL 18 Beta 1 - New Features and Breaking Changes
+
+**Source**: [GitHub - PostgreSQL 18 Beta 1 New Features](https://github.com/nori-shinoda/documents/blob/main/postgresql_18_beta1_new_features_en_20250527-1.pdf)
+
+## Overview
+PostgreSQL 18 introduces over 200 new features and changes. This document summarizes all significant new features, improvements, and breaking changes introduced in the Beta 1 release. Meaning these features can disappear too, this is just a beta.
+
+---
+
+## 1. Highlights of Major New Features
+
+### 1.1 Adaptation to Large Scale Environments
+- **Virtual Columns**: Support for virtual (non-stored) columns in tables.
+- **ONLY Clause for VACUUM/ANALYZE**: Now supports partitioned tables to avoid recursive partition scans.
+
+### 1.2 Reliability Enhancements
+- **`pg_dumpall` Output Format**: Supports formats other than plain text.
+- **`pg_verifybackup` Tar Format**: Adds support for tar format verification.
+
+### 1.3 Maintainability Improvements
+- **Statistics Migration**: `pg_dump` and `pg_dumpall` can now include optimizer statistics.
+- **Functions for Stats Management**: Added functions to set or clear optimizer stats per table/column.
+   - `pg_restore_relation_stats`, `pg_clear_relation_stats`, `pg_restore_attribute_stats`, `pg_clear_attribute_stats`
+   - Commits: [d32d146](https://git.postgresql.org/gitweb/?p=postgresql.git;a=commit;h=d32d1463995c036853eeb9ec99cc367ffc7794ae)
+
+### 1.4 Programming Improvements
+- **Access to `OLD` and `NEW` in `RETURNING` clause**.
+- **New Function**: UUID v7 support.
+
+### 1.5 Preparations for Future Features
+- **Asynchronous I/O Infrastructure**: Introduced with `io_method` and `io_workers`.
+   - Commits: [da72269](https://git.postgresql.org/gitweb/?p=postgresql.git;a=commit;h=da7226993fd4b73d8b40abb7167d124eada97f2e)
+- **NUMA Support**: Basic infrastructure and views (`pg_shmem_allocations_numa`).
+   - Commit: [8cc139b](https://git.postgresql.org/gitweb/?p=postgresql.git;a=commit;h=8cc139bec34a2971b0682a04eb52ce7b3f5bb425)
+
+---
+
+## 2. Breaking Changes & Incompatibilities
+
+### 2.1 Platform & Tool Support
+- Dropped support for: PA-RISC, LLVM < 14, OpenSSL < 1.1.1, Python < 3.6.8.
+- Added support: Tcl 9.
+
+### 2.2 Passwords
+- **MD5 passwords**: Now deprecated; warning shown by default.
+   - Commit: [db6a4a9](https://git.postgresql.org/gitweb/?p=postgresql.git;a=commit;h=db6a4a985bc09d260d5c29848e3c97f080646a53)
+
+### 2.3 Configuration
+- Removed `--disable-spin-locks` and `--disable-atomics`.
+   - Commits: [e256266](https://git.postgresql.org/gitweb/?p=postgresql.git;a=commit;h=e25626677f8076eb3ce94586136c5464ee154381)
+- `initdb` now enables data checksums by default.
+   - Commit: [04bec89](https://git.postgresql.org/gitweb/?p=postgresql.git;a=commit;h=04bec894a04cb0d32533f1522ab81b7016141ff1)
+
+### 2.4 SQL & DDL Statements
+- **COPY FREEZE**: Disallowed on foreign tables.
+   - Commit: [401a695](https://git.postgresql.org/gitweb/?p=postgresql.git;a=commit;h=401a6956fa69c9202cbc14c09ba8a9c430b90cac)
+- **EXPLAIN**: `BUFFERS` enabled by default.
+   - Commit: [c2a4078](https://git.postgresql.org/gitweb/?p=postgresql.git;a=commit;h=c2a4078ebad71999dd451ae7d4358be3c9290b07)
+- **CREATE SUBSCRIPTION**: Default `streaming` = `parallel`.
+   - Commit: [1bf1140](https://git.postgresql.org/gitweb/?p=postgresql.git;a=commit;h=1bf1140be87230c71d0e7b29939f7e2b3d073aa1)
+
+---
+
+## 3. Architecture Changes
+
+### 3.1 Catalog Changes
+- **New Views**: `pg_aios`, `pg_shmem_allocations_numa`
+- **Added Columns**: Many views now include additional metadata, such as constraint enforcement flags, VACUUM/ANALYZE timing, and I/O stats.
+
+### 3.2 Logical Replication
+- Logs detailed conflict types like `insert_exists`, `update_differ`, `delete_missing`.
+   - Commit: [9758174](https://git.postgresql.org/gitweb/?p=postgresql.git;a=commit;h=9758174e2e5cd278cf37e0980da76b51890e0011)
+- Propagation of generated columns via `publish_generated_columns`.
+   - Commit: [7054186](https://git.postgresql.org/gitweb/?p=postgresql.git;a=commit;h=7054186c4ebe24e63254651e2ae9b36efae90d4e)
+
+### 3.3 Storage I/O Enhancements
+- **Streaming I/O**: Broadened scope to VACUUM, CREATE DATABASE, GiST/SP-GiST, etc.
+- **Async I/O**: Controlled with `io_method`, can use `io_uring`.
+
+---
+
+## 4. SQL Enhancements
+
+### 4.1 ALTER Enhancements
+- `ALTER CONSTRAINT SET INHERIT/NO INHERIT`
+- `ADD CONSTRAINT ... NOT VALID`
+- `ALTER TABLE ONLY DROP CONSTRAINT`
+
+### 4.2 ANALYZE Improvements
+- **ONLY Clause**: Skip partitions.
+- **Verbose Stats**: Includes I/O, WAL, and delay stats.
+
+---
+
+## 5. Utilities & Tooling
+- `pg_combinebackup`, `pg_createsubscriber`: New utilities.
+- `pg_stat_io`: Combines WAL and I/O metrics.
+- `psql \conninfo`: More detailed output.
+
+---
+
+## 6. Contrib Modules
+
+Highlights:
+- `amcheck`: Enhanced with streaming I/O.
+- Enhancements to: `pgcrypto`, `pg_stat_statements`, `postgres_fdw`.
+
+---
+
+## Summary
+PostgreSQL 18 Beta 1 introduces significant architectural upgrades and functional improvements while laying the groundwork for upcoming innovations like async I/O and NUMA-aware processing. Compatibility testing is essential for a smooth transition.

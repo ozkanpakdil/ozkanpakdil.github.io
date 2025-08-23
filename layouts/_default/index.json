@@ -1,0 +1,9 @@
+{{- $.Scratch.Add "index" slice -}}
+{{- range site.RegularPages -}}
+    {{- $exclude := hasPrefix .RelPermalink "/posts/microservice-tests/" -}}
+    {{- if and (not $exclude) (not .Params.searchHidden) (ne .Layout `archives`) (ne .Layout `search`) }}
+    {{- /* Keep index small: exclude full content, keep title, permalink, and summary only */ -}}
+    {{- $.Scratch.Add "index" (dict "title" .Title "permalink" .Permalink "summary" (.Summary | plainify)) -}}
+    {{- end }}
+{{- end -}}
+{{- $.Scratch.Get "index" | jsonify -}}

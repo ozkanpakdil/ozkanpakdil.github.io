@@ -1,0 +1,32 @@
+---
+categories:
+- linux
+aliases:
+- "/linux/2025/05/10/debian12.html"
+- "/linux/2025/05/10/debian12/"
+- "/linux/2025/05/10/debian12"
+
+date: "2025-05-10T00:00:30Z"
+title: Install debian 12 on old huawei matebook
+cover:
+  image: "https://github.com/user-attachments/assets/70cdef3a-d30e-4924-9756-7054b9d5549b"
+  alt: "debian12"
+  hidden: false
+---
+I have an old Huawei laptop that was originally running Windows 10. Then moved to 11 With only 8GB of memory, the system was painfully slow, just browsing internet quite frustrating. I initially considered switching to Linux Mate, but then decided to give Debian 12 a try. I used Debian between 2004 to 2015 so I know how good it is.
+
+I downloaded the minimal USB stick image of Debian 12 from [here](https://www.debian.org/distrib/netinst) and started the installation process. The entire installation took only about 40 minutes, which was surprisingly quick.
+
+![installer gif debian12](https://github.com/user-attachments/assets/11e508b3-1f15-453b-9b16-da1a68a18fb9)
+![debian 12 progress](https://github.com/user-attachments/assets/9964afe9-d3c9-4c9d-8ced-940cdb9961a7)
+
+Looks like Debian still use old installer which does not have any desktop, just jump to installation then next next next, just be careful about disk formatting, I used full disk after all I was not planning to keep any files and it went smooth.
+
+After the installation was complete, I was amazed by the performance improvement - the system now restarts in around 7 seconds, which is incredible compared to the sluggish Windows 11 boot times.
+
+I'm currently using the Cinnamon desktop environment, which feels just right for my needs. While Gnome seems too resource-heavy and KDE feels a bit alien(protos-star craft), Cinnamon provides a perfect balance of functionality and performance. I might give XFCE a try in the afternoon, but for now, I'm really impressed with both the speed and workflow that Debian 12 with Cinnamon offers.
+
+Here are some photographs from installation
+
+![desktop manager installation](https://github.com/user-attachments/assets/a88e90ab-533a-4837-b7c8-110b0721f145)
+![debian 12 login](https://github.com/user-attachments/assets/80a01feb-49d9-43a6-b9a8-cb0d1a00974a)

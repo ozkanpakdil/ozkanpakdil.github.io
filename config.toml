@@ -1,0 +1,164 @@
+#
+# Theme setup
+#
+# If you use go mod to install your theme, you must use the URL of the theme.
+# If your theme is in the themes directory, you just need to specify its name.
+#
+baseURL = "https://ozkanpakdil.gitlab.io/"
+title = "Özkan Pakdil Software Engineer"
+copyright = "© Özkan Pakdil"
+theme = ["github.com/adityatelange/hugo-PaperMod"]
+
+[params.social]
+  linkedin = "ozkanpakdil"
+  twitter = "@thejvmbender"
+
+[pagination]
+pagerSize = 5
+enableInlineShortcodes = true
+enableRobotsTXT = true
+canonifyURLs = true
+buildDrafts = false
+buildFuture = false
+buildExpired = false
+enableEmoji = true
+pygmentsUseClasses = true
+mainsections = ["post", "posts", "pages", "projects", "wiki"]
+
+[minify]
+disableXML = true
+
+[languages.en]
+languageName = "English"
+weight = 1
+
+[languages.en.taxonomies]
+category = "categories"
+tag = "tags"
+series = "series"
+
+[[languages.en.menu.main]]
+name = "About"
+url = "about"
+weight = 5
+[[languages.en.menu.main]]
+name = "Archive"
+url = "archives"
+weight = 5
+[[languages.en.menu.main]]
+name = "Search"
+url = "search/"
+weight = 10
+[[languages.en.menu.main]]
+identifier = "categories"
+name = "Categories"
+url = "/categories/"
+weight = 20
+
+[outputs]
+home = ["HTML", "RSS", "JSON"]
+
+[params]
+env = "production"
+description = "Özkan Pakdil's Blog - Software Engineering and Technology"
+author = "Özkan Pakdil"
+defaultTheme = "auto"
+mainSections = ["post", "posts", "pages", "projects", "wiki"]
+ShowShareButtons = true
+ShowReadingTime = true
+displayFullLangName = true
+ShowPostNavLinks = true
+ShowBreadCrumbs = true
+ShowCodeCopyButtons = true
+ShowRssButtonInSectionTermList = true
+ShowAllPagesInArchive = true
+ShowPageNums = true
+ShowToc = true
+hideFooter = true
+images = ["images/papermod-cover.png"]
+
+[params.profileMode]
+enabled = false
+title = "PaperMod"
+imageUrl = "#"
+imageTitle = "my image"
+
+[[params.profileMode.buttons]]
+name = "Archives"
+url = "archives"
+[[params.profileMode.buttons]]
+name = "Tags"
+url = "tags"
+
+[params.homeInfoParams]
+Title = "Welcome to Özkan Pakdil's Blog"
+Content = """
+👋 Hello! I'm Özkan Pakdil, a software engineer with professional experience since 2004.
+
+- I specialize in **Java development** and **C#** but consider myself a full-stack developer with expertise in backend, database, server-side development, UI, and UX.
+
+- My technical journey spans various technologies including Spring Boot, Kubernetes, React, and many more. I'm a Linux enthusiast since 1999 and enjoy optimizing system performance.
+
+- This blog contains articles about technologies I use and my experiences in software development. Feel free to explore my [projects on GitHub](https://github.com/ozkanpakdil).
+"""
+
+[[params.socialIcons]]
+name = "github"
+title = "Projects on GitHub"
+url = "https://github.com/ozkanpakdil"
+[[params.socialIcons]]
+name = "mastodon"
+title = "Mastodon"
+url = "https://techhub.social/@thejvmbender"
+[[params.socialIcons]]
+name = "codeproject"
+title = "Articles on CodeProject"
+url = "https://web.archive.org/web/20240529124947/https://www.codeproject.com/script/Articles/MemberArticles.aspx?amid=119403"
+[[params.socialIcons]]
+name = "sourceforge"
+title = "SourceForge Projects"
+url = "https://sourceforge.net/u/ozkanpakdil/profile/"
+[[params.socialIcons]]
+name = "scholar"
+title = "Google Scholar"
+url = "https://scholar.google.com/citations?hl=en&user=sYaAYoEAAAAJ"
+[[params.socialIcons]]
+name = "rss"
+title = "Subscribe via RSS"
+url = "/index.xml"
+
+[params.editPost]
+URL = "https://gitlab.com/ozkanpakdil/ozkanpakdil/-/blob/main/content"
+Text = "Suggest Changes"
+appendFilePath = true
+
+[params.assets]
+disableHLJS = true
+
+[markup.goldmark.renderer]
+unsafe = true
+[markup.highlight]
+noClasses = false
+
+[services.instagram]
+disableInlineCSS = true
+
+[sitemap]
+  changefreq = "monthly"
+  filename = "sitemap.xml"
+  priority = 0.5
+
+
+[params.fuseOpts]
+iscasesensitive = false
+includescore = false
+includematches = false
+minmatchcharlength = 2
+shouldsort = true
+findallmatches = false
+keys = ["title", "summary"]
+location = 0
+threshold = 0.3
+distance = 100
+ignorelocation = true
+limit = 20

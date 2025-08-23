@@ -1,0 +1,49 @@
+---
+categories:
+- java
+aliases:
+- "/java/2023/11/20/java-21-emojis.html"
+- "/java/2023/11/20/java-21-emojis/"
+- "/java/2023/11/20/java-21-emojis"
+
+date: "2023-11-20T00:00:30Z"
+title: Character isEmoji and some others added to java 21
+---
+In java 21 we get new API for emojis like below
+
+```java
+    isEmoji(int codePoint)
+    isEmojiComponent(int codePoint)
+    isEmojiModifier(int codePoint)
+    isEmojiModifierBase(int codePoint)
+    isEmojiPresentation(int codePoint)
+    isExtendedPictographic(int codePoint)
+```
+here is a working example
+```java
+public static void main(String[] args) {
+    StringBuilder sb = new StringBuilder();
+    sb.appendCodePoint(0x1F600); // Grinning face
+    sb.appendCodePoint(0x1F601); // Grinning face with big eyes
+    sb.appendCodePoint(0x1F602); // Grinning face with tears
+    sb.appendCodePoint(0x1F923); // Rolling on the floor laughing
+    sb.appendCodePoint(0x1F970); // Smiling face with hearts
+    sb.appendCodePoint(0x1F60D); // Smiling face with heart-eyes
+    sb.appendCodePoint(0x1F929); // Star-struck
+    sb.appendCodePoint(0x1F618); // Face blowing a kiss
+    sb.appendCodePoint(0x1F617); // Kissing face
+    sb.appendCodePoint(0x263A); // Smiling face
+    System.out.println(sb);
+
+    var codePoint = Character.codePointAt("😃", 0);
+    var isEmoji = Character.isEmoji(codePoint);
+    System.out.println("😃 is an emoji: " + isEmoji);
+
+    int[] surrogates = { 0xD83D, 0xDC7D };
+    String alienEmojiString = new String(surrogates, 0, surrogates.length);
+    System.out.println(alienEmojiString);
+}
+```
+seeing these emojis in vscode ![vscode](https://github.com/ozkanpakdil/ozkanpakdil.github.io/assets/604405/b5d670e7-3e08-4dcc-8aed-5d57fa5edc86) 
+
+looks nicer compared to [intellij](https://stackoverflow.com/questions/72814914/how-to-make-monochrome-emoji-to-colorful-emoji-in-android-studio-editor-windows) 

@@ -1,0 +1,71 @@
+/* Dropdown styling for Microservice Tests in header */
+
+/* Allow dropdowns to overflow vertically from the top menu */
+/* Ensure header containers allow dropdown to overflow */
+.header, .header .nav, #menu {
+  overflow: visible !important;
+}
+
+/* Container positioning */
+#menu li.menu-dropdown {
+  position: relative;
+}
+/* Trigger element styled like a regular menu link */
+#menu li.menu-dropdown .dropdown-toggle {
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: var(--header-height);
+}
+
+/* Dropdown panel */
+#menu li.menu-dropdown .submenu {
+  display: none;
+  position: absolute;
+  top: calc(100%);
+  left: 0;
+  background: var(--entry);
+  color: var(--content);
+  list-style: none;
+  padding: 8px 0;
+  margin: 0;
+  min-width: 260px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  box-shadow: 0 6px 24px rgba(0,0,0,.12);
+  z-index: 9999;
+}
+
+#menu li.menu-dropdown .submenu li {
+  margin: 0;
+}
+
+#menu li.menu-dropdown .submenu a {
+  display: block;
+  padding: 6px 12px;
+  text-decoration: none;
+  color: inherit;
+  white-space: normal;
+  font-size: 14px;
+  line-height: 1.25;
+}
+
+/* Open on hover or keyboard focus */
+#menu li.menu-dropdown:hover > .submenu,
+#menu li.menu-dropdown:focus-within > .submenu {
+  display: block;
+}
+
+#menu li.menu-dropdown .submenu a:hover {
+  background: var(--tertiary);
+}
+
+/* Open the menu when details is toggled */
+#menu li.menu-dropdown details[open] > .submenu {
+  display: block;
+}
+
+/* Optional: visual cue like other active menu underlines when open */
+#menu li.menu-dropdown details[open] > summary {
+  border-bottom: 2px solid currentColor;
+}

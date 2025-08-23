@@ -1,0 +1,40 @@
+---
+date: "2025-05-10T00:00:00Z"
+tags:
+- Hugo
+- Jekyll
+- Static Site
+- Performance
+title: 'Exploring Hugo: A Faster Alternative to Jekyll for Static Sites'
+cover:
+  image: "https://github.com/user-attachments/assets/4fd557f8-1b24-4d67-8f22-2fcb36a98f73"
+  alt: "go hugo"
+  hidden: false
+---
+
+For years, I’ve been using [Jekyll](https://jekyllrb.com/) to power my blog at [ozkanpakdil.github.io](https://ozkanpakdil.github.io/). It has served me well in production, but setting it up on Windows for local testing has always been a bit of a headache. Even with WSL, the process is sluggish, making experimentation and quick iterations more cumbersome than I’d like.
+
+Recently, I started thinking about creating a PostgreSQL benchmark center website, and given my past challenges with Jekyll, I decided to explore other options. That’s when I discovered [Hugo](https://gohugo.io/), a static site generator built with Go. I went ahead and created the site under GitHub Pages at [pgbench.github.io](https://pgbench.github.io/), and the difference in speed was immediately noticeable.
+
+## Why Hugo?
+
+Setting up Hugo was refreshingly straightforward:
+
+```sh
+# Install Hugo using Chocolatey
+choco install hugo
+
+# Create a new Hugo site
+hugo new site quickstart
+
+# Add markdown files under `content/` and start the local server
+hugo server
+```
+Right out of the gate, Hugo felt significantly faster than Jekyll. The local server runs at `http://localhost:1313` and refreshes automatically, making content updates smooth and effortless.
+
+Another big advantage is the vast selection of themes. While I don’t consider myself a designer, Hugo’s themes make it incredibly easy to build a visually appealing site without much effort.
+
+### Will I Move My Blog to Hugo?
+At this point, I’m seriously considering it. The speed and simplicity of Hugo are hard to ignore, and I love how easy it is to deploy updates. If I can shake off the laziness, I might migrate my personal blog to Hugo in the near future.
+
+For anyone looking for a fast, efficient static site generator, I highly recommend checking out Hugo. It’s lightweight, written in Go, and delivers excellent performance right out of the box.
