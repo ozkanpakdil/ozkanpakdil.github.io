@@ -5,18 +5,7 @@ categories:
 - security
 - authentication
 aliases:
-- "/postgresql/2025/07/15/postgresql-client-certificate-authentication.html"
-- "/postgresql/2025/07/15/postgresql-client-certificate-authentication/"
-- "/postgresql/2025/07/15/postgresql-client-certificate-authentication"
-- "/ssl/2025/07/15/postgresql-client-certificate-authentication.html"
-- "/ssl/2025/07/15/postgresql-client-certificate-authentication/"
-- "/ssl/2025/07/15/postgresql-client-certificate-authentication"
-- "/security/2025/07/15/postgresql-client-certificate-authentication.html"
-- "/security/2025/07/15/postgresql-client-certificate-authentication/"
-- "/security/2025/07/15/postgresql-client-certificate-authentication"
-- "/authentication/2025/07/15/postgresql-client-certificate-authentication.html"
-- "/authentication/2025/07/15/postgresql-client-certificate-authentication/"
-- "/authentication/2025/07/15/postgresql-client-certificate-authentication"
+- "/postgresql/ssl/security/authentication/2025/07/30/postgresql-client-certificate-authentication.html"
 
 date: "2025-07-15T00:00:00Z"
 excerpt: Learn how to configure PostgreSQL with client certificate authentication
