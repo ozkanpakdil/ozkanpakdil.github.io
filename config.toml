@@ -4,7 +4,7 @@
 # If you use go mod to install your theme, you must use the URL of the theme.
 # If your theme is in the themes directory, you just need to specify its name.
 #
-baseURL = "https://ozkanpakdil.gitlab.io/"
+baseURL = "https://ozkanpakdil.github.io/"
 title = "Özkan Pakdil Software Engineer"
 copyright = "© Özkan Pakdil"
 theme = ["github.com/adityatelange/hugo-PaperMod"]
@@ -128,7 +128,7 @@ title = "Subscribe via RSS"
 url = "/index.xml"
 
 [params.editPost]
-URL = "https://gitlab.com/ozkanpakdil/ozkanpakdil/-/blob/main/content"
+URL = "https://github.com/ozkanpakdil/ozkanpakdil/-/blob/main/content"
 Text = "Suggest Changes"
 appendFilePath = true
 
