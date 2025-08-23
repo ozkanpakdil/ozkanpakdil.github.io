@@ -3,9 +3,7 @@ type: post
 title: Java microservice framework tests in SB:3.4.1 Q:3.21.0 M:4.8.2 V:5.0.0 H:4.2.1 Dotnet:7,8,9 openjdk version "24.0.1" 2025-04-15 rustc 1.87.0 (17067e9ac 2025-05-09)
 tags: [ "microservice","quarkus","graalvm","kotlin","rust","dotnet" ]
 aliases:
-- "/microservicetests/2025/06/01/microservice-framework-test-24.html"
-- "/microservicetests/2025/06/01/microservice-framework-test-24/"
-- "/microservicetests/2025/06/01/microservice-framework-test-24"
+- "/microservicetests/2025/2025-08-03-microservice-framework-test-24.html"
 
 ---
 
