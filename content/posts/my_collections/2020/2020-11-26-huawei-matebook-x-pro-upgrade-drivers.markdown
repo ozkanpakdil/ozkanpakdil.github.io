@@ -19,20 +19,20 @@ title: I have been procrastinating this upgrade for a long
 ---
 I bought Huawei matebook x pro around 2 years ago
 
-{{< highlight bash >}}
+```bash
 Matebook X Pro i5 8GB+256GB (MACH-W19)
 SN: SNLBB18903000150
 Applicable scope: Austria, Belgium, Bulgaria, Switzerland, Cyprus, Czech Republic, Germany, Denmark, Estonia, Spain, Finland, France, United Kingdom, Greece, Croatia, Hungary, Ireland, Iceland, Italy, Lithuania, Luxembourg, Latvia, Malta, Netherlands, Norway, Poland, Portugal, Romania, Sweden, Slovenia, Slovakia
-{{< / highlight >}}
+```
 
 and I just check warranty
 
-{{< highlight bash >}}
+```bash
 Warranty period
 Out of warranty
 Expected warranty expiration date:
 2020/9/23
-{{< / highlight >}}
+```
 
 First of all I am very happy with the performance and stability. This is my first personal windows 10 usage it needed 2 times resetting(we used to call it format but it changed obviously) after windows updates, Windows is not very famous about it`s stability, so I learn how to backup and make sure everything is okay in case of system failure.
 

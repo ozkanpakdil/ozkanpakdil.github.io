@@ -15,7 +15,7 @@ title: adding jars to maven pom
 ---
 normally you dont need this but sometime you may need to work with some special products like weblogic. and you may just need to add a dependincy from already installed weblogic.
 
-{{< highlight xml >}}
+```xml
 <dependency>
                 <groupId>weblogic</groupId>
                 <artifactId>weblogic</artifactId>
@@ -23,6 +23,6 @@ normally you dont need this but sometime you may need to work with some special 
                 <scope>system</scope>
                 <systemPath>C:\wl12\wlserver\modules\features\weblogic.server.merged.jar</systemPath>
 </dependency>
-{{< / highlight >}}
+```
 
 this is working in windows as you guess :)

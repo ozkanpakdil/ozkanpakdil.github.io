@@ -16,7 +16,7 @@ today I was reading imperative coding vs functional coding <a href="http://www.j
 
 then I have to try which one is faster. here is the code
 
-{{< highlight java >}}
+```java
 
 package testarea;
 
@@ -81,7 +81,7 @@ public class Test {
 
 }
 
-{{< / highlight >}}
+```
 
 here is my output
 <pre>

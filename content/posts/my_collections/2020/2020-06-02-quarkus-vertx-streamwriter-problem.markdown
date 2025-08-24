@@ -15,12 +15,12 @@ title: 'Could not find MessageBodyWriter for response object of type: io.vertx.r
   of media type: text/html;charset=UTF-8'
 ---
 I was trying to use freemarker with quarkus and vertx. I start getting this error
-{{< highlight bash >}}
+```bash
 Could not find MessageBodyWriter for response object of type: io.vertx.reactivex.core.buffer.Buffer of media type: text/html;charset=UTF-8
-{{< / highlight >}}
+```
 
 And code look like below. I was trying to use reactive approach.
-{{< highlight java >}}
+```java
     @GET
     @Produces(MediaType.TEXT_HTML)
     public Uni<Object> doSomethingAsync() throws Exception {
@@ -46,10 +46,10 @@ And code look like below. I was trying to use reactive approach.
 
         return Uni.createFrom().item(page);
     }
-{{< / highlight >}}
+```
 
 I check and could not find a proper solution here is how I solved it.
-{{< highlight java >}}
+```java
     @GET
     @Produces(MediaType.TEXT_HTML)
     public Uni<Object> doSomethingAsync() throws Exception {
@@ -58,6 +58,6 @@ I check and could not find a proper solution here is how I solved it.
         String page = engine.rxRender(data, "/templates/index.htm").toFuture().get().toString();
         return Uni.createFrom().item(page);
     }
-{{< / highlight >}}
+```
 
 after all pages are made of string.

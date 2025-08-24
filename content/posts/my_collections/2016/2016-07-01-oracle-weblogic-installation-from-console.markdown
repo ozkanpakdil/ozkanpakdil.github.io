@@ -18,7 +18,7 @@ the -silent mode is actually console installation without gui.
 Create 2 files 1
 
 responseFile.properties
-{{< highlight bash >}}
+```bash
 [ENGINE]
 Response File Version=1.0.0.0.0
 [GENERIC]
@@ -33,21 +33,21 @@ PROXY_PORT=
 PROXY_USER=
 PROXY_PWD=<SECURE VALUE>
 COLLECTOR_SUPPORTHUB_URL=
-{{< / highlight >}}
+```
 oraInst.loc
-{{< highlight bash >}}
+```bash
 inventory_loc=/inventory/
 inst_group=users
-{{< / highlight >}}
+```
 Run this command in  shell
-{{< highlight bash >}}
+```bash
 java -jar fmw_12.2.1.1.0_wls.jar -silent -invPtrLoc /fullpath/oraInst.loc -responseFile /fullpath/responseFile.properties
-{{< / highlight >}}
+```
 for windows
-{{< highlight bash >}}
+```bash
 java -jar fmw_12.2.1.1.0_wls.jar -silent -invPtrLoc c:\oracle\oraInst.loc -responseFile c:\oracle\responseFile.properties
-{{< / highlight >}}
+```
 in responseFile.properties change
-{{< highlight bash >}}
+```bash
 ORACLE_HOME=c:\\some-path-to-install
-{{< / highlight >}}
+```

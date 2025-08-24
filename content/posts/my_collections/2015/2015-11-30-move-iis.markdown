@@ -18,13 +18,13 @@ Last weekend I needed to move from one windows 2012 to another one. And I have a
 Normally in IIS manager you can export with web deploy tool. But I hit the 4gb max size limit.  And the dialog was saying use archivedir.
 
 Here is how you can do it. For backing up whole sites from your IIS
-{{< highlight bash >}}
+```bash
 msdeploy -verb:sync -dest:archivedir=c:\site1archive,encryptPassword=password -source=webserver
-{{< / highlight >}}
+```
 The sitearchive1 directory should have been created before and you can change the password.
 
 After you move whole folder to new machine here is how you can import all sites into fresh new IIS
-{{< highlight bash >}}
+```bash
 msdeploy -verb:sync -dest=webserver -source:archivedir=c:\site1archive,encryptPassword=password
-{{< / highlight >}}
+```
 you can download msdeploy from here http://www.iis.net/downloads/microsoft/web-deploy

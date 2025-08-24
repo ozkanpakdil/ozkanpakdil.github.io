@@ -25,7 +25,7 @@ in weblogic there is XA enabled jms. which uses JTA user-transactions. and in my
 
 this is non XA example. 
 
-{{< highlight java >}}
+```java
 <%@page import="java.io.PrintWriter"%>
 <%@ page import="java.util.*"%>
 <%@ page import="javax.jms.*"%>
@@ -91,11 +91,11 @@ this is non XA example.
 
 </body>
 </html>
-{{< / highlight >}}
+```
 
 this is XA jms example
 
-{{< highlight java >}}
+```java
 <%@page import="java.io.PrintWriter"%>
 <%@ page import="java.util.*"%>
 <%@ page import="javax.jms.*"%>
@@ -161,4 +161,4 @@ this is XA jms example
 
 </body>
 </html>
-{{< / highlight >}}
+```

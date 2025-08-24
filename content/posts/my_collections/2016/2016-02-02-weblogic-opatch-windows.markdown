@@ -9,7 +9,7 @@ date: "2016-02-02T11:30:30Z"
 title: How to use opatch in windows
 ---
 Oracle has opatch utility for applying weblogic patches. you just need to unzip the patch package and run the command like this
-{{< highlight PowerShell >}}
+```powershell
 C:\Oracle\wls12.1.3\OPatch>opatch apply C:\Oracle\wls12.1.3\OPatch\utils\patches\20741228
 Oracle Interim Patch Installer version 13.2.0.0.0
 Copyright (c) 2014, Oracle Corporation.  All rights reserved.
@@ -47,19 +47,19 @@ Patch 20741228 successfully applied
 Log file location: C:\Oracle\WLS121~1.3\cfgtoollogs\opatch\20741228_Feb_01_2016_10_10_23\apply
  
 OPatch succeeded.
-{{< / highlight >}}
+```
 for listing patches already applid in the system
-{{< highlight PowerShell >}}
+```powershell
 C:\Oracle\wls12.1.3\OPatch>opatch lspatches
 Feb 01, 2016 5:53:32 PM oracle.sysman.oii.oiii.OiiiInstallAreaControl initAreaControl
 INFO: Install area Control created with access level  0
 21370953;WebLogic Server 12.1.3.0.5 PSU Patch for BUG21370953 October 2015
 20469805;One-off
 20741228;JDBC 12.1.3.1 BP1
-22192029;One-off
-{{< / highlight >}}
+22192029;One-offN
+```
 making a rollback one of the patches
-{{< highlight PowerShell >}}
+```powershell
 C:\Oracle\wls12.1.3\OPatch>opatch rollback -id 21370953
 Oracle Interim Patch Installer version 13.2.0.0.0
 Copyright (c) 2014, Oracle Corporation.  All rights reserved.
@@ -122,6 +122,6 @@ RollbackSession removing interim patch '21370953' from inventory
 Log file location: C:\Oracle\WLS121~1.3\cfgtoollogs\opatch\21370953_Feb_01_2016_17_56_20\rollback2016-02-01_17-56-02PM_1.log
  
 OPatch succeeded.
-{{< / highlight >}}
+```
 
 I tried to copy opatch run from another folder then installation. but it throwed some class not found exceptions. 

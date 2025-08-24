@@ -14,16 +14,16 @@ Let say you have bunch(5 millions) of small files in your linux in some folder. 
 Everybody knows rm -rf /tmp/somefolder but if you run this on a server which already has internet load it may freeze it. and make it stop serving pages.
 
 So what are the options. first and easiest way 
-{{< highlight bash >}}
+```bash
 find /tmp/somefolder/ -type f -mtime +30  | xargs rm -f
-{{< / highlight >}}
+```
 this also can freeze or eat a lot of resources to run.
 
 Then ionice comes to scene and with ionice you can make it run smoothly 
-{{< highlight bash >}}ionice -c3 find /tmp2/cache/ -type f -mtime +30  | xargs rm -f{{< / highlight >}}
+```bashionice -c3 find /tmp2/cache/ -type f -mtime +30  | xargs rm -f```
 this way for sure your system does not get freeze. but the problem is if you run this in every hour this may overrun and can 2 procceses clash which result as slow server. so what we need to do watch the system and clean whenever server has time.
 
-{{< highlight bash >}}
+```bash
 #!/bin/bash
 
 while true
@@ -38,6 +38,6 @@ do
     fi
     sleep 30
 done
-{{< / highlight >}}
+```
 
 This script checks every 30 seconds server load and if it is 0 run 10k delete. BTW server load never hits to 0. it runs when ever its below 1. it took me 3 days to clean 5.5 million files :) 

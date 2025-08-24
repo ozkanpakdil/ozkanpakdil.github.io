@@ -12,7 +12,7 @@ title: nginx vs varnish
 it has been a long time I am using varnish + apache. and I was reading nginx is really fast. 2 days ago I installed nginx and configure one php page works with it. here are the ab outputs
 
 this is varnish
-{{< highlight bash >}}
+```bash
 mascix@mascix-HP-Pavilion-dv7-Notebook-PC:~/tmp/akka/example-akka-http$ ab -n 100 -c 10 http://sifavi.com/
 This is ApacheBench, Version 2.3 <$Revision: 1528965 $>
 Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
@@ -57,9 +57,9 @@ Percentage of the requests served within a certain time (ms)
   98%    110
   99%    113
  100%    113 (longest request)
-{{< / highlight >}}
+```
 this is nginx
-{{< highlight bash >}}
+```bash
 mascix@mascix-HP-Pavilion-dv7-Notebook-PC:~/tmp/akka/example-akka-http$ ab -n 100 -c 10 http://sifavi.com:3080/
 This is ApacheBench, Version 2.3 <$Revision: 1528965 $>
 Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
@@ -103,6 +103,6 @@ Percentage of the requests served within a certain time (ms)
   98%    597
   99%   1512
  100%   1512 (longest request)
-{{< / highlight >}}
+```
 
 I am not the expert about it but from my understanding varnish faster then nginx 15 times. by the way yes I enabled cache in nginx. if you see any mistake about this feel free to contact me.

@@ -137,8 +137,6 @@ disableHLJS = true
 
 [markup.goldmark.renderer]
 unsafe = true
-[markup.highlight]
-noClasses = false
 
 [services.instagram]
 disableInlineCSS = true

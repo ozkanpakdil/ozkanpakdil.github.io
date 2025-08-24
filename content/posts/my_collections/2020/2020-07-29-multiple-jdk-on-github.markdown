@@ -15,7 +15,7 @@ title: Running multiple jdk in github action
 ---
 [Here](https://github.com/ozkanpakdil/eclipse-collections-benchmark/blob/master/.github/workflows/main.yml) is an example to show how multiple jdk run in one github action. And generate artifacts as test results
 
-{{< highlight yml >}}
+```yaml
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -24,6 +24,6 @@ jobs:
         java: ["8", "11", "13", "14"]
     name: Java ${{ matrix.java }} sample
     steps:
-{{< / highlight >}}
+```
 
 And to see how it looks in build, check any build in https://github.com/ozkanpakdil/eclipse-collections-benchmark/actions

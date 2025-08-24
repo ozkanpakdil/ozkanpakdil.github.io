@@ -17,7 +17,7 @@ I was reading [eclipse collections benchmark doc](https://www.baeldung.com/jdk-c
 
 Below from my local
 
-{{< highlight bash >}}
+```bash
 D:\tmp\benchmark-eclipse-collections>java -jar target/benchmarks.jar IntegerListFilter -rf json 
 WARNING: An illegal reflective access operation has occurred
 WARNING: Illegal reflective access by org.openjdk.jmh.util.Utils (file:/D:/tmp/benchmark-eclipse-collections/target/benchmarks.jar) to field java.io.PrintStream.charOut
@@ -305,9 +305,9 @@ IntegerListFilter.jdkList                thrpt   10  112.842 ± 16.585  ops/s
 IntegerListFilter.jdkListParallel        thrpt   10  340.537 ± 18.300  ops/s
 
 Benchmark result is saved to jmh-result.json
-{{< / highlight >}}
+```
 
-{{< highlight bash >}}
+```bash
 Result "com.mascix.IntegerListSum.jdkListParallel":
   1130.600 ±(99.9%) 7.078 ops/s [Average]
   (min, avg, max) = (1119.181, 1130.600, 1135.694), stdev = 4.682
@@ -330,6 +330,6 @@ IntegerListSum.ecPrimitiveParallel    thrpt   10  8070.602 ± 436.183  ops/s
 IntegerListSum.jdkList                thrpt   10   543.355 ±  22.079  ops/s
 IntegerListSum.jdkListParallel        thrpt   10  1130.600 ±   7.078  ops/s
 
-{{< / highlight >}}
+```
 
 You can find more results in jdk matrix from [eclipse collections benchmark](https://github.com/ozkanpakdil/eclipse-collections-benchmark/actions)

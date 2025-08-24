@@ -11,7 +11,7 @@ title: Java imperative and functional approach performance test 2
 ---
 another test for imperative code
 
-{{< highlight java >}}
+```java
 
 package testarea;
 
@@ -88,7 +88,7 @@ public class Test {
 
 }
 
-{{< / highlight >}}
+```
 
 here is my output
 <pre>

@@ -13,7 +13,7 @@ I never tried JNI(Java Native Interface) before. jni is an api for to call nativ
 
 basically there are 2 codes. one is written in java one is written in C. here is our C code
 
- {{< highlight C >}}
+```c
 /* ctest.c */
 #include <jni.h>
 #include <stdio.h>
@@ -23,11 +23,11 @@ JNIEXPORT void JNICALL Java_HelloWorld_helloFromC
 {
     printf("Hello from C!\n");
 }
-{{< / highlight >}}
+```
 
 and here is our java code
 
- {{< highlight C >}}
+ ```c
 public class HelloWorld {
     native void helloFromC(); /* (1) */
     static {
@@ -38,28 +38,28 @@ public class HelloWorld {
         helloWorld.helloFromC(); /* (3) */
     }
 }
-{{< / highlight >}}
+```
 
 you can compile C code like this
-{{< highlight bash >}}
+```bash
 gcc -o libctest.so -shared -I/usr/lib/jvm/java-8-oracle/include/ ctest.c -lc -fPIC
-{{< / highlight >}}
+```
 and you can compile java code like this
-{{< highlight bash >}}
+```bash
 javac HelloWorld.java
-{{< / highlight >}}
+```
 after you compile both. you can run the code like this
-{{< highlight bash >}}
+```bash
 java -Djava.library.path=. HelloWorld
-{{< / highlight >}}
+```
 what it does actually you call Java_HelloWorld_helloFromC function of C from java. and it prints hello world string on console. in my ubuntu it took a while to compile that C code. I needed to install a lot of libraries like this
-{{< highlight bash >}}
+```bash
 apt-get install libc6-dev-i386 g++-multilib
 apt-get install libc6-dev-i386
 apt-get install --reinstall libc6-dev
-{{< / highlight >}}
+```
 because gcc was givin this error
-{{< highlight bash >}}
+```bash
 mascix@mascix-HP-Pavilion-dv7-Notebook-PC:~/tmp/jniexample$ g++ -o libctest.so -shared -I/usr/lib/jvm/java-8-oracle/include/ ctest.c -lc
 In file included from /usr/include/stdio.h:27:0,
                  from /usr/lib/jvm/java-8-oracle/include/jni.h:39,
@@ -67,10 +67,10 @@ In file included from /usr/include/stdio.h:27:0,
 /usr/include/features.h:374:25: fatal error: sys/cdefs.h: No such file or directory
  #  include <sys/cdefs.h>
                          ^
-{{< / highlight >}}
+```
 after it compiled I run the java and jni and see the output but my intentions was only to investigate to see how fast is jni is compared to C. so what I did is actually run commands in linux like this and see the output
 
-{{< highlight bash >}}
+```bash
 mascix@mascix-HP-Pavilion-dv7-Notebook-PC:~/tmp/jniexample$ time java -Djava.library.path=. HelloWorld 
 Hello from C!
 
@@ -83,6 +83,6 @@ Hello World
 real	0m0.002s
 user	0m0.001s
 sys	0m0.002s
-{{< / highlight >}}
+```
 
 compared to JNI, C is very fast. I was not expecting this difference.65 times faster in C.
