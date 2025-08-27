@@ -74,6 +74,7 @@ ShowRssButtonInSectionTermList = true
 ShowAllPagesInArchive = true
 ShowPageNums = true
 ShowToc = true
+ShowFullTextinRSS = true
 hideFooter = true
 images = ["images/papermod-cover.png"]
 
