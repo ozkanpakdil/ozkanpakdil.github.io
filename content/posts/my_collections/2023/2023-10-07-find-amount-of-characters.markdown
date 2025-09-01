@@ -57,4 +57,4 @@ public static String transformString(String input) {
     return result.toString();
 }
 ```
-The output is “a3b3c3a1z2d3x2” find the working code [here](https://github.com/ozkanpakdil/swaggerific/blob/main/src/test/java/com/mascix/swaggerific/algorithms/FindhighestAverage.java#L38) for full working example.
+The output is “a3b3c3a1z2d3x2” find the working code [here](https://github.com/ozkanpakdil/swaggerific/blob/158d039812a74d5cdf3f872ce29b3686253c82dc/src/test/java/io/github/ozkanpakdil/swaggerific/algorithms/FindhighestAverage.java#L39) for full working example.
