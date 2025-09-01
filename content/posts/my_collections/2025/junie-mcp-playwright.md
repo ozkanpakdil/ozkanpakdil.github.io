@@ -14,9 +14,9 @@ And couple of months ago I was doing a small demo to show how to use vscode with
 
 I have been trying to do same with Junie in intellij and failing, this weekend figured it out. Here are the steps
 1. Enable MCP server in intellij https://youtu.be/1HvxI89dRs8
-[![How to enable MCP server in intellij](https://img.youtube.com/vi/1HvxI89dRs8/0.jpg)](https://www.youtube.com/watch?v=1HvxI89dRs8)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/1HvxI89dRs8?si=lLEjpdX2dd7hGu3a" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 2. Define Playwright MCP 
-[![How to enable Playwright MCP server in intellij](https://img.youtube.com/vi/qrWdIXnn6ck/0.jpg)](https://youtu.be/qrWdIXnn6ck)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/qrWdIXnn6ck?si=SgdDgTwxyz4YEW2L" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ```json
 {
@@ -31,4 +31,4 @@ I have been trying to do same with Junie in intellij and failing, this weekend f
 3. Ask Junie to use Playwright MCP to write the tests for the target site. Do not forget to give details like username password and what LLM should scan for like which links and what scenario is in the target. 
 
 Here you can see the full scenario how you can use Junie to create the test
-[![How to write Playwright  tests with Playwright MCP server in intellij](https://img.youtube.com/vi/L3A7dMY4cmk/0.jpg)](https://youtu.be/L3A7dMY4cmk)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/L3A7dMY4cmk?si=TXcnpqr4iydMtjSx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
