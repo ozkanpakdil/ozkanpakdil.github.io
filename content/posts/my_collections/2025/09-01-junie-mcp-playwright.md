@@ -8,7 +8,7 @@ cover:
   alt: "How to use Playwright MCP in intellij"
   hidden: false
 ---
-Junie is intellij`s AI agent, which is very helpfull for working on code, I find it better then github copilot because its taks planning and implementation is more helpfull then github copilot for me.
+Junie is intellij`s AI agent, which is very helpful for working on code, I find it better then github copilot because its taks planning and implementation is more helpful then github copilot for me.
 
 And couple of months ago I was doing a small demo to show how to use vscode with github copilot and playwright. The idea is LLM will use the playwright and write all tests and it will explore the site, this is good because it feels like you are showing your product to a fresh eyes, when we are writing/developing we may miss many things, this LLM approach is good for learning how others can act and it will find in time how to use the site and it will write the test scenario we want. I Longer details for vscode [check here](https://www.youtube.com/watch?v=zyOJfGtJ3Rw).
 
