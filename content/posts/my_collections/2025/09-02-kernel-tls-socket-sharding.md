@@ -1,7 +1,7 @@
 ---
 title: "Kernel TLS, NIC Offload, and Socket Sharding: What’s New and Who Uses It?"
 date: 2025-09-02
-tags: ["linux","tls"]
+tags: ["linux","tls","network"]
 cover:
   image: "https://dev-to-uploads.s3.amazonaws.com/uploads/articles/9j1rxjp2e9v60rupl0bu.png"
   alt: "Kernel TLS and socket sharding"
