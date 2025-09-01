@@ -108,21 +108,42 @@ name = "github"
 title = "Projects on GitHub"
 url = "https://github.com/ozkanpakdil"
 [[params.socialIcons]]
+name = "linkedin"
+url = "https://www.linkedin.com/in/ozkanpakdil"
+[[params.socialIcons]]
+name = "cv"
+url = "/about/"
+[[params.socialIcons]]
+name = "stackoverflow"
+url = "https://stackoverflow.com/users/175554/ozkanpakdil"
+[[params.socialIcons]]
 name = "mastodon"
 title = "Mastodon"
 url = "https://techhub.social/@thejvmbender"
 [[params.socialIcons]]
-name = "codeproject"
-title = "Articles on CodeProject"
+name = "adobestock"
+title = "Code project from webarchive"
 url = "https://web.archive.org/web/20240529124947/https://www.codeproject.com/script/Articles/MemberArticles.aspx?amid=119403"
 [[params.socialIcons]]
-name = "sourceforge"
+name = "dev"
 title = "SourceForge Projects"
 url = "https://sourceforge.net/u/ozkanpakdil/profile/"
 [[params.socialIcons]]
-name = "scholar"
-title = "Google Scholar"
+name = "googlescholar"
 url = "https://scholar.google.com/citations?hl=en&user=sYaAYoEAAAAJ"
+[[params.socialIcons]]
+name = "hackerrank"
+title = "Hasckerrank"
+url = "https://www.hackerrank.com/certificates/f171f77aa5ee"
+#[[params.socialIcons]]
+#name = "x"
+#url = "https://x.com/thejvmbender"
+[[params.socialIcons]]
+name = "bluesky"
+url = "https://bsky.app/profile/thejvmbender.bsky.social"
+[[params.socialIcons]]
+name = "researchgate"
+url = "https://www.researchgate.net/scientific-contributions/Ozkan-Pakdil-69824792"
 [[params.socialIcons]]
 name = "rss"
 title = "Subscribe via RSS"

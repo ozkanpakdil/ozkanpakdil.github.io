@@ -4,7 +4,7 @@ layout: "page"
 # url: "/about"
 summary: "This is the about page for the Özkan Pakdil"
 ---
-As the title of this site says, I'm a seasoned software engineer with a professional journey spanning back
+As the title of this site says, I'm a software engineer with a professional journey spanning back
 to 2004. Throughout my career, I've delved into a multitude of projects and companies, honing my skills across
 various technologies. While my primary expertise lies in Java development, I've also ventured into diverse areas such as
 mobile web projects, where I've tackled tasks like crafting solutions
