@@ -14,11 +14,7 @@ And couple of months ago I was doing a small demo to show how to use vscode with
 
 I have been trying to do same with Junie in intellij and failing, this weekend figured it out. Here are the steps
 
-1. Enable MCP server in intellij https://youtu.be/1HvxI89dRs8
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/1HvxI89dRs8?si=lLEjpdX2dd7hGu3a" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-2. Define Playwright MCP 
+1. Define Playwright MCP 
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/qrWdIXnn6ck?si=SgdDgTwxyz4YEW2L" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
@@ -35,7 +31,7 @@ I have been trying to do same with Junie in intellij and failing, this weekend f
 }
 ```
 
-3. Ask Junie to use Playwright MCP to write the tests for the target site. Do not forget to give details like username password and what LLM should scan for like which links and what scenario is in the target. 
+2. Ask Junie to use Playwright MCP to write the tests for the target site. Do not forget to give details like username password and what LLM should scan for like which links and what scenario is in the target. 
 
 Here you can see the full scenario how you can use Junie to create the test
 
