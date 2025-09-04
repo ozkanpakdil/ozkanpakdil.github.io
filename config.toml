@@ -9,21 +9,23 @@ title = "Özkan Pakdil Software Engineer"
 copyright = "© Özkan Pakdil"
 theme = ["github.com/adityatelange/hugo-PaperMod"]
 
+enableEmoji = true
+
 [params.social]
   linkedin = "ozkanpakdil"
   twitter = "@thejvmbender"
 
-[pagination]
-pagerSize = 5
 enableInlineShortcodes = true
 enableRobotsTXT = true
 canonifyURLs = true
 buildDrafts = false
 buildFuture = true
 buildExpired = false
-enableEmoji = true
 pygmentsUseClasses = true
 mainsections = ["post", "posts", "pages", "projects", "wiki"]
+
+[pagination]
+pagerSize = 5
 
 [minify]
 disableXML = true
