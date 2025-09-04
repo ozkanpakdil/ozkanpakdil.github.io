@@ -37,4 +37,4 @@ Here you can see the full scenario how you can use Junie to create the test
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/L3A7dMY4cmk?si=TXcnpqr4iydMtjSx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-Find the test-mc project [here](https://github.com/ozkanpakdil/nodejs-projects/tree/master/test-mcp).
+Find the test-mcp project [here](https://github.com/ozkanpakdil/nodejs-projects/tree/master/test-mcp).
