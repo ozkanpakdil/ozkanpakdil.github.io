@@ -8,6 +8,10 @@ aliases:
 
 date: "2018-01-13T08:05:30Z"
 title: Delete files in linux best way
+cover:
+  image: "https://github.com/user-attachments/assets/30065668-8a2c-4533-aacb-0d064a1aa6bc"
+  alt: "Best way to delete files in linux on prod"
+  hidden: false
 ---
 Let say you have bunch(5 millions) of small files in your linux in some folder. when you try to delete them can be very tricky.
 
