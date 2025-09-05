@@ -152,7 +152,7 @@ title = "Subscribe via RSS"
 url = "/index.xml"
 
 [params.editPost]
-URL = "https://github.com/ozkanpakdil/ozkanpakdil/-/blob/main/content"
+URL = "https://github.com/ozkanpakdil/ozkanpakdil.github.io/edit/main/content"
 Text = "Suggest Changes"
 appendFilePath = true
 
