@@ -51,16 +51,16 @@ bloat_indicator = index_size / reltuples
 
 Here's SQL you can run right away (no extensions needed):
 ```sql
-SELECT
-    schemaname,
-    relname AS table_name,
-    indexrelname AS index_name,
+SELECT 
+    i.schemaname,
+    c.relname AS table_name,
+    i.indexrelname AS index_name,
     pg_size_pretty(pg_relation_size(i.indexrelid)) AS index_size,
     c.reltuples::bigint AS row_estimate,
-    CASE
-        WHEN c.reltuples > 0
-        THEN pg_relation_size(i.indexrelid) / c.reltuples
-        ELSE NULL
+    CASE 
+        WHEN c.reltuples > 0 
+        THEN pg_relation_size(i.indexrelid) / c.reltuples 
+        ELSE NULL 
     END AS bytes_per_row
 FROM pg_stat_all_indexes i
 JOIN pg_class c ON c.oid = i.relid
