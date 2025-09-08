@@ -1,15 +1,10 @@
 ---
 date: 2025-09-08
-tags:
-- postgresql
-- index bloat
-- database tuning
-- vacuum
-- performance
+tags: [postgresql,index bloat,database tuning,vacuum,performance]
 title: Understanding and Monitoring Index and Table Bloat in PostgreSQL
 cover:
     image: https://github.com/user-attachments/assets/2f69fdda-d2fd-4e1e-b31a-c047bdf2dc9a
-    alt: "Postgres index table bloat
+    alt: Postgres index table bloat
     hidden: false
 ---
 
