@@ -26,7 +26,17 @@ TL;DR
 - Issue a server cert for hostname localhost (SAN=DNS:localhost) and a client cert for the DB user (CN=testuser).
 - Copy certs/keys into the container during init; set ssl=on and point PostgreSQL to the files.
 - Set pg_hba.conf rules to require client certs with verify-full.
+- No DB password needed: client-certificate auth proves identity via the certificate (CN=testuser), so you don’t store or pass a password.
 - Connect from Java using JSSE keystore/truststore or from psql using PEM files.
+
+Why client-certificate authentication?
+- No username/passwords to manage: the client’s identity is established by possession of the private key and a certificate issued by your CA. PostgreSQL maps the certificate’s CN to a role (testuser in this post), so there is no password to type or store.
+- Secretless connections: no DB credentials in environment variables, config files, or CI logs—only certificates/keys that you can mount or inject securely.
+- Strong, mutual TLS: the client verifies the server (CA + hostname with verify-full) and the server verifies the client certificate, eliminating password phishing/replay.
+- Great for automation: jobs/containers can authenticate without embedded passwords; just provide the client cert/key and trust the CA.
+- Fine-grained control: issue distinct client certs per service and revoke them individually without rotating a shared password.
+
+Note: in the JDBC example below we still set user=testuser to select the role, but there is no password—authentication is performed by the client certificate.
 
 
 Prerequisites
@@ -144,12 +154,10 @@ Finally, create the database role that matches the client cert’s CN (testuser)
 ```
 
 Wiring it up with Testcontainers
-[The PostgreSQLContainer](https://github.com/ozkanpakdil/java-examlpes/blob/79d21e955b6940ccf4b79ec52bd86efabcd5777b/postgresql-ssl-testcontainers/src/test/java/com/example/ssl/PostgresWithClientCertTest.java#L179) is started with SSL assets and init scripts copied into /docker-entrypoint-initdb.d:
+[The PostgreSQLContainer](https://github.com/ozkanpakdil/java-examlpes/blob/f0b46caa1bc82766c3bea67e52cdcae97ca7a44f/postgresql-ssl-testcontainers/src/test/java/com/example/ssl/PostgresWithClientCertTest.java#L179) is started with SSL assets and init scripts copied into /docker-entrypoint-initdb.d:
 ```java
     pg = new PostgreSQLContainer<>("postgres:16")
         .withDatabaseName("postgres")
-        .withUsername("postgres")
-        .withPassword("postgres")
         .withStartupTimeout(Duration.ofSeconds(30))
         .withLogConsumer(new Slf4jLogConsumer(LOG).withSeparateOutputStreams())
 
