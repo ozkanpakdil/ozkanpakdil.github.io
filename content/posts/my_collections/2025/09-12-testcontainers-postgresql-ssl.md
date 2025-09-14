@@ -56,7 +56,7 @@ This project generates all materials at runtime for you (see CryptoUtil.java). T
 - Issue a server certificate (Extended Key Usage: serverAuth) with SAN=DNS:localhost
 - Issue a client certificate (Extended Key Usage: clientAuth) with CN=testuser
 
-Snippet (simplified from CryptoUtil):
+Snippet (simplified from [CryptoUtil](https://github.com/ozkanpakdil/java-examlpes/blob/79d21e955b6940ccf4b79ec52bd86efabcd5777b/postgresql-ssl-testcontainers/src/test/java/com/example/ssl/PostgresWithClientCertTest.java#L92)):
 ```java
     var ca = generateSelfSignedCA("Demo-CA");
     var server = issueCertificate(ca, "localhost", true, List.of("localhost"));
@@ -75,13 +75,13 @@ About formats:
 - Server key: the code writes PKCS#1 (BEGIN RSA PRIVATE KEY), which PostgreSQL accepts.
 - Client key: written as PKCS#8 (BEGIN PRIVATE KEY) so PgJDBC can load it if using libpq factory.
 
-Permissions for the client key (psql requires 0600):
+[Permissions for the client key (psql requires 0600):](https://github.com/ozkanpakdil/java-examlpes/blob/79d21e955b6940ccf4b79ec52bd86efabcd5777b/postgresql-ssl-testcontainers/src/test/java/com/example/ssl/PostgresWithClientCertTest.java#L112)
 ```java
     // Best-effort on POSIX; otherwise fallback to owner-only readable/writable
     Set<PosixFilePermission> perms = EnumSet.of(PosixFilePermission.OWNER_READ, PosixFilePermission.OWNER_WRITE);
     Files.setPosixFilePermissions(clientKeyPem, perms);
 ```
-Java keystore/truststore (JSSE) for JDBC:
+Java keystore/truststore (JSSE) [for JDBC](https://github.com/ozkanpakdil/java-examlpes/blob/79d21e955b6940ccf4b79ec52bd86efabcd5777b/postgresql-ssl-testcontainers/src/test/java/com/example/ssl/PostgresWithClientCertTest.java#L124):
 ```java
     // Client key + chain in PKCS#12 keystore (client.p12)
     createPkcs12KeyStore(clientKeystore, "client", client.keyPair().getPrivate(),
@@ -100,14 +100,14 @@ A minimal pg_hba.conf used here:
 ```
     # TYPE  DATABASE        USER            ADDRESS                 METHOD
 
-    # Allow local socket connections for init scripts and superuser tasks
-    local   all            all                                     trust
-    host    all            all             127.0.0.1/32            trust
-    host    all            all             ::1/128                 trust
+    # Allow local socket connections with password only
+    local   all            all                                     scram-sha-256
+    host    all            all             127.0.0.1/32            scram-sha-256
+    host    all            all             ::1/128                 scram-sha-256
 
     # Require client certs for all TCP connections
     hostssl all            all             0.0.0.0/0               cert clientcert=verify-full
-    hostssl all            all             ::0/0                    cert clientcert=verify-full
+    hostssl all            all             ::0/0                   cert clientcert=verify-full
 ```
 The postgresql.conf changes we apply during container init:
 ```
@@ -144,7 +144,7 @@ Finally, create the database role that matches the client cert’s CN (testuser)
 ```
 
 Wiring it up with Testcontainers
-The PostgreSQLContainer is started with SSL assets and init scripts copied into /docker-entrypoint-initdb.d:
+[The PostgreSQLContainer](https://github.com/ozkanpakdil/java-examlpes/blob/79d21e955b6940ccf4b79ec52bd86efabcd5777b/postgresql-ssl-testcontainers/src/test/java/com/example/ssl/PostgresWithClientCertTest.java#L179) is started with SSL assets and init scripts copied into /docker-entrypoint-initdb.d:
 ```java
     pg = new PostgreSQLContainer<>("postgres:16")
         .withDatabaseName("postgres")
@@ -175,7 +175,7 @@ Two approaches are common:
 - JSSE keystore/truststore (used here): put client key+cert chain into a PKCS#12 keystore and CA into a PKCS#12 truststore; use DefaultJavaSSLFactory.
 - Libpq (PEM) style files via PgJDBC’s LibPQFactory (not shown here, but compatible with the PEM files you generated).
 
-In this project we use JSSE:
+In this project we [use JSSE](https://github.com/ozkanpakdil/java-examlpes/blob/79d21e955b6940ccf4b79ec52bd86efabcd5777b/postgresql-ssl-testcontainers/src/test/java/com/example/ssl/PostgresWithClientCertTest.java#L221):
 ```java
     String url = "jdbc:postgresql://localhost:" + pg.getFirstMappedPort() + "/postgres";
 
@@ -197,7 +197,7 @@ In this project we use JSSE:
         // ... use the connection
     }
 ```
-Verification query used in the test:
+[Verification query](https://github.com/ozkanpakdil/java-examlpes/blob/79d21e955b6940ccf4b79ec52bd86efabcd5777b/postgresql-ssl-testcontainers/src/test/java/com/example/ssl/PostgresWithClientCertTest.java#L239) used in the test:
 ```sql
     select current_user,
            (select ssl from pg_stat_ssl where pid = pg_backend_pid()) as ssl_used;
