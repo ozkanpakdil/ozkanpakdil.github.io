@@ -2,6 +2,11 @@
 categories: [graalvm,native-image,java,howto]
 date: 2025-09-16
 title: "GraalVM Native Image Agent — reachability metadata: how to run it, where files go"
+description: "How to run the agent (generic Java) and where the metadata is used"
+cover:
+  image: https://github.com/user-attachments/assets/3e943296-4acf-4d7a-af76-87bd4944525c
+  alt: How to run the agent (generic Java) and where the metadata is used
+  hidden: false
 ---
 Native Image needs reachability metadata so it can include dynamic features your app uses at run time (reflection, resources, proxies, serialization, JNI). The simplest way to get this metadata is to run your app on the JVM with the Native Image Agent and then use the generated JSON files during the native build.
 

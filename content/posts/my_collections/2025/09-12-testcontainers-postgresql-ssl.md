@@ -2,7 +2,7 @@
 date: 2025-09-12
 tags: [docker,testcontainers,postgresql,postgresql-ssl]
 title: How to use Testcontainers with PostgreSQL and SSL
-description:
+description: Using Testcontainers with PostgreSQL over SSL/TLS (with client certificates)
 cover:
     image: https://github.com/user-attachments/assets/e5c2c8c8-4532-4da2-b229-245c175817a8
     alt: Testcontainers with PostgreSQL and SSL
