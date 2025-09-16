@@ -24,7 +24,7 @@ You have two common ways to feed these JSONs to native-image:
 
 1) Put them on the classpath under META-INF/native-image
 - Source path in your project:
-  src/main/resources/META-INF/native-image/<groupId>/<artifactId>/
+  **src/main/resources/META-INF/native-image/<groupId>/<artifactId>/**
 - Example files you will typically see (names per GraalVM docs):
   - reachability-metadata.json
   - below one exist before GraalVM 23.0.0:
@@ -51,4 +51,4 @@ java -agentlib:native-image-agent=config-output-dir=./graalcnf,config-merge-dir=
 
 Reference
 - Official metadata types and details: https://www.graalvm.org/latest/reference-manual/native-image/metadata/
-- My earlier Ktor+Maven note (tiny example with native-image.properties):  http://localhost:1313/posts/my_collections/2022/2022-11-13-ktor-graal/
+- My earlier Ktor+Maven note (tiny example with native-image.properties): https://ozkanpakdil.github.io/posts/my_collections/2022/2022-11-13-ktor-graal/
