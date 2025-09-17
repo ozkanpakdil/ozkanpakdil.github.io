@@ -8,6 +8,19 @@ cover:
   alt: How to run the agent (generic Java) and where the metadata is used
   hidden: false
 ---
+In short
+1. Run the app
+```shell
+java -agentlib:native-image-agent=config-output-dir=./graalcnf/ -jar target/app.jar
+```
+2. Copy the generated files from `./graalcnf/` to the project under `src/main/resources/META-INF/native-image/<groupId>/<artifactId>/`
+3. Build the native image
+```shell
+mvn -ntp package -Pnative -DskipTests 
+```
+---
+TLDR
+
 Native Image needs reachability metadata so it can include dynamic features your app uses at run time (reflection, resources, proxies, serialization, JNI). The simplest way to get this metadata is to run your app on the JVM with the Native Image Agent and then use the generated JSON files during the native build.
 
 How to run the agent (generic Java)
