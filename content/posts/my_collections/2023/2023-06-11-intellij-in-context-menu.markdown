@@ -4,6 +4,7 @@ categories:
 - intellij
 aliases:
 - "/linux/2023/06/11/intellij-in-context-menu.html"
+- "/linux,intellij/2023/05/11/intellij-in-context-menu.html"
 - "/linux/2023/06/11/intellij-in-context-menu/"
 - "/linux/2023/06/11/intellij-in-context-menu"
 - "/intellij/2023/06/11/intellij-in-context-menu.html"
@@ -18,7 +19,7 @@ Add code below to ~/.local/share/nemo/actions/intellij.nemo_action
 [Nemo Action]
 Name=Open in Intellij
 Comment=Open in Intellij
-Exec=intellij-idea-community "%F"
+Exec=sh -c '"$HOME/.local/share/JetBrains/Toolbox/apps/intellij-idea-community-edition/bin/idea" "%F"'
 Icon-Name=intellij
 Selection=Any
 Extensions=dir;
