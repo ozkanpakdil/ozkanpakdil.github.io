@@ -3,9 +3,17 @@ categories:
 - java performance
 date: "2025-09-29T20:22:00Z"
 title: Java imperative vs functional in 2025 — revisiting a 2015 microbenchmark
+slug: java-imperative-vs-functional-2025
+type: posts
+draft: false
+aliases:
+- "/posts/my_collections/2025/09-29-java-imperative-vs-functional-2025/"
+- "/java-performance/2025/09/29/java-imperative-vs-functional-2025/"
 ---
 
 In 2015 I compared an imperative loop with a functional Stream-based approach and found that the simple loop was much faster on a tiny array. A decade later (hello Java 25!), I revisited the experiment with a proper microbenchmark using JMH to avoid the typical pitfalls of ad‑hoc timing with `System.nanoTime()`.
+
+Looking for the original 2015 write‑up? Read it here: [Java imperative and functional approach performance test (2015)](/java-performance/2015/09/19/java-imperative-vs-functional/).
 
 TL;DR
 - For small collections and simple operations, a tight imperative loop remains the fastest and most allocation‑friendly.
