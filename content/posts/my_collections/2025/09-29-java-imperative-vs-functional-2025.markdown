@@ -10,6 +10,17 @@ aliases:
 - "/posts/my_collections/2025/09-29-java-imperative-vs-functional-2025/"
 - "/java-performance/2025/09/29/java-imperative-vs-functional-2025/"
 ---
+Quick numbers (avg; smaller is faster)
+
+- I (imperative nested): 3.28 µs
+- I2 (imperative freq-map): 1.93 µs
+- F (streams grouping): 127.37 µs
+- FP (parallel streams grouping): 599.28 µs
+
+Winner: I2 — imperative freq-map
+
+Note: These are sample numbers from the run below on my machine; yours will differ. I/F labels mirror the 2015 post for a simple visual compare.
+
 ozkan@ozkan-debian:~/projects/ozkanpakdil.github.io/scripts/compare-2015-25$ ./run.sh
 == 2015-style harness (I:/F: lines) ==
 
