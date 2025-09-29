@@ -4,9 +4,11 @@ CDIR="$(cd "$(dirname "$0")" && pwd)"
 OUT="$CDIR/out"
 mkdir -p "$OUT"
 
-# Compile (prints javac version for clarity)
-javac -version
+# Show javac version like in examples
+javac -version || true
+
+# Compile
 javac -d "$OUT" "$CDIR/Test2015.java"
 
-# Run
+# Run (default package)
 java -cp "$OUT" Test2015

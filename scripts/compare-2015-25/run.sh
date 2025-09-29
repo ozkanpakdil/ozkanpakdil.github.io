@@ -29,7 +29,7 @@ printf "\n== 2025 benchmark summary (fastest → slowest) ==\n\n"
 # Quick winner extraction from 2025 summary
 WINNER_LINE=$(grep -E "^Winner:" "$TMP_DIR/bench.txt" || true)
 if [ -n "$WINNER_LINE" ]; then
-  printf "\nWinner (2025 run): %s\n" "$WINNER_LINE" | sed 's/^Winner: /Winner (2025): /'
+  printf "\nWinner (2025 run): %s\n" "$WINNER_LINE"
 fi
 
 cat <<EOF

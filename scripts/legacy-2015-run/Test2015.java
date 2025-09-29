@@ -2,11 +2,10 @@ import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 /**
- * 2015-style tiny harness to reproduce the original I:/F: outputs.
- * No packages, no deps. Compile and run with javac/java.
+ * Minimal reproduction of the 2015 micro test to print I:/F: lines.
+ * Keeps the same array and general structure to mimic output style.
  */
 public class Test2015 {
-
     static int[] array = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 8, 8, 9, 10 };
 
     static long startTime, stopTime;
@@ -34,6 +33,7 @@ public class Test2015 {
         System.out.println("I:" + (stopTime - startTime));
     }
 
+    // Mirrors the 2015 nested-loop structure
     private static void imperativeApproach() {
         int sum = 0;
         for (int j = 0; j < array.length; j++) {
@@ -43,17 +43,15 @@ public class Test2015 {
                 }
             }
         }
-        // prevent dead-code elimination
-        if (sum == 42) System.out.print("");
+        if (sum == 42) System.out.print(""); // avoid JIT elimination
     }
 
+    // Mirrors the 2015 stream-based grouping work
     private static void functionalApproach() {
         IntStream.of(array).boxed()
-            .collect(Collectors.groupingBy(i -> i))
-            .entrySet().stream()
-            .filter(e -> e.getValue().size() > 1)
-            .forEach(e -> {
-                e.getValue().stream().collect(Collectors.summingInt(i -> i));
-            });
+                .collect(Collectors.groupingBy(i -> i))
+                .entrySet().stream()
+                .filter(e -> e.getValue().size() > 1)
+                .forEach(e -> e.getValue().stream().collect(Collectors.summingInt(i -> i)));
     }
 }
