@@ -1,9 +1,10 @@
 ---
 categories:
 - java performance
-date: "2025-09-29T22:22:00Z"
+date: "2025-09-29T20:22:00Z"
 title: Java imperative vs functional in 2025 — revisiting a 2015 microbenchmark
 ---
+
 In 2015 I compared an imperative loop with a functional Stream-based approach and found that the simple loop was much faster on a tiny array. A decade later (hello Java 25!), I revisited the experiment with a proper microbenchmark using JMH to avoid the typical pitfalls of ad‑hoc timing with `System.nanoTime()`.
 
 TL;DR
