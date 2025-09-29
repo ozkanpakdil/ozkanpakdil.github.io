@@ -1,0 +1,12 @@
+Java imperative vs functional — 10 years later (Java 25)
+
+In 2015 I measured a tiny loop vs a Stream-based approach and the loop won by a mile. I reran the idea in 2025 with JMH on JDK 25.
+
+Highlights:
+- Small data + simple work: tight loops are still fastest and most memory-friendly.
+- Streams are faster than before thanks to JIT/runtime improvements, but still have overhead.
+- Parallel streams help only for larger inputs or heavier work per element.
+- If performance matters in a hot path, pick a readable loop (or a frequency map) first; use Streams when clarity and composability outweigh a few percent of overhead.
+
+I shared the JMH code and how to run it (JDK 25 + Maven). Curious to see your numbers on your hardware!
+#Java #Java25 #JMH #Performance #Streams #CleanCode
