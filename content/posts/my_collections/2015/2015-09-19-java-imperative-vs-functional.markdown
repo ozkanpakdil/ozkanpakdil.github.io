@@ -99,3 +99,23 @@ I:5740
 F:159416
 </pre>
 as you see imperative coding kick ass. and in my mind its easy to understand. I know it does not look beautiful like functional. still it works and far faster then functional. just saying :)
+
+
+---
+
+Update (2025): I revisited this tiny test on Java 25 with real numbers and a simple reproduce script. See the new post: [/posts/my_collections/2025/java-imperative-vs-functional-2025/](/posts/my_collections/2025/java-imperative-vs-functional-2025/)
+
+Re-run the 2015 harness today:
+
+If you want to reproduce the exact I:/F: line format from this post on your machine (with current JDK), use the tiny harness included in this repo:
+
+```
+./scripts/legacy-2015-run/run.sh
+```
+It compiles and runs a small Test2015.java and prints the same-style output (your numbers will differ by hardware/load).
+
+Or run both 2015-style and 2025 summary together:
+```
+./scripts/compare-2015-25/run.sh 12 5 10
+```
+This prints the original I:/F: lines first, then a modern ranked summary from the 2025 benchmark, so you can compare them at a glance.

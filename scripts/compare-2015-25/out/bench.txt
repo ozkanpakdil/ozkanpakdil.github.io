@@ -1,0 +1,39 @@
+javac 25
+Java version: 25
+CPU cores: 8
+Size=12, warmup=5, iters=10
+
+imperativeNested:
+  avg  = 3.28 µs
+  p50  = 1.82 µs
+  p90  = 3.62 µs
+  p99  = 14.36 µs
+  raw  = [1769, 1772, 1787, 1788, 1797, 1818, 1827, 2300, 3622, 14357]
+
+imperativeFreqMap:
+  avg  = 1.93 µs
+  p50  = 1.77 µs
+  p90  = 1.98 µs
+  p99  = 3.18 µs
+  raw  = [1715, 1716, 1724, 1727, 1762, 1771, 1845, 1900, 1979, 3182]
+
+streamGrouping:
+  avg  = 127.37 µs
+  p50  = 127.73 µs
+  p90  = 164.10 µs
+  p99  = 176.66 µs
+  raw  = [88484, 88562, 96348, 121006, 125770, 127731, 138254, 146769, 164102, 176661]
+
+parallelStreamGrouping:
+  avg  = 599.28 µs
+  p50  = 576.47 µs
+  p90  = 927.77 µs
+  p99  = 931.11 µs
+  raw  = [365417, 384289, 411498, 519010, 523009, 576465, 580818, 773447, 927771, 931106]
+
+Summary (fastest → slowest):
+  1. imperativeFreqMap — avg=1.93 µs (x1.00)
+  2. imperativeNested — avg=3.28 µs (x1.70)
+  3. streamGrouping — avg=127.37 µs (x65.92)
+  4. parallelStreamGrouping — avg=599.28 µs (x310.17)
+Winner: imperativeFreqMap
