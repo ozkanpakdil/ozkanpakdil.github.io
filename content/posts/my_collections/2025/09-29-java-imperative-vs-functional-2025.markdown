@@ -21,9 +21,9 @@ Winner: I2 — imperative freq-map
 
 Note: These are sample numbers from the run below on my machine; yours will differ. I/F labels mirror the 2015 post for a simple visual compare.
 
-ozkan@ozkan-debian:~/projects/ozkanpakdil.github.io/scripts/compare-2015-25$ ./run.sh
 == 2015-style harness (I:/F: lines) ==
-
+```shell
+ozkan@ozkan-debian:~/projects/ozkanpakdil.github.io/scripts/compare-2015-25$ ./run.sh
 javac 25
 I:5372
 F:22032373
@@ -37,6 +37,7 @@ I:4903
 I:4698
 I:4147
 F:104857
+```
 
 == 2025 benchmark summary (fastest → slowest) ==
 ```shell
