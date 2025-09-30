@@ -12,12 +12,12 @@ aliases:
 ---
 Quick numbers (avg; smaller is faster)
 
-- I (imperative nested): 3.28 µs
+- [I (imperative nested)](https://github.com/ozkanpakdil/ozkanpakdil.github.io/blob/ec3bbcee3a1fcd28c673d4bcca8138b878a4a2be/scripts/java25-bench/Benchmark.java#L119): 3.28 µs
 - I2 (imperative freq-map): 1.93 µs
 - F (streams grouping): 127.37 µs
 - FP (parallel streams grouping): 599.28 µs
 
-Winner: I2 — imperative freq-map
+Winner: [I2 — imperative freq-map](https://github.com/ozkanpakdil/ozkanpakdil.github.io/blob/ec3bbcee3a1fcd28c673d4bcca8138b878a4a2be/scripts/java25-bench/Benchmark.java#L130)
 
 Note: These are sample numbers from the run below on my machine; yours will differ. I/F labels mirror the 2015 post for a simple visual compare.
 
