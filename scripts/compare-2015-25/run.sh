@@ -61,17 +61,6 @@ get_avg_us() {
 NEW_I_AVG_US=$(get_avg_us imperativeNested || echo "0")
 NEW_F_AVG_US=$(get_avg_us streamGrouping || echo "0")
 
-if [ -n "$NEW_I_AVG_US" ] && [ -n "$NEW_F_AVG_US" ]; then
-  I_SPEEDUP=$(awk -v old="$LEG_I_MED_US" -v new="$NEW_I_AVG_US" 'BEGIN{ if(new>0){printf "%.2fx", old/new}else{print "n/a"} }')
-  F_SPEEDUP=$(awk -v old="$LEG_F_MED_US" -v new="$NEW_F_AVG_US" 'BEGIN{ if(new>0){printf "%.2fx", old/new}else{print "n/a"} }')
-  printf "\n== 2015 vs 2025 (medians vs avgs) ==\n"
-  printf "2015 I median: %s µs  |  2025 I avg: %s µs  |  Speedup: %s\n" "$LEG_I_MED_US" "$NEW_I_AVG_US" "$I_SPEEDUP"
-  printf "2015 F median: %s µs  |  2025 F avg: %s µs  |  Speedup: %s\n" "$LEG_F_MED_US" "$NEW_F_AVG_US" "$F_SPEEDUP"
-  # Simple conclusion lines
-  awk -v s="$I_SPEEDUP" 'BEGIN{print "Conclusion (I): Java 25 ", (s!="n/a" && s+0>=1.00?"is faster":"is not faster or similar"), " for the imperative test."}'
-  awk -v s="$F_SPEEDUP" 'BEGIN{print "Conclusion (F): Java 25 ", (s!="n/a" && s+0>=1.00?"is faster":"is not faster or similar"), " for the stream test."}'
-fi
-
 cat <<EOF
 
 Tip: You can change SIZE/WARMUP/ITERS:

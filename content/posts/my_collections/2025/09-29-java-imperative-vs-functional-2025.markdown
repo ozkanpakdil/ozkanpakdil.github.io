@@ -103,7 +103,6 @@ If you prefer the exact I:/F: lines from the original 2015 post, run this tiny h
 ./scripts/legacy-2015-run/run.sh
 ```
 - It compiles a small Test2015.java and prints lines like `I:12345` and `F:67890` (your real numbers will vary by machine/load).
-- This mirrors the 2015 output style and is useful if you want a 1:1 comparison of the raw harness outputs.
 
 Minimal code (like 2015)
 
