@@ -9,6 +9,10 @@ draft: false
 aliases:
 - "/posts/my_collections/2025/09-29-java-imperative-vs-functional-2025/"
 - "/java-performance/2025/09/29/java-imperative-vs-functional-2025/"
+cover:
+  image: https://github.com/user-attachments/assets/3a14ba61-dc23-4668-bd05-7107eee59c09
+  alt: Comparison functional code vs imperative code
+  hidden: false
 ---
 Quick numbers (avg; smaller is faster)
 
