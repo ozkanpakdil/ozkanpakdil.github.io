@@ -85,9 +85,9 @@ About formats:
 
 [Permissions for the client key (psql requires 0600):](https://github.com/ozkanpakdil/java-examlpes/blob/79d21e955b6940ccf4b79ec52bd86efabcd5777b/postgresql-ssl-testcontainers/src/test/java/com/example/ssl/PostgresWithClientCertTest.java#L112)
 ```java
-    // Best-effort on POSIX; otherwise fallback to owner-only readable/writable
-    Set<PosixFilePermission> perms = EnumSet.of(PosixFilePermission.OWNER_READ, PosixFilePermission.OWNER_WRITE);
-    Files.setPosixFilePermissions(clientKeyPem, perms);
+// Best-effort on POSIX; otherwise fallback to owner-only readable/writable
+Set<PosixFilePermission> perms = EnumSet.of(PosixFilePermission.OWNER_READ, PosixFilePermission.OWNER_WRITE);
+Files.setPosixFilePermissions(clientKeyPem, perms);
 ```
 Java keystore/truststore (JSSE) [for JDBC](https://github.com/ozkanpakdil/java-examlpes/blob/79d21e955b6940ccf4b79ec52bd86efabcd5777b/postgresql-ssl-testcontainers/src/test/java/com/example/ssl/PostgresWithClientCertTest.java#L124):
 ```java
