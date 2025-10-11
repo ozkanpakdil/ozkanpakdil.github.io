@@ -9,6 +9,7 @@ aliases:
 - "/java/2025/02/20/handling-concurrent-api-calls-in-spring-boot.html"
 - "/java/2025/02/20/handling-concurrent-api-calls-in-spring-boot/"
 - "/java/2025/02/20/handling-concurrent-api-calls-in-spring-boot"
+- "/spring/java/2025/02/20/Handling-Concurrent-API-Calls-in-Spring-Boot.html"
 
 date: "2025-02-20T00:00:30Z"
 title: Handling Concurrent API Calls in Spring Boot
