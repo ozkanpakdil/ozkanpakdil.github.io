@@ -8,8 +8,6 @@ cover:
     alt: Testcontainers with PostgreSQL and SSL
     hidden: false
 ---
-Using Testcontainers with PostgreSQL over SSL/TLS (with client certificates)
-
 This guide walks you through running PostgreSQL in Testcontainers with SSL enabled and client-certificate authentication (verify-full). It explains:
 - How to generate a CA, server, and client certificates.
 - How to prepare certificate/key files and the right formats/permissions.
