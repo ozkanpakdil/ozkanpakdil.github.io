@@ -66,17 +66,17 @@ This project generates all materials at runtime for you (see CryptoUtil.java). T
 
 Snippet (simplified from [CryptoUtil](https://github.com/ozkanpakdil/java-examlpes/blob/79d21e955b6940ccf4b79ec52bd86efabcd5777b/postgresql-ssl-testcontainers/src/test/java/com/example/ssl/PostgresWithClientCertTest.java#L92)):
 ```java
-    var ca = generateSelfSignedCA("Demo-CA");
-    var server = issueCertificate(ca, "localhost", true, List.of("localhost"));
-    var client = issueCertificate(ca, "testuser", false, List.of());
+var ca = generateSelfSignedCA("Demo-CA");
+var server = issueCertificate(ca, "localhost", true, List.of("localhost"));
+var client = issueCertificate(ca, "testuser", false, List.of());
 
-    // Write to PEM files
-    writePemCertificate(caCertPem, ca.certificate());
-    writePemCertificate(serverCertPem, server.certificate());
-    writePemPrivateKey(serverKeyPem, server.keyPair().getPrivate()); // server: PKCS#1 (RSA PRIVATE KEY) ok
+// Write to PEM files
+writePemCertificate(caCertPem, ca.certificate());
+writePemCertificate(serverCertPem, server.certificate());
+writePemPrivateKey(serverKeyPem, server.keyPair().getPrivate()); // server: PKCS#1 (RSA PRIVATE KEY) ok
 
-    writePemCertificate(clientCertPem, client.certificate());
-    writePemPrivateKeyPkcs8(clientKeyPem, client.keyPair().getPrivate()); // client: PKCS#8 for PgJDBC
+writePemCertificate(clientCertPem, client.certificate());
+writePemPrivateKeyPkcs8(clientKeyPem, client.keyPair().getPrivate()); // client: PKCS#8 for PgJDBC
 ```
 
 About formats:
@@ -91,12 +91,12 @@ About formats:
 ```
 Java keystore/truststore (JSSE) [for JDBC](https://github.com/ozkanpakdil/java-examlpes/blob/79d21e955b6940ccf4b79ec52bd86efabcd5777b/postgresql-ssl-testcontainers/src/test/java/com/example/ssl/PostgresWithClientCertTest.java#L124):
 ```java
-    // Client key + chain in PKCS#12 keystore (client.p12)
-    createPkcs12KeyStore(clientKeystore, "client", client.keyPair().getPrivate(),
-            new Certificate[]{client.certificate(), ca.certificate()}, KEYSTORE_PASSWORD);
+// Client key + chain in PKCS#12 keystore (client.p12)
+createPkcs12KeyStore(clientKeystore, "client", client.keyPair().getPrivate(),
+        new Certificate[]{client.certificate(), ca.certificate()}, KEYSTORE_PASSWORD);
 
-    // Truststore containing the CA
-    createPkcs12TrustStore(truststore, "ca", ca.certificate(), KEYSTORE_PASSWORD);
+// Truststore containing the CA
+createPkcs12TrustStore(truststore, "ca", ca.certificate(), KEYSTORE_PASSWORD);
 ```
 
 Configuring PostgreSQL for SSL + client cert auth
@@ -106,70 +106,70 @@ We need to:
 
 A minimal pg_hba.conf used here:
 ```
-    # TYPE  DATABASE        USER            ADDRESS                 METHOD
+# TYPE  DATABASE        USER            ADDRESS                 METHOD
 
-    # Allow local socket connections with password only
-    local   all            all                                     scram-sha-256
-    host    all            all             127.0.0.1/32            scram-sha-256
-    host    all            all             ::1/128                 scram-sha-256
+# Allow local socket connections with password only
+local   all            all                                     scram-sha-256
+host    all            all             127.0.0.1/32            scram-sha-256
+host    all            all             ::1/128                 scram-sha-256
 
-    # Require client certs for all TCP connections
-    hostssl all            all             0.0.0.0/0               cert clientcert=verify-full
-    hostssl all            all             ::0/0                   cert clientcert=verify-full
+# Require client certs for all TCP connections
+hostssl all            all             0.0.0.0/0               cert clientcert=verify-full
+hostssl all            all             ::0/0                   cert clientcert=verify-full
 ```
 The postgresql.conf changes we apply during container init:
 ```
-    ssl=on
-    ssl_cert_file='server.crt'
-    ssl_key_file='server.key'
-    ssl_ca_file='root.crt'
-    listen_addresses='*'
+ssl=on
+ssl_cert_file='server.crt'
+ssl_key_file='server.key'
+ssl_ca_file='root.crt'
+listen_addresses='*'
 ```
 We write an init shell script (00-ssl.sh) that the official postgres image runs once on first startup:
 ```shell
-    #!/bin/bash
-    set -euo pipefail
+#!/bin/bash
+set -euo pipefail
 
-    echo '[ssl-init] Configuring Postgres SSL (copying files into PGDATA)'
-    cp /docker-entrypoint-initdb.d/server.crt "$PGDATA"/server.crt
-    cp /docker-entrypoint-initdb.d/server.key "$PGDATA"/server.key
-    cp /docker-entrypoint-initdb.d/root.crt   "$PGDATA"/root.crt
-    chmod 600  "$PGDATA"/server.key || true
-    chmod 644  "$PGDATA"/server.crt "$PGDATA"/root.crt || true
+echo '[ssl-init] Configuring Postgres SSL (copying files into PGDATA)'
+cp /docker-entrypoint-initdb.d/server.crt "$PGDATA"/server.crt
+cp /docker-entrypoint-initdb.d/server.key "$PGDATA"/server.key
+cp /docker-entrypoint-initdb.d/root.crt   "$PGDATA"/root.crt
+chmod 600  "$PGDATA"/server.key || true
+chmod 644  "$PGDATA"/server.crt "$PGDATA"/root.crt || true
 
-    echo "ssl=on"                    >> "$PGDATA"/postgresql.conf
-    echo "ssl_cert_file='server.crt'" >> "$PGDATA"/postgresql.conf
-    echo "ssl_key_file='server.key'"  >> "$PGDATA"/postgresql.conf
-    echo "ssl_ca_file='root.crt'"     >> "$PGDATA"/postgresql.conf
-    echo "listen_addresses='*'"       >> "$PGDATA"/postgresql.conf
+echo "ssl=on"                    >> "$PGDATA"/postgresql.conf
+echo "ssl_cert_file='server.crt'" >> "$PGDATA"/postgresql.conf
+echo "ssl_key_file='server.key'"  >> "$PGDATA"/postgresql.conf
+echo "ssl_ca_file='root.crt'"     >> "$PGDATA"/postgresql.conf
+echo "listen_addresses='*'"       >> "$PGDATA"/postgresql.conf
 
-    # Replace pg_hba.conf with our rules
-    cp /docker-entrypoint-initdb.d/pg_hba.conf "$PGDATA"/pg_hba.conf
+# Replace pg_hba.conf with our rules
+cp /docker-entrypoint-initdb.d/pg_hba.conf "$PGDATA"/pg_hba.conf
 ```
 Finally, create the database role that matches the client cert’s CN (testuser):
 ```sql
-    CREATE ROLE "testuser" LOGIN;
+CREATE ROLE "testuser" LOGIN;
 ```
 
 Wiring it up with Testcontainers
 [The PostgreSQLContainer](https://github.com/ozkanpakdil/java-examlpes/blob/f0b46caa1bc82766c3bea67e52cdcae97ca7a44f/postgresql-ssl-testcontainers/src/test/java/com/example/ssl/PostgresWithClientCertTest.java#L179) is started with SSL assets and init scripts copied into /docker-entrypoint-initdb.d:
 ```java
-    pg = new PostgreSQLContainer<>("postgres:16")
-        .withDatabaseName("postgres")
-        .withStartupTimeout(Duration.ofSeconds(30))
-        .withLogConsumer(new Slf4jLogConsumer(LOG).withSeparateOutputStreams())
+pg = new PostgreSQLContainer<>("postgres:16")
+    .withDatabaseName("postgres")
+    .withStartupTimeout(Duration.ofSeconds(30))
+    .withLogConsumer(new Slf4jLogConsumer(LOG).withSeparateOutputStreams())
 
-        // Init SQL and HBA rules
-        .withCopyFileToContainer(MountableFile.forHostPath(initSql), "/docker-entrypoint-initdb.d/01-init.sql")
-        .withCopyFileToContainer(MountableFile.forHostPath(pgHba),  "/docker-entrypoint-initdb.d/pg_hba.conf")
+    // Init SQL and HBA rules
+    .withCopyFileToContainer(MountableFile.forHostPath(initSql), "/docker-entrypoint-initdb.d/01-init.sql")
+    .withCopyFileToContainer(MountableFile.forHostPath(pgHba),  "/docker-entrypoint-initdb.d/pg_hba.conf")
 
-        // SSL assets; the 00-ssl.sh script moves them into $PGDATA
-        .withCopyFileToContainer(MountableFile.forHostPath(serverCertPem, 0644), "/docker-entrypoint-initdb.d/server.crt")
-        .withCopyFileToContainer(MountableFile.forHostPath(serverKeyPem,  0644), "/docker-entrypoint-initdb.d/server.key")
-        .withCopyFileToContainer(MountableFile.forHostPath(caCertPem,     0644), "/docker-entrypoint-initdb.d/root.crt")
-        .withCopyFileToContainer(MountableFile.forHostPath(sslInit,       0755), "/docker-entrypoint-initdb.d/00-ssl.sh");
+    // SSL assets; the 00-ssl.sh script moves them into $PGDATA
+    .withCopyFileToContainer(MountableFile.forHostPath(serverCertPem, 0644), "/docker-entrypoint-initdb.d/server.crt")
+    .withCopyFileToContainer(MountableFile.forHostPath(serverKeyPem,  0644), "/docker-entrypoint-initdb.d/server.key")
+    .withCopyFileToContainer(MountableFile.forHostPath(caCertPem,     0644), "/docker-entrypoint-initdb.d/root.crt")
+    .withCopyFileToContainer(MountableFile.forHostPath(sslInit,       0755), "/docker-entrypoint-initdb.d/00-ssl.sh");
 
-    pg.start();
+pg.start();
 ```
 Notes:
 - We initially set relaxed permissions (0644) on server.key while it lives in /docker-entrypoint-initdb.d so the postgres user inside the container can read it during init. The script then tightens perms when moving it into $PGDATA.
@@ -183,30 +183,30 @@ Two approaches are common:
 
 In this project we [use JSSE](https://github.com/ozkanpakdil/java-examlpes/blob/79d21e955b6940ccf4b79ec52bd86efabcd5777b/postgresql-ssl-testcontainers/src/test/java/com/example/ssl/PostgresWithClientCertTest.java#L221):
 ```java
-    String url = "jdbc:postgresql://localhost:" + pg.getFirstMappedPort() + "/postgres";
+String url = "jdbc:postgresql://localhost:" + pg.getFirstMappedPort() + "/postgres";
 
-    // JSSE system properties
-    System.setProperty("javax.net.ssl.keyStore",         clientKeystore.toAbsolutePath().toString());
-    System.setProperty("javax.net.ssl.keyStorePassword", new String(KEYSTORE_PASSWORD));
-    System.setProperty("javax.net.ssl.keyStoreType",     "PKCS12");
-    System.setProperty("javax.net.ssl.trustStore",       truststore.toAbsolutePath().toString());
-    System.setProperty("javax.net.ssl.trustStorePassword", new String(KEYSTORE_PASSWORD));
-    System.setProperty("javax.net.ssl.trustStoreType",   "PKCS12");
+// JSSE system properties
+System.setProperty("javax.net.ssl.keyStore",         clientKeystore.toAbsolutePath().toString());
+System.setProperty("javax.net.ssl.keyStorePassword", new String(KEYSTORE_PASSWORD));
+System.setProperty("javax.net.ssl.keyStoreType",     "PKCS12");
+System.setProperty("javax.net.ssl.trustStore",       truststore.toAbsolutePath().toString());
+System.setProperty("javax.net.ssl.trustStorePassword", new String(KEYSTORE_PASSWORD));
+System.setProperty("javax.net.ssl.trustStoreType",   "PKCS12");
 
-    Properties props = new Properties();
-    props.setProperty("user",     "testuser");
-    props.setProperty("ssl",      "true");
-    props.setProperty("sslmode",  "verify-full");
-    props.setProperty("sslfactory", "org.postgresql.ssl.DefaultJavaSSLFactory");
+Properties props = new Properties();
+props.setProperty("user",     "testuser");
+props.setProperty("ssl",      "true");
+props.setProperty("sslmode",  "verify-full");
+props.setProperty("sslfactory", "org.postgresql.ssl.DefaultJavaSSLFactory");
 
-    try (Connection conn = DriverManager.getConnection(url, props)) {
-        // ... use the connection
-    }
+try (Connection conn = DriverManager.getConnection(url, props)) {
+    // ... use the connection
+}
 ```
 [Verification query](https://github.com/ozkanpakdil/java-examlpes/blob/79d21e955b6940ccf4b79ec52bd86efabcd5777b/postgresql-ssl-testcontainers/src/test/java/com/example/ssl/PostgresWithClientCertTest.java#L239) used in the test:
 ```sql
-    select current_user,
-           (select ssl from pg_stat_ssl where pid = pg_backend_pid()) as ssl_used;
+select current_user,
+        (select ssl from pg_stat_ssl where pid = pg_backend_pid()) as ssl_used;
 ```
 
 Connecting with psql (optional)
