@@ -347,9 +347,9 @@ generate_client_cert() {
 
 ## Conclusion
 
-Proper certificate creation forms the backbone of secure PostgreSQL communications. While development environments can use simple OpenSSL-based approaches, production deployments—especially in enterprise environments—require sophisticated PKI hierarchies, automated certificate lifecycle management, and hardware-backed security modules.
+Proper certificate creation forms the backbone of secure PostgreSQL communications. While development environments can use simple OpenSSL-based approaches, production deployments-especially in enterprise environments-require sophisticated PKI hierarchies, automated certificate lifecycle management, and hardware-backed security modules.
 
-The practices employed by major financial institutions and media companies demonstrate that certificate creation is not just about generating keys and signing certificates—it's about building a comprehensive security infrastructure that supports business operations while maintaining the highest security standards.
+The practices employed by major financial institutions and media companies demonstrate that certificate creation is not just about generating keys and signing certificates-it's about building a comprehensive security infrastructure that supports business operations while maintaining the highest security standards.
 
 Whether you're implementing basic certificate authentication or enterprise-grade PKI systems, the key is to start with solid foundations and progressively enhance your certificate management capabilities as your security requirements evolve.
 

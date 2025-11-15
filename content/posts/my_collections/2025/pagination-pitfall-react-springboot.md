@@ -4,7 +4,7 @@ date: 2025-08-07
 draft: false
 tags: ["react", "spring-boot", "pagination", "performance", "backend", "frontend"]
 categories: ["development", "webdev", "java", "react"]
-description: "Why using client-side pagination for unknown data sizes in a React + Spring Boot app can backfire — and how to fix it with proper server-side pagination."
+description: "Why using client-side pagination for unknown data sizes in a React + Spring Boot app can backfire - and how to fix it with proper server-side pagination."
 cover:
   image: "https://github.com/user-attachments/assets/89d6e596-38c4-43a4-bdea-27694d23fa81"
   alt: "Pagination Pitfall Cover"
@@ -19,7 +19,7 @@ A few years ago, I was working on a dashboard application with a **React fronten
 
 One of the newer devs suggested:
 
-> “Let’s just fetch everything once and paginate on the client side — it’ll be faster for the user.”
+> “Let’s just fetch everything once and paginate on the client side - it’ll be faster for the user.”
 
 We had maybe 500 users at the time, so… sure. Why not?
 
@@ -94,7 +94,7 @@ We then plugged this into a pagination UI. Now, we load **only what we need**, k
 
 ### 💡 Lessons Learned
 
-- **React + Spring Boot** is a powerful combo — but scale with caution  
+- **React + Spring Boot** is a powerful combo - but scale with caution  
 - Don’t optimize for “today’s data” unless you’re *certain* it won’t grow  
 - Use **Spring’s `Pageable`** and let the database do the heavy lifting  
 - Keep network traffic and frontend memory usage lean  
@@ -106,7 +106,7 @@ We then plugged this into a pagination UI. Now, we load **only what we need**, k
 
 Using client-side pagination for large or unknown datasets is like bringing a spoon to a firefight.
 
-It might work — for a while — but you’re setting yourself up for disaster.
+It might work - for a while - but you’re setting yourself up for disaster.
 
 👉 Use the right tools. Paginate smart. Scale with confidence.
 

@@ -10,17 +10,17 @@ cover:
   alt: "credit suisse"
   hidden: false
 ---
-In **July 2015**, I packed my bags and left Istanbul for a new chapter in **Wrocław, Poland**, to join **Credit Suisse**. It was a hot summer. I couldn’t afford a direct flight, so I flew to Berlin and took a bus to Wrocław. I was excited—and nervous. It was my first time living outside of Turkiye, and I was about to work for a bank I had never heard of before.
+In **July 2015**, I packed my bags and left Istanbul for a new chapter in **Wrocław, Poland**, to join **Credit Suisse**. It was a hot summer. I couldn’t afford a direct flight, so I flew to Berlin and took a bus to Wrocław. I was excited-and nervous. It was my first time living outside of Turkiye, and I was about to work for a bank I had never heard of before.
 
-I had spent over a decade in Istanbul—from university days in 1996 to working in tech roles from 2004 to 2015. So many memories, so many projects, and so much learning.
+I had spent over a decade in Istanbul-from university days in 1996 to working in tech roles from 2004 to 2015. So many memories, so many projects, and so much learning.
 
 ### 👋 First Day Jitters
 
-Starting a new job at 35 in a new country wasn’t easy. My manager, Xenon, had arranged for Jerzy to meet me at reception. I still remember that first call on internal Skype—Xenon told me I’d be working with Tarik and Frank in Zurich. Tarik was my team lead, and I could ask him anything.
+Starting a new job at 35 in a new country wasn’t easy. My manager, Xenon, had arranged for Jerzy to meet me at reception. I still remember that first call on internal Skype-Xenon told me I’d be working with Tarik and Frank in Zurich. Tarik was my team lead, and I could ask him anything.
 
-A couple of months later, Tarik left for military service, and I found myself handling **Java and WebLogic** issues solo in JAP. These weren’t your average bugs—these were the “creme de la creme” of problems. If no one else could solve it, it landed on our desk.
+A couple of months later, Tarik left for military service, and I found myself handling **Java and WebLogic** issues solo in JAP. These weren’t your average bugs-these were the “creme de la creme” of problems. If no one else could solve it, it landed on our desk.
 
-We’d often build **reproducers**—small Java projects to replicate the issue—and open SRs with Oracle. It was challenging, but incredibly rewarding.
+We’d often build **reproducers**-small Java projects to replicate the issue-and open SRs with Oracle. It was challenging, but incredibly rewarding.
 
 ### 🏙️ Life in Poland
 
@@ -28,7 +28,7 @@ After 1.5 years in Wrocław, I moved to **Warsaw** for a permanent position. Fro
 
 ### 🚀 Enter Odyssey
 
-In 2019, I joined the **Odyssey team**—a CI/CD platform with over 7 Spring Boot applications (a surprise after years of WebLogic!). Everything ran on Linux, backed by PostgreSQL. Our main app was a project management tool that integrated with **Active Directory, Jira, Bitbucket, Confluence**, and **JFrog Artifactory**.
+In 2019, I joined the **Odyssey team**-a CI/CD platform with over 7 Spring Boot applications (a surprise after years of WebLogic!). Everything ran on Linux, backed by PostgreSQL. Our main app was a project management tool that integrated with **Active Directory, Jira, Bitbucket, Confluence**, and **JFrog Artifactory**.
 
 When a project manager added a user, the system had to:
 - Query AD for user info
@@ -45,7 +45,7 @@ After 6–8 months, I became the **Subject Matter Expert** for **Atlas**, a tool
 
 Working at **Credit Suisse in Poland** was a great experience. I met brilliant people, tackled tough problems, and grew both personally and professionally. Now that CS has been acquired by UBS and closed in many locations, I look back with gratitude.
 
-To anyone starting a new chapter—especially in a new country—know that the journey might be tough, but it’s worth it. 🌟
+To anyone starting a new chapter-especially in a new country-know that the journey might be tough, but it’s worth it. 🌟
 
 
 ### Hashtags

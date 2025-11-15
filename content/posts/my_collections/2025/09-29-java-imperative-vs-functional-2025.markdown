@@ -2,7 +2,7 @@
 categories:
 - java performance
 date: "2025-09-29T20:22:00Z"
-title: Java imperative vs functional in 2025 — revisiting a 2015 microbenchmark
+title: Java imperative vs functional in 2025 - revisiting a 2015 microbenchmark
 slug: java-imperative-vs-functional-2025
 type: posts
 draft: false
@@ -21,7 +21,7 @@ Quick numbers (avg; smaller is faster)
 - F (streams grouping): 127.37 µs
 - FP (parallel streams grouping): 599.28 µs
 
-Winner: [I2 — imperative freq-map](https://github.com/ozkanpakdil/ozkanpakdil.github.io/blob/ec3bbcee3a1fcd28c673d4bcca8138b878a4a2be/scripts/java25-bench/Benchmark.java#L130)
+Winner: [I2 - imperative freq-map](https://github.com/ozkanpakdil/ozkanpakdil.github.io/blob/ec3bbcee3a1fcd28c673d4bcca8138b878a4a2be/scripts/java25-bench/Benchmark.java#L130)
 
 Note: These are sample numbers from the run below on my machine; yours will differ. I/F labels mirror the 2015 post for a simple visual compare.
 
@@ -80,10 +80,10 @@ raw  = [365417, 384289, 411498, 519010, 523009, 576465, 580818, 773447, 927771, 
 ```
 
 Summary (fastest → slowest):
-1. imperativeFreqMap — avg=1.93 µs (x1.00)
-2. imperativeNested — avg=3.28 µs (x1.70)
-3. streamGrouping — avg=127.37 µs (x65.92)
-4. parallelStreamGrouping — avg=599.28 µs (x310.17)
+1. imperativeFreqMap - avg=1.93 µs (x1.00)
+2. imperativeNested - avg=3.28 µs (x1.70)
+3. streamGrouping - avg=127.37 µs (x65.92)
+4. parallelStreamGrouping - avg=599.28 µs (x310.17)
    Winner: imperativeFreqMap
 
 Winner (2025 run): Winner: imperativeFreqMap

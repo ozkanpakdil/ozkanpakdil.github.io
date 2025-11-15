@@ -9,15 +9,15 @@ cover:
   alt: "Postgresql mtls SAN subject alternative names design"
   hidden: false
 ---
-Mutual TLS (mTLS) for PostgreSQL provides strong, passwordless authentication and encryption. The most common cause of failed secure connections in real deployments is incorrect Subject Alternative Name (SAN) handling and trust configuration on the client side. This post explains how to set up SANs correctly, how hostname verification really works, and how to align PostgreSQL with enterprise PKI practices—using [this repository](https://github.com/ozkanpakdil/docker-sandbox/tree/main/postgres-cluster)’s cluster as a concrete example.
+Mutual TLS (mTLS) for PostgreSQL provides strong, passwordless authentication and encryption. The most common cause of failed secure connections in real deployments is incorrect Subject Alternative Name (SAN) handling and trust configuration on the client side. This post explains how to set up SANs correctly, how hostname verification really works, and how to align PostgreSQL with enterprise PKI practices-using [this repository](https://github.com/ozkanpakdil/docker-sandbox/tree/main/postgres-cluster)’s cluster as a concrete example.
 
 ## Why SAN Matters More Than CN
 
-Modern TLS stacks validate the server’s identity against the SAN extension on the server certificate—not the Common Name (CN). When a PostgreSQL client connects to a host name (or IP), it will check:
+Modern TLS stacks validate the server’s identity against the SAN extension on the server certificate-not the Common Name (CN). When a PostgreSQL client connects to a host name (or IP), it will check:
 - Is the certificate chain valid up to a trusted root (or intermediate) CA?
 - Does the requested host (e.g., postgres-node1.local or 127.0.0.1) appear in the certificate’s SAN entries? Use `sslmode=verify-full` to enforce this.
 
-If the host you dial is not listed in SAN (as DNS or IP entry), hostname verification fails and the connection is rejected—even if the CN looks right.
+If the host you dial is not listed in SAN (as DNS or IP entry), hostname verification fails and the connection is rejected-even if the CN looks right.
 
 PostgreSQL follows RFC 6125 for hostname verification, but with some backward compatibility exceptions. The host name is matched against the certificate's Subject Alternative Name (SAN) attributes first. If no SAN of type `dNSName` is present, PostgreSQL falls back to checking the Common Name attribute. For IP addresses, PostgreSQL matches against both `iPAddress` SANs and `dNSName` SANs for backward compatibility.
 
@@ -73,7 +73,7 @@ Important: You do not add SANs “to the root CA.” SANs belong on end-entity c
 ## Enterprise PKI Considerations (Credit Suisse/UBS/Enterprise–class environments)
 
 - Use an enterprise CA hierarchy (offline root, issuing intermediates). Distribute the intermediate CA to servers and clients; the root CA typically remains in the OS trust store. When using intermediate certificates, include them in the certificate chain files where needed.
-- Keep CA private keys out of application containers. [This repo](https://github.com/ozkanpakdil/docker-sandbox/tree/main/postgres-cluster) copies the CA key into the container during server cert generation and deletes it—acceptable for a lab, but not for production. In production, sign CSRs outside the DB container or use an internal CA service (e.g., ACME with step-ca, Venafi, or Microsoft AD CS with SCEP/NDES or manual workflows).
+- Keep CA private keys out of application containers. [This repo](https://github.com/ozkanpakdil/docker-sandbox/tree/main/postgres-cluster) copies the CA key into the container during server cert generation and deletes it-acceptable for a lab, but not for production. In production, sign CSRs outside the DB container or use an internal CA service (e.g., ACME with step-ca, Venafi, or Microsoft AD CS with SCEP/NDES or manual workflows).
 - Enforce TLS policy: minimum TLS 1.2 or 1.3, approved cipher suites, and FIPS-validated crypto modules where applicable.
 - Use CRLs or OCSP for revocation checking. PostgreSQL supports `ssl_crl_file` for individual CRL files and `ssl_crl_dir` for directory-based CRL storage. Certificate revocation checking happens automatically if `~/.postgresql/root.crl` exists (or `%APPDATA%\postgresql\root.crl` on Windows) or when specified via connection parameters. For online verification, you can distribute CRLs via automation. OCSP stapling is not natively supported by PostgreSQL, so CRL distribution is the practical path for revocation checking.
 - Rotate certificates and keys regularly, enforce short lifetimes, and automate renewal.

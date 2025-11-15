@@ -9,7 +9,7 @@ cover:
   alt: "PostgreSQL DN Distinguished Name certificate authentication design"
   hidden: false
 ---
-Today, I'm diving into Distinguished Name (DN) authentication—a powerful feature that enables certificate-based authentication when the Common Name (CN) in your client certificate doesn't match your PostgreSQL username. This approach is essential in enterprise environments where certificate naming conventions don't align with database user naming requirements.
+Today, I'm diving into Distinguished Name (DN) authentication-a powerful feature that enables certificate-based authentication when the Common Name (CN) in your client certificate doesn't match your PostgreSQL username. This approach is essential in enterprise environments where certificate naming conventions don't align with database user naming requirements.
 
 > **Version Compatibility**: The `clientname=DN` feature was introduced in PostgreSQL 14. If you're using PostgreSQL 13 or earlier versions, this DN authentication method will not work and you'll need to use traditional CN-based certificate authentication instead.
 
@@ -113,7 +113,7 @@ psql "host=localhost port=5432 dbname=redgatemonitor user=redgatemonitor \
       sslrootcert=client-certs/ca.crt"
 ```
 
-Notice that despite the certificate having a complex DN, we use the simple `user=redgatemonitor` in the connection string—the mapping is handled transparently by PostgreSQL.
+Notice that despite the certificate having a complex DN, we use the simple `user=redgatemonitor` in the connection string-the mapping is handled transparently by PostgreSQL.
 
 ## Advanced DN Mapping Scenarios
 
@@ -322,7 +322,7 @@ psql "host=localhost port=5433 dbname=redgatemonitor user=redgatemonitor \
 
 While DN authentication provides flexible identity mapping, the foundation lies in proper certificate creation. The certificates must contain the correct Distinguished Name structure that matches your `pg_ident.conf` mapping configuration.
 
-> **📖 Comprehensive Certificate Creation Guide**: For detailed coverage of certificate creation—from basic OpenSSL commands to enterprise-grade PKI practices used by major financial institutions and media companies—see our dedicated [Enterprise SSL Certificate Creation guide](https://ozkanpakdil.gitlab.io/posts/my_collections/2025/enterprise-ssl-certificate-creation/).
+> **📖 Comprehensive Certificate Creation Guide**: For detailed coverage of certificate creation-from basic OpenSSL commands to enterprise-grade PKI practices used by major financial institutions and media companies-see our dedicated [Enterprise SSL Certificate Creation guide](https://ozkanpakdil.gitlab.io/posts/my_collections/2025/enterprise-ssl-certificate-creation/).
 
 ### Basic Certificate Requirements for DN Authentication
 
@@ -362,4 +362,4 @@ Distinguished Name (DN) authentication in PostgreSQL provides the flexibility ne
 
 The combination of DN authentication with proper SAN configuration (covered in yesterday's post) creates a robust, enterprise-ready PostgreSQL authentication system that aligns with modern PKI practices while maintaining operational simplicity.
 
-When implementing DN authentication, remember that security comes from the combination of proper certificate validation, network access controls, identity mapping accuracy, and comprehensive monitoring—not just from the complexity of the certificate subject.
+When implementing DN authentication, remember that security comes from the combination of proper certificate validation, network access controls, identity mapping accuracy, and comprehensive monitoring-not just from the complexity of the certificate subject.

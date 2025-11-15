@@ -52,7 +52,7 @@ public class Benchmark {
         for (int i = 0; i < results.size(); i++) {
             Result r = results.get(i);
             double factor = r.avgNanos / fastest;
-            System.out.println("  " + (i+1) + ". " + r.name + " — avg=" + formatNanos(r.avgNanos) + " (" + String.format(Locale.ROOT, "x%.2f", factor) + ")");
+            System.out.println("  " + (i+1) + ". " + r.name + " - avg=" + formatNanos(r.avgNanos) + " (" + String.format(Locale.ROOT, "x%.2f", factor) + ")");
         }
         System.out.println("Winner: " + results.get(0).name);
     }

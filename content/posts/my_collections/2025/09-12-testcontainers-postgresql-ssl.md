@@ -29,12 +29,12 @@ TL;DR
 
 Why client-certificate authentication?
 - No username/passwords to manage: the client’s identity is established by possession of the private key and a certificate issued by your CA. PostgreSQL maps the certificate’s CN to a role (testuser in this post), so there is no password to type or store.
-- Secretless connections: no DB credentials in environment variables, config files, or CI logs—only certificates/keys that you can mount or inject securely.
+- Secretless connections: no DB credentials in environment variables, config files, or CI logs-only certificates/keys that you can mount or inject securely.
 - Strong, mutual TLS: the client verifies the server (CA + hostname with verify-full) and the server verifies the client certificate, eliminating password phishing/replay.
 - Great for automation: jobs/containers can authenticate without embedded passwords; just provide the client cert/key and trust the CA.
 - Fine-grained control: issue distinct client certs per service and revoke them individually without rotating a shared password.
 
-Note: in the JDBC example below we still set user=testuser to select the role, but there is no password—authentication is performed by the client certificate.
+Note: in the JDBC example below we still set user=testuser to select the role, but there is no password-authentication is performed by the client certificate.
 
 
 Prerequisites
@@ -253,4 +253,4 @@ Full flow summary
 4) Create role testuser.
 5) Connect via JDBC using verify-full (JSSE) or via psql with PEM files.
 
-That’s it—you now have a fully working Postgres over SSL with client certificates inside Testcontainers, including both JDBC and CLI examples.
+That’s it-you now have a fully working Postgres over SSL with client certificates inside Testcontainers, including both JDBC and CLI examples.

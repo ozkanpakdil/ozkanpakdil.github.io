@@ -32,8 +32,8 @@ parallelStreamGrouping:
   raw  = [246764, 296753, 349712, 360874, 400693, 468153, 470811, 486121, 537787, 872510]
 
 Summary (fastest → slowest):
-  1. imperativeNested — avg=1.73 µs (x1.00)
-  2. imperativeFreqMap — avg=6.56 µs (x3.79)
-  3. streamGrouping — avg=100.04 µs (x57.84)
-  4. parallelStreamGrouping — avg=449.02 µs (x259.62)
+  1. imperativeNested - avg=1.73 µs (x1.00)
+  2. imperativeFreqMap - avg=6.56 µs (x3.79)
+  3. streamGrouping - avg=100.04 µs (x57.84)
+  4. parallelStreamGrouping - avg=449.02 µs (x259.62)
 Winner: imperativeNested

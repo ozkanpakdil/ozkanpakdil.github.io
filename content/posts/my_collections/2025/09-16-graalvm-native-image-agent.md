@@ -1,7 +1,7 @@
 ---
 categories: [graalvm,native-image,java,howto]
 date: 2025-09-16
-title: "GraalVM Native Image Agent — reachability metadata: how to run it, where files go"
+title: "GraalVM Native Image Agent - reachability metadata: how to run it, where files go"
 description: "How to run the agent (generic Java) and where the metadata is used"
 cover:
   image: https://github.com/user-attachments/assets/3e943296-4acf-4d7a-af76-87bd4944525c

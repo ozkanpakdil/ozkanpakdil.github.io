@@ -22,10 +22,10 @@ cover:
 ## Prologue: The Era of WebLogic and Apache Mod_WebLogic
 
 It was 2012. Turkcell, Turkey’s largest mobile operator, had 15 million subscribers, and the pressure was on. As part of the operations team for www.turkcell.com.tr, I managed a labyrinth of infrastructure: 10 strong
-linux servers which had Weblogic installed humming behind Apache mod_weblogic proxies, serving dynamic requests while Apache handled static content. The e-commerce platform, Turkcell Shop, was my responsibility—where a
+linux servers which had Weblogic installed humming behind Apache mod_weblogic proxies, serving dynamic requests while Apache handled static content. The e-commerce platform, Turkcell Shop, was my responsibility-where a
 single GC pause during peak traffic could mean thousands of failed transactions and angry customers.
 
-Back then, Java ruled enterprise systems, but garbage collection was a double-edged sword. Tuning JVMs like orchestra conductors—desperate to balance throughput, latency, and stability.
+Back then, Java ruled enterprise systems, but garbage collection was a double-edged sword. Tuning JVMs like orchestra conductors-desperate to balance throughput, latency, and stability.
 
 ---
 
@@ -41,13 +41,13 @@ seconds**, causing timeouts in Apache’s mod_weblogic connections. Customers sa
 Armed with **JMeter**, we simulated 10,000 concurrent users on the e-commerce app. The results were brutal:
 
 - **CMS**: 92% throughput, but 99th percentile response times of **12 seconds** during GC.
-- **Parallel GC**: Better throughput, but even longer pauses—**15 seconds** during full GC.
+- **Parallel GC**: Better throughput, but even longer pauses-**15 seconds** during full GC.
 
 The team debated: *“Do we accept pauses for throughput, or chase lower latency?”*
 
 ---
 
-## Discovering G1—The “Garbage-First” Gamble
+## Discovering G1-The “Garbage-First” Gamble
 
 ### Why G1?
 
@@ -87,7 +87,7 @@ We piped GC logs into Splunk, tracking:
 - **Promotion rates** (Young → Old generation).
 - **Pause times** correlated with customer complaints.
 
-One midnight, a dashboard alert caught a humongous allocation—a 50MB XML payload clogging a G1 region. We fixed it by splitting the payload and adding:
+One midnight, a dashboard alert caught a humongous allocation-a 50MB XML payload clogging a G1 region. We fixed it by splitting the payload and adding:
 
 ```shell
 -XX:G1HeapRegionSize=16M  
@@ -111,6 +111,6 @@ As a developer-turned-SRE, I learned:
 
 ### Epilogue: Beyond Turkcell
 
-When I left Turkcell in 2015, G1 was becoming mainstream. Today, ZGC and Shenandoah handle terabyte heaps, but G1’s principles—predictability, incremental compaction—live on.
+When I left Turkcell in 2015, G1 was becoming mainstream. Today, ZGC and Shenandoah handle terabyte heaps, but G1’s principles-predictability, incremental compaction-live on.
 
 To engineers battling GC pauses: Your logs tell a story. Listen to them.

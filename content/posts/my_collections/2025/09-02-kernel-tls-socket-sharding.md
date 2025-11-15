@@ -7,7 +7,7 @@ cover:
   alt: "Kernel TLS and socket sharding"
   hidden: false
 ---
-Modern servers are expected to push **hundreds of gigabits per second** while keeping latency low and CPU use manageable. Two kernel-level innovations—**socket sharding** and **kernel TLS (kTLS)**—help make that possible. When paired with **NIC TLS offload**, the gains are even bigger.
+Modern servers are expected to push **hundreds of gigabits per second** while keeping latency low and CPU use manageable. Two kernel-level innovations-**socket sharding** and **kernel TLS (kTLS)**-help make that possible. When paired with **NIC TLS offload**, the gains are even bigger.
 
 ---
 

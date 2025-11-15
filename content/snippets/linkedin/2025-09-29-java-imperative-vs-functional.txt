@@ -1,4 +1,4 @@
-Java imperative vs functional — 10 years later (Java 25)
+Java imperative vs functional - 10 years later (Java 25)
 
 In 2015 I measured a tiny loop vs a Stream-based approach and the loop won by a mile. I reran the idea in 2025 with JMH on JDK 25.
 
