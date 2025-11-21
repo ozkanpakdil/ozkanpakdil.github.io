@@ -9,7 +9,7 @@ cover:
   alt: Macos hdmi connected TV sound management problem
 ---
 
-So I got my Mac Mini M4 from Amazon for £500 and started using it. I had so many problems with the shortcuts I normally use— even Ctrl+A wasn’t working, I had to use Win+A, and many other shortcuts were different. One of the biggest problems was using the sound keys on the keyboard. On Linux they worked fine: sound up and down controlled the output volume. But on macOS it didn’t work. Very strange policy Apple has—macOS doesn’t allow the user to control end devices connected through HDMI.
+So I got my Mac Mini M4 from Amazon for £500 and started using it. I had so many problems with the shortcuts I normally use  even Ctrl+A wasn’t working, I had to use Win+A, and many other shortcuts were different. One of the biggest problems was using the sound keys on the keyboard. On Linux they worked fine: sound up and down controlled the output volume. But on macOS it didn’t work. Very strange policy Apple has macOS doesn’t allow the user to control end devices connected through HDMI.
 
 The solution is [proxy-audio-device](https://github.com/briankendall/proxy-audio-device), installed via brew. Now the system output sound is controlled over HDMI. This proxy audio device shows itself as a sound output option, and we can control it. The sound configuration looks like this:
 
