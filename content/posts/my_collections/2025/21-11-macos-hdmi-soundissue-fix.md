@@ -16,3 +16,7 @@ The solution is [proxy-audio-device](https://github.com/briankendall/proxy-audio
 <img width="704" height="612" alt="Image" src="https://github.com/user-attachments/assets/9ae35bb2-0317-41d0-864e-d4e208d5eb69" />
 
 As seen in the picture, proxy audio device is selected and you can easily change the sound, and it is open source and working nice, I am feeling happy.
+
+References:
+- https://apple.stackexchange.com/a/336751/683942
+- https://apple.stackexchange.com/a/374380/683942
