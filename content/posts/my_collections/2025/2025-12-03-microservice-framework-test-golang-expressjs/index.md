@@ -9,6 +9,8 @@ cover:
   caption: "Performance comparison: Golang vs Express.js vs Rust vs .NET"
 ---
 
+[Test results for this benchmark run →](https://ozkanpakdil.github.io/test-microservice-frameworks/posts/2025/2025-12-03-microservice-framework-test-25/)
+
 ## Introduction
 
 Over the last two days, I've expanded our microservice framework benchmark suite to include two new contenders: **Golang** and **Express.js**. This addition allows us to compare performance across a broader spectrum of technologies, from compiled languages like Rust and Go to JVM-based frameworks and Node.js.
