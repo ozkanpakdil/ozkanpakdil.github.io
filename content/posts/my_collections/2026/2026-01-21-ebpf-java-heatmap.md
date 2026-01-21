@@ -96,6 +96,10 @@ sudo make run
 
 Once it's running, you can press **1-5** to sort by different metrics (Reads, Writes, Bytes) and watch your system's I/O come to life!
 
+<a href="https://github.com/user-attachments/assets/8fee6e53-6a2a-41b9-aa70-33c2002c4dc2" target="_blank">
+<img width="1223" height="1040" alt="Image" src="https://github.com/user-attachments/assets/8fee6e53-6a2a-41b9-aa70-33c2002c4dc2" />
+</a>
+
 ### Conclusion
 
 Combining eBPF's low-level performance with Java's high-level productivity (and the latest features in Java 25!) is a powerful way to build Linux tooling. Whether you're debugging a database or just curious about what your IDE is doing in the background, this heatmap gives you a unique window into your system.
