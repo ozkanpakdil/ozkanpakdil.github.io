@@ -128,14 +128,6 @@ else
     echo "  - llama-cli not found at $LLAMA_CLI"
 fi
 
-echo -e "\n--- Summary & Instructions ---"
-echo "1. Driver Fix: Your kernel modules are not loaded. Run: sudo modprobe nvidia"
-echo "2. llama.cpp Fix: Your current binary (from Nix) was NOT compiled with CUDA support."
-echo "   To use your MX450 GPU, you need to use a version of llama.cpp built with CUDA."
-echo "   If using Nix, try: nix-shell -p llama-cpp --argstr cudaSupport true"
-echo "   Or build from source: cmake -B build -DGGML_CUDA=ON && cmake --build build --config Release"
-
-echo -e "\n--- End of Tests ---"
 ```
 
 Running this script gave me a clear picture of what was missing:
