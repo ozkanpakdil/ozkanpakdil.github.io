@@ -63,12 +63,64 @@ I switched to a smaller 2B model to stay within the VRAM limits. The results wer
 
 Asking Qwen 2B to **"write me hello world in rust"**:
 
-| Setup | Time to Complete |
-| :--- | :--- |
-| **CPU Only** | 1 minute 32 seconds |
-| **CUDA (GPU)** | **24 seconds** |
+| Setup | Time to Complete | Notes |
+| :--- | :--- | :--- |
+| **CPU Only** | 1 minute 32 seconds | Default `nouveau` or no acceleration |
+| **Vulkan (GPU)** | **57 seconds** | Using `-ngl 2` and `-dev Vulkan1` |
+| **CUDA (GPU)** | **24 seconds** | **Best performance (4x over CPU)** |
 
-That's nearly a **4x speed improvement** on a entry-level mobile GPU!
+That's nearly a **4x speed improvement** on a entry-level mobile GPU when using CUDA! Interestingly, **Vulkan** also provides a significant boost over CPU-only mode, though it falls short of CUDA's optimization for this hardware.
+
+### The Vulkan Alternative
+
+I also experimented with the Vulkan backend to see how it compares. While CUDA remains the king of performance for NVIDIA hardware, Vulkan is a great cross-platform alternative.
+
+To run the Vulkan version, I used the following command:
+```bash
+./build/bin/llama-server -hf unsloth/Qwen3.5-2B-GGUF --jinja -c 4096 -ngl 2 -dev Vulkan1 --host 127.0.0.1 --port 8033
+```
+
+**Important Note on Vulkan:** 
+I encountered some memory-related segmentation faults when trying to offload too many layers. I had to limit the offloading to `-ngl 2` to maintain stability. Even with this limitation, it finished the task in **57 seconds**, which is still much better than the 1m 32s on the CPU.
+
+When starting up, `llama.cpp` detected multiple devices, including the integrated Intel graphics and the MX450:
+
+```text
+ggml_vulkan: Found 2 Vulkan devices:
+ggml_vulkan: 0 = Intel(R) Iris(R) Xe Graphics (TGL GT2) (Intel open-source Mesa driver) | uma: 1 | ...
+ggml_vulkan: 1 = NVIDIA GeForce MX450 (NVIDIA) | uma: 0 | fp16: 1 | bf16: 0 | warp size: 32 | ...
+```
+
+Interestingly, it also gave some advice on how to improve performance for this specific hardware:
+
+```text
+The following devices will have suboptimal performance due to a lack of tensor cores:
+  Device 0: NVIDIA GeForce MX450
+Consider compiling with CMAKE_CUDA_ARCHITECTURES=61-virtual;80-virtual and DGGML_CUDA_FORCE_MMQ to force the use of the Pascal code for Turing.
+```
+
+Here is what the logs look like when it's balancing the memory:
+
+```text
+llama_params_fit_impl: projected to use 926 MiB of device memory vs. 1906 MiB of free device memory
+llama_params_fit_impl: cannot meet free memory target of 1024 MiB, need to reduce device memory by 43 MiB
+llama_params_fit_impl: context size set by user to 4096 -> no change
+llama_params_fit: failed to fit params to free device memory: n_gpu_layers already set by user to 2, abort
+...
+load_tensors: offloading 1 repeating layers to GPU
+load_tensors: offloaded 2/25 layers to GPU
+load_tensors:   CPU_Mapped model buffer size =  1179.54 MiB
+load_tensors:      Vulkan1 model buffer size =   429.35 MiB
+```
+
+And the final timing results:
+
+```text
+prompt eval time =    3065.78 ms /    16 tokens (  191.61 ms per token,     5.22 tokens per second)
+       eval time =   57813.32 ms /   764 tokens (   75.67 ms per token,    13.21 tokens per second)
+      total time =   60879.11 ms /   780 tokens
+```
+
 
 ### Summary
 
