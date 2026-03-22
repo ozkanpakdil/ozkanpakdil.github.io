@@ -4,7 +4,7 @@ title: "Accelerating LLMs on Debian 13: Setting up Vulkan for llama.cpp"
 date: 2026-03-22T09:47:00+03:00
 tags: ["debian", "vulkan", "llamacpp", "gpu", "performance", "ai", "qwen"]
 cover:
-  image: https://github.com/user-attachments/assets/2bb64d22-763f-403b-a648-ee76a3f3c2e5
+  image: https://github.com/user-attachments/assets/81510bb4-adfd-44a4-93b8-15823d049075
   alt: 'Vulkan acceleration on Debian'
 ---
 
