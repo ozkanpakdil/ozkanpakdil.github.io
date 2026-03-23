@@ -216,3 +216,7 @@ warning: one possible reason is that llama.cpp was compiled without GPU support
 ```
 
 If you are on Debian 13 and want to try this, make sure you check your VRAM limits before picking a model, and don't forget that `mokutil` step if you have Secure Boot enabled!
+
+Reference:
+- [NVIDIA Tesla Driver Installation Guide for Debian](https://docs.nvidia.com/datacenter/tesla/driver-installation-guide/debian.html)
+- llama.cpp: https://github.com/ggml-org/llama.cpp/

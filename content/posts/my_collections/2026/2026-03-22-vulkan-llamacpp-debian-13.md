@@ -87,3 +87,9 @@ Even though it only offloaded **13/37 layers** to the GPU, it still maintained a
 If you don't have an NVIDIA card, don't ignore your integrated GPU. Vulkan provides a fantastic alternative that works out-of-the-box on Debian with Intel and AMD hardware.
 
 My next target is to use **Qwen on OpenClaw** to further explore local LLM capabilities. Stay tuned!
+
+Reference:
+- https://en.wikipedia.org/wiki/Vulkan
+- Vulkan: https://vulkan.lunarg.com/
+- https://github.com/ggml-org/llama.cpp/blob/master/docs/build.md#vulkan
+- llama.cpp: https://github.com/ggml-org/llama.cpp/
