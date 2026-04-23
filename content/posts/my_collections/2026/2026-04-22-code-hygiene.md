@@ -40,6 +40,38 @@ Syntactically, the code `db.WithContext(ctx).Begin()` looked fine. It compiled. 
 
 A simple **AST (Abstract Syntax Tree)** scanner fixed this permanently. We wrote a rule that flags any instance where these calls are out of order. Institutional knowledge was turned into an automated gatekeeper.
 
+```go
+
+// Using Go's AST (Abstract Syntax Tree) to detect out-of-order method calls.
+// This identifies 'db.WithContext(ctx).Begin()' which should be 'db.Begin().WithContext(ctx)'.
+insp.Preorder([]ast.Node{(*ast.CallExpr)(nil)}, func(n ast.Node) {
+    call := n.(*ast.CallExpr)
+    
+    // Check if the outer function call is "Begin"
+    outerSel, ok := call.Fun.(*ast.SelectorExpr)
+    if !ok || outerSel.Sel.Name != "Begin" {
+        return
+    }
+
+    // Ensure we are calling Begin on a *gorm.DB or result of WithContext on gorm.DB
+    if !isGormDB(pass, outerSel.X) {
+        return
+    }
+
+    // Check if "Begin" was called on the result of another function
+    innerCall, ok := outerSel.X.(*ast.CallExpr)
+    if !ok {
+        return
+    }
+
+    // Check if that inner function call was "WithContext"
+    innerSel, ok := innerCall.Fun.(*ast.SelectorExpr)
+    if ok && innerSel.Sel.Name == "WithContext" {
+        pass.Reportf(call.Pos(), "Hygiene Alert: Use 'db.Begin().WithContext(ctx)' to prevent leaks.")
+    }
+})
+```
+
 ## Why You Need a Hygiene Strategy
 
 1. **Preventing "Silent" Failures:** Catch memory leaks, race conditions, and API misuses that don't trigger a test failure but kill performance.
