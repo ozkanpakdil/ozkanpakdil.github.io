@@ -8,7 +8,7 @@ cover:
     alt: 'Code Hygiene: The Architectural Shield'
 ---
 
-In the world of software engineering, we often obsess over the "Testing Pyramid." We pour resources into unit tests, integration tests, and E2E suites. These are critical—they tell us that our features work as designed. But there’s a shadowy category of bugs that traditional tests often miss: the architectural "anti-patterns" and "API misuses" that don't break functionality today but lead to system failures, memory leaks, or portability issues tomorrow.
+In the world of software engineering, we often obsess over the "Testing Pyramid." We pour resources into unit tests, integration tests, and E2E suites. These are critical, they tell us that our features work as designed. But there’s a shadowy category of bugs that traditional tests often miss: the architectural "anti-patterns" and "API misuses" that don't break functionality today but lead to system failures, memory leaks, or portability issues tomorrow.
 
 This is where **Code Hygiene** comes in.
 
