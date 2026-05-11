@@ -62,7 +62,7 @@ home = ["HTML", "RSS", "JSON"]
 
 [params]
 env = "production"
-description = "Özkan Pakdil's Blog - Software Engineering and Technology"
+description = "Özkan Pakdil's Blog - Software Engineering, Java development, C#, Linux optimization, and technology insights since 2004."
 author = "Özkan Pakdil"
 defaultTheme = "auto"
 mainSections = ["post", "posts", "pages", "projects", "wiki"]
@@ -170,6 +170,18 @@ disableInlineCSS = true
   filename = "sitemap.xml"
   priority = 0.5
 
+
+[params.schema]
+  publisherType = "Person"
+  sameAs = [
+    "https://github.com/ozkanpakdil",
+    "https://www.linkedin.com/in/ozkanpakdil",
+    "https://techhub.social/@thejvmbender",
+    "https://bsky.app/profile/thejvmbender.bsky.social",
+    "https://stackoverflow.com/users/175554/ozkanpakdil",
+    "https://scholar.google.com/citations?hl=en&user=sYaAYoEAAAAJ",
+    "https://sourceforge.net/u/ozkanpakdil/profile/"
+  ]
 
 [params.fuseOpts]
 iscasesensitive = false
