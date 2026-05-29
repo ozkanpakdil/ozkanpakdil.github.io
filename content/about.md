@@ -2,6 +2,7 @@
 title: "About"
 layout: "page"
 # url: "/about"
+description: "Learn more about Özkan Pakdil, a software engineer with expertise in Java, C#, and Linux, sharing technology insights since 2004."
 summary: "This is the about page for the Özkan Pakdil"
 ---
 As the title of this site says, I'm a software engineer with a professional journey spanning back
