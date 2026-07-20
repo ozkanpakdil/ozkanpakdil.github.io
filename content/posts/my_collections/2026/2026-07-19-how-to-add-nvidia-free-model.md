@@ -157,7 +157,6 @@ Once configured, you can use the model in VS Code Chat:
 
 The model supports:
 - **Tool calling** - Can use tools and functions
-- **Vision** - Can analyze images
 - **128K context window** - Large context for long conversations
 - **16K output tokens** - Long responses
 
