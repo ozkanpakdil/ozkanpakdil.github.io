@@ -170,7 +170,6 @@ The model supports:
 | Context Window | 128,000 tokens |
 | Max Output | 16,000 tokens |
 | Tool Calling | ✅ Yes |
-| Vision | ✅ Yes |
 | Free Tier | ✅ Yes (with NVIDIA account) |
 
 ## Tips
