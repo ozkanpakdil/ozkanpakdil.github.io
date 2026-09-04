@@ -1,0 +1,6 @@
+/* Wrapper for the Google "Preferred Sources" button on post pages
+   (see layouts/_default/single.html). The button itself is rendered
+   by Google's publisher.js library loaded from extend_head.html. */
+.preferred-source {
+  margin: 1.5rem 0 0;
+}
