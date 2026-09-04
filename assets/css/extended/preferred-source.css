@@ -1,19 +1,14 @@
-/* Top bar holding the Google "Preferred Sources" button on every page.
-   The placeholder div lives in layouts/_default/baseof.html; the button
-   itself is rendered by Google's publisher.js loaded from extend_head.html.
+/* Nav menu instance of the Google "Preferred Sources" button.
+   The placeholder div lives in layouts/partials/header.html (last <li>
+   of ul#menu); the button itself is rendered by Google's publisher.js
+   loaded from extend_head.html, inside a shadow root on the placeholder.
    https://developers.google.com/search/docs/appearance/preferred-sources */
-.preferred-source-bar {
-  display: flex;
-  justify-content: center;
-  padding: 0.4rem 1rem;
-  border-bottom: 1px solid var(--border);
-  background: var(--theme);
+.menu li.preferred-source-menu {
+  display: inline-flex;
+  align-items: center;
 }
 
-/* Hide the bar only when publisher.js never ran (e.g. blocked by an ad
-   blocker): the library sets data-initialized on the placeholder as its
-   first action. Do NOT test for "empty" — the button renders inside a
-   shadow root on the placeholder, so light-DOM emptiness is normal. */
-.preferred-source-bar:not(:has(> [data-initialized])) {
-  display: none;
+/* Slightly shrink the widget so it fits the nav row height. */
+.menu li.preferred-source-menu > [google-add-preferred-source-btn] {
+  zoom: 0.8;
 }
