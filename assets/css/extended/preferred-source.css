@@ -10,8 +10,10 @@
   background: var(--theme);
 }
 
-/* Hide the whole bar when publisher.js never rendered anything
-   (e.g. the script is blocked by an ad blocker). */
-.preferred-source-bar:not(:has(> *:not(:empty))) {
+/* Hide the bar only when publisher.js never ran (e.g. blocked by an ad
+   blocker): the library sets data-initialized on the placeholder as its
+   first action. Do NOT test for "empty" — the button renders inside a
+   shadow root on the placeholder, so light-DOM emptiness is normal. */
+.preferred-source-bar:not(:has(> [data-initialized])) {
   display: none;
 }
