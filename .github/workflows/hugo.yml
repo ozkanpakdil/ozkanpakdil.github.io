@@ -68,3 +68,84 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+  # Notify IndexNow partner engines (Bing, Yandex, Naver, Seznam, ...) about
+  # new/changed content after each deployment.
+  # Key file (public by protocol design): https://ozkanpakdil.github.io/1c26fb725c84515f7f275b0e8c1c3f6e.txt
+  indexnow:
+    needs: deploy
+    if: ${{ github.event_name == 'push' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Submit new and changed URLs
+        run: |
+          set -euo pipefail
+          BASE="https://ozkanpakdil.github.io"
+          HOST="ozkanpakdil.github.io"
+          KEY="$(cat static/1c26fb725c84515f7f275b0e8c1c3f6e.txt)"
+
+          url_for() {
+            local path="$1"
+            path="${path#content/}"
+            path="${path%.md}"
+            case "$path" in
+              index|*/index)    path="${path%/index}" ;;
+              _index|*/_index)  path="${path%/_index}" ;;
+            esac
+            [ -z "$path" ] && { printf '%s/' "$BASE"; return; }
+            printf '%s/%s/' "$BASE" "${path#/}"
+          }
+
+          BEFORE="${{ github.event.before }}"
+          if [[ "$BEFORE" =~ ^0+$ || -z "$BEFORE" ]]; then
+            CHANGED=""
+          else
+            CHANGED="$(git diff --name-only --diff-filter=ACMRT "$BEFORE" HEAD -- content/ || true)"
+          fi
+
+          if [[ -z "$CHANGED" ]]; then
+            echo "No content/ changes in this push; skipping IndexNow submission."
+            exit 0
+          fi
+
+          # Homepage always reflects new posts; changed pages verified against
+          # the live site (the Pages deploy has just finished, small CDN lag
+          # possible) so we never submit dead URLs.
+          URLS="[\"$BASE/\"]"
+          while IFS= read -r f; do
+            case "$f" in
+              *.md) ;;
+              *) continue ;;
+            esac
+            candidate="$(url_for "$f")"
+            code="000"
+            for i in 1 2 3; do
+              code="$(curl -s -o /dev/null -w '%{http_code}' "$candidate")"
+              [ "$code" = "200" ] && break
+              sleep 20
+            done
+            if [ "$code" = "200" ]; then
+              URLS="$URLS,\"$candidate\""
+              echo "verified: $candidate"
+            else
+              echo "skipping (HTTP $code): $candidate"
+            fi
+          done <<< "$CHANGED"
+
+          echo "Submitting to IndexNow: $URLS"
+          RESP="$(curl -s -o /tmp/indexnow-response.txt -w '%{http_code}' -X POST \
+            'https://api.indexnow.org/indexnow' \
+            -H 'Content-Type: application/json; charset=utf-8' \
+            -d "{\"host\":\"$HOST\",\"key\":\"$KEY\",\"urlList\":$URLS}")"
+          echo "IndexNow response: HTTP $RESP $(cat /tmp/indexnow-response.txt 2>/dev/null || true)"
+          case "$RESP" in
+            200|202) echo "OK: URLs accepted by IndexNow." ;;
+            403)     echo "Warning: key file not valid yet at $BASE/$KEY.txt (deploy lag?)";;
+            422)     echo "Warning: submission rejected as invalid/spam by IndexNow";;
+            429)     echo "Warning: rate limited by IndexNow";;
+            *)       echo "Warning: unexpected IndexNow response";;
+          esac
