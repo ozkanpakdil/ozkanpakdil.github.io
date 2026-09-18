@@ -160,7 +160,7 @@ I also restored observability MySQL had and PG didn't: `log_min_duration_stateme
 
 Honest answer up front: **I did not capture a formal benchmark before and after.** No pgbench runs, no latency percentiles, no throughput table. But there was one very clear real-world signal in production: the system felt noticeably lighter after the swap.
 
-This was the surprise for me: during the MySQL phase, the host was often sitting around a **~1% load average** and felt like it was busy waiting on database work; after PostgreSQL, the same workload was much calmer and the load average dropped to **below 0.5**. That is not a formal benchmark, but it was a very real operating observation from the box itself. It is exactly the sort of thing that makes you revisit your assumptions about "all databases are roughly equivalent" — in this case, MySQL was clearly dragging the server harder than PostgreSQL for this workload.
+This was the surprise for me: during the MySQL phase, `top` commonly showed the host around a **1.5 load average**; after PostgreSQL, the same workload was much calmer, with the load average generally around **0.3-0.5**. That is not a formal benchmark, but it was a very real operating observation from the box itself. It is exactly the sort of thing that makes you revisit your assumptions about "all databases are roughly equivalent" — in this case, MySQL was clearly dragging the server harder than PostgreSQL for this workload.
 
 What I *can* say, and why I wasn't worried:
 
