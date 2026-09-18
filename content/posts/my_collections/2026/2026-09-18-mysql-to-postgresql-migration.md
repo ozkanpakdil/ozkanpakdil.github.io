@@ -3,6 +3,9 @@ title: "MySQL → PostgreSQL: moving a live classifieds site with ~3 minutes of 
 date: 2026-09-18
 tags: ["postgresql", "mysql", "migration", "spring-boot", "graalvm", "devops"]
 categories: ["Databases", "DevOps"]
+cover:
+    image: https://github.com/user-attachments/assets/19b4fc72-41e2-4a26-9b16-59f6f419f60e
+    alt: mysql to pg upgrade
 ---
 
 [mpazari.com](https://www.mpazari.com) is a Turkish motorcycle classifieds site I've been rewriting from a 2006-era ASP.NET WebForms application to Spring Boot 4 / Java 25, compiled to a GraalVM native image. Phase one deliberately kept the legacy MySQL schema untouched — the new app talked to the same `motosiklet` database the old site had used for two decades. Once the rewrite was stable and green in CI, the second half of the plan kicked in: move the database itself from MySQL 8 to PostgreSQL.
