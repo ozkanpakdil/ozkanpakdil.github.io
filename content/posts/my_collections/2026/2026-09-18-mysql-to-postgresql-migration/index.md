@@ -4,7 +4,7 @@ date: 2026-09-18
 tags: ["postgresql", "mysql", "migration", "spring-boot", "devops"]
 categories: ["Databases", "DevOps"]
 cover:
-    image: https://github.com/user-attachments/assets/19b4fc72-41e2-4a26-9b16-59f6f419f60e
+    image: cover.webp
     alt: mysql to pg upgrade
 ---
 
