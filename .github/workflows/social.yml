@@ -1,4 +1,4 @@
-name: Crosspost to Mastodon & Bluesky
+name: Crosspost to Bluesky
 
 on:
   push:
@@ -16,11 +16,5 @@ jobs:
       - run: python3 scripts/crosspost.py
         env:
           SITE_FEED: https://ozkanpakdil.github.io/index.xml
-          MASTODON_INSTANCE: techhub.social
-          MASTODON_ACCESS_TOKEN: ${{ secrets.MASTODON_ACCESS_TOKEN }}
           BLUESKY_IDENTIFIER: ${{ secrets.BLUESKY_IDENTIFIER }}
           BLUESKY_APP_PASSWORD: ${{ secrets.BLUESKY_APP_PASSWORD }}
-          X_CONSUMER_KEY: ${{ secrets.X_CONSUMER_KEY }}
-          X_CONSUMER_SECRET: ${{ secrets.X_CONSUMER_SECRET }}
-          X_ACCESS_TOKEN: ${{ secrets.X_ACCESS_TOKEN }}
-          X_ACCESS_SECRET: ${{ secrets.X_ACCESS_SECRET }}
