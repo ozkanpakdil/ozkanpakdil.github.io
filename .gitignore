@@ -4,3 +4,4 @@ public/
 themes/ananke
 go.*
 .DS_Store
+resources/_gen/
