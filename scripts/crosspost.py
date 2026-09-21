@@ -21,8 +21,16 @@ MAX_AGE_DAYS = int(os.environ.get("MAX_AGE_DAYS", "45"))
 
 def http(url, data=None, headers=None, method=None):
     req = urllib.request.Request(url, data=data, headers=headers or {}, method=method)
-    with urllib.request.urlopen(req, timeout=30) as r:
-        return r.read().decode()
+    try:
+        with urllib.request.urlopen(req, timeout=30) as r:
+            return r.read().decode()
+    except urllib.error.HTTPError as e:
+        body = ""
+        try:
+            body = e.read().decode(errors="replace")[:300]
+        except Exception:
+            pass
+        raise RuntimeError(f"HTTP {e.code} {url}: {body}") from None
 
 
 def fetch_feed():
@@ -50,11 +58,14 @@ def clamp(text, limit):
     return text if len(text) <= limit else text[: limit - 1] + "…"
 
 
-def bluesky(post):
+def bluesky_session():
     ident, pw = os.environ["BLUESKY_IDENTIFIER"], os.environ["BLUESKY_APP_PASSWORD"]
-    sess = json.loads(http("https://bsky.social/xrpc/com.atproto.server.createSession",
+    return json.loads(http("https://bsky.social/xrpc/com.atproto.server.createSession",
                            data=json.dumps({"identifier": ident, "password": pw}).encode(),
                            headers={"Content-Type": "application/json"}))
+
+
+def bluesky(post, sess):
     feed = http("https://public.api.bsky.app/xrpc/app.bsky.feed.getAuthorFeed"
                 f"?actor={urllib.parse.quote(sess['did'])}&limit=30&filter=posts_no_replies")
     if post["link"] in feed:
@@ -84,10 +95,16 @@ def main():
         print("No new posts in window.")
         return
     failed = False
+    try:
+        sess = bluesky_session()
+        print("bluesky: session ok")
+    except Exception as e:
+        print(f"  WARN bluesky session: {e}")
+        raise SystemExit(1)
     for p in posts:
         print(f"Posting: {p['link']}")
         try:
-            bluesky(p)
+            bluesky(p, sess)
             print("  bluesky: ok")
         except Exception as e:
             failed = True
