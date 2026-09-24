@@ -60,6 +60,11 @@ def clamp(text, limit):
 
 def bluesky_session():
     ident, pw = os.environ["BLUESKY_IDENTIFIER"], os.environ["BLUESKY_APP_PASSWORD"]
+    if ident.startswith("@") or "://" in ident or "/" in ident:
+        raise RuntimeError(
+            "BLUESKY_IDENTIFIER must be a Bluesky handle without '@' or a profile URL "
+            "(for example: ozkanpakdil.github.io)"
+        )
     return json.loads(http("https://bsky.social/xrpc/com.atproto.server.createSession",
                            data=json.dumps({"identifier": ident, "password": pw}).encode(),
                            headers={"Content-Type": "application/json"}))

@@ -5,3 +5,4 @@ themes/ananke
 go.*
 .DS_Store
 resources/_gen/
+scripts/__pycache__/crosspost.cpython-313.pyc
