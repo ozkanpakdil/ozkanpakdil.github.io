@@ -1,8 +1,14 @@
 {{- if .Params.cover.image -}}
 <meta name="twitter:card" content="summary_large_image">
-{{- if (ne $.Params.cover.relative true) }}
+{{- $pageBundleCover := (.Resources.ByType "image").GetMatch (printf "*%s*" (.Params.cover.image)) }}
+{{- $globalResourcesCover := (resources.ByType "image").GetMatch (printf "*%s*" (.Params.cover.image)) }}
+{{- $cover := (or $pageBundleCover $globalResourcesCover) }}
+{{- if $cover }}
 <meta name="twitter:image:width" content="1200">
 <meta name="twitter:image:height" content="628">
+<meta name="twitter:image" content="{{ $cover.Permalink }}">
+<meta name="twitter:image:src" content="{{ $cover.Permalink }}">
+{{- else if (ne $.Params.cover.relative true) }}
 <meta name="twitter:image" content="{{ .Params.cover.image | absURL }}">
 <meta name="twitter:image:src" content="{{ .Params.cover.image | absURL }}">
 {{- else }}

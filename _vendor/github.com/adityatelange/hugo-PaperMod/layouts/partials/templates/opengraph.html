@@ -36,7 +36,12 @@
 {{- end }}
 
 {{- if .Params.cover.image -}}
-  {{- if (ne .Params.cover.relative true) }}
+  {{- $pageBundleCover := (.Resources.ByType "image").GetMatch (printf "*%s*" (.Params.cover.image)) }}
+  {{- $globalResourcesCover := (resources.ByType "image").GetMatch (printf "*%s*" (.Params.cover.image)) }}
+  {{- $cover := (or $pageBundleCover $globalResourcesCover) }}
+  {{- if $cover }}
+    <meta property="og:image" content="{{ $cover.Permalink }}">
+  {{- else if (ne .Params.cover.relative true) }}
     <meta property="og:image" content="{{ .Params.cover.image | absURL }}">
   {{- else}}
     <meta property="og:image" content="{{ (path.Join .RelPermalink .Params.cover.image ) | absURL }}">
