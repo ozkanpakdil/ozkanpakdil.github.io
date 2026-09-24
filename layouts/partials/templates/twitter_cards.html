@@ -4,8 +4,10 @@
 {{- $globalResourcesCover := (resources.ByType "image").GetMatch (printf "*%s*" (.Params.cover.image)) }}
 {{- $cover := (or $pageBundleCover $globalResourcesCover) }}
 {{- if $cover }}
-<meta name="twitter:image:width" content="1200">
-<meta name="twitter:image:height" content="628">
+{{- if ne $cover.MediaType.SubType "svg" }}
+<meta name="twitter:image:width" content="{{ $cover.Width }}">
+<meta name="twitter:image:height" content="{{ $cover.Height }}">
+{{- end }}
 <meta name="twitter:image" content="{{ $cover.Permalink }}">
 <meta name="twitter:image:src" content="{{ $cover.Permalink }}">
 {{- else if (ne $.Params.cover.relative true) }}
