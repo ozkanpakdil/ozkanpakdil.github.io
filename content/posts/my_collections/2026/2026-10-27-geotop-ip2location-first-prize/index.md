@@ -225,3 +225,4 @@ I cannot tell you what the judges weighted, and I would not guess. I can tell yo
 - [`GeoSentinel-Ingress`](https://github.com/ozkanpakdil/GeoSentinel-Ingress)
 - [IP2Location Programming Contest 2026 winners](https://contest.ip2location.com/winners)
 - [Contest home](https://contest.ip2location.com/)
+- [Ip2Location Linkedin Post](https://lnkd.in/p/ezAjQWnK)
